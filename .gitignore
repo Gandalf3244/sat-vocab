@@ -8,3 +8,7 @@ Thumbs.db
 # Large upstream downloads, re-fetched by tools/fetch-*.mjs when needed
 tools/.pos-raw.txt
 tools/.thesaurus-raw.txt
+
+# Large intermediate files for tools/build-sat1000-extra.mjs — re-fetch/re-run
+# rather than commit; only sat1000-extra.json (its small output) is checked in.
+tools/sat1000-src/

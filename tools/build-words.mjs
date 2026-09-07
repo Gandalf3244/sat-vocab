@@ -448,6 +448,18 @@ for (const src of SOURCES) {
   raw.push(...rows);
 }
 
+/* Extra words merged in later (e.g. tools/build-sat1000-extra.mjs), already
+ * shaped like a parsePage() row and pre-tiered by real usage frequency. Any
+ * word already covered by SOURCES above wins on dedup below regardless of
+ * this file's tier, since it is ordered first in `raw`. */
+try {
+  const extra = JSON.parse(readFileSync(join(HERE, 'sat1000-extra.json'), 'utf8'));
+  console.log(`  Extra (SAT 1000 list): ${extra.length}`);
+  raw.push(...extra);
+} catch {
+  console.log('  Extra (SAT 1000 list): none found (tools/sat1000-extra.json)');
+}
+
 const order = new Map();
 raw.forEach((r, i) => { if (!order.has(r)) order.set(r, i); });
 const byWord = new Map();

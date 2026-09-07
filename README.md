@@ -1,7 +1,7 @@
 # SAT Vocab
 
 A short-session SAT vocab trainer that works on a phone and a computer and keeps
-one shared record of what you know. 3,660 words, ordered by how often they
+one shared record of what you know. 3,876 words, ordered by how often they
 actually turn up, with a spaced-repetition scheduler and multiple-choice
 questions whose wrong answers are the words people genuinely mix up.
 
@@ -13,10 +13,14 @@ Static site — no server to run. Host it free on GitHub Pages.
 
 **High-frequency first.** The word list comes from
 [sesamewords](https://sites.google.com/site/sesamewords/home), which is already
-sorted into three frequency bands. New words are always introduced in that
-order, so the top band is finished before the mid band is touched. That is also
-what keeps difficulty from jumping between sessions: tomorrow's session is the
-same shape as today's, one notch along.
+sorted into three frequency bands, plus 216 additional words (drawn from a
+second SAT vocabulary list, deduplicated against the sesame set) slotted into
+those same three bands by real English-usage frequency — see
+`tools/build-sat1000-extra.mjs` — rather than dropped into a pile at the end.
+New words are always introduced in tier order, so the top band is finished
+before the mid band is touched. That is also what keeps difficulty from
+jumping between sessions: tomorrow's session is the same shape as today's, one
+notch along.
 
 **Each session ramps on its own.** Items are ordered by how hard they should
 feel *to you* — a rare word you know well is an easy item; a common word you
@@ -90,8 +94,9 @@ highest-frequency band, an example sentence with the word picked out in
 context — seeing it used is what makes it stick.
 
 Examples live in `tools/examples.json` as a plain `word: sentence` map and are
-folded into the build. All 449 top-frequency words are covered; add entries to
-that file and re-run the build to cover more.
+folded into the build. All 449 top-frequency words are covered, plus 665 more
+across the other tiers; add entries to that file and re-run the build to cover
+more.
 
 ---
 
@@ -135,13 +140,16 @@ assets/js/
   config.js             ← the only file you edit
 data/words.json         generated word list
 tools/
-  build-words.mjs       word-list + answer-choice generator
-  examples.json         example sentences, word -> sentence
-  pos-lexicon.json      part-of-speech data (derived, committed)
-  synonyms.json         mutual synonym links (derived, committed)
-  fetch-pos.mjs         rebuilds pos-lexicon.json
-  fetch-thesaurus.mjs   rebuilds synonyms.json
-  make-icons.py         builds the icon set from icons/source-logo.png
+  build-words.mjs           word-list + answer-choice generator
+  examples.json             example sentences, word -> sentence
+  pos-lexicon.json          part-of-speech data (derived, committed)
+  synonyms.json             mutual synonym links (derived, committed)
+  fetch-pos.mjs             rebuilds pos-lexicon.json
+  fetch-thesaurus.mjs       rebuilds synonyms.json
+  parse-sat1000.mjs         parses a supplementary word-list PDF (see below)
+  build-sat1000-extra.mjs   dedupes + frequency-tiers that list into sat1000-extra.json
+  sat1000-extra.json        its output — extra words merged in by build-words.mjs
+  make-icons.py             builds the icon set from icons/source-logo.png
 ```
 
 ## Keyboard
@@ -151,5 +159,9 @@ tools/
 ## Credit
 
 Word list and definitions from
-[sesamewords](https://sites.google.com/site/sesamewords/home).
+[sesamewords](https://sites.google.com/site/sesamewords/home), plus 216
+additional words from a supplementary SAT vocabulary list, tiered by
+real-world frequency data from
+[hermitdave/FrequencyWords](https://github.com/hermitdave/FrequencyWords)
+(OpenSubtitles-derived English word frequencies).
 Part-of-speech and thesaurus data from the Moby Project (public domain).

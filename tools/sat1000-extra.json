@@ -1,0 +1,1730 @@
+[
+  {
+    "w": "abide",
+    "g": "put up with",
+    "d": "to put up with",
+    "t": 1,
+    "l": null,
+    "rawG": "to put up with"
+  },
+  {
+    "w": "abort",
+    "g": "give up on a half-finished project",
+    "d": "to give up on a half-finished project or effort",
+    "t": 1,
+    "l": null,
+    "rawG": "to give up on a half-finished project or effort"
+  },
+  {
+    "w": "absolution",
+    "g": "freedom from blame",
+    "d": "freedom from blame, guilt, sin",
+    "t": 1,
+    "l": null,
+    "rawG": "freedom from blame, guilt, sin"
+  },
+  {
+    "w": "accessible",
+    "g": "obtainable",
+    "d": "obtainable, reachable",
+    "t": 1,
+    "l": null,
+    "rawG": "obtainable, reachable"
+  },
+  {
+    "w": "accommodating",
+    "g": "helpful",
+    "d": "helpful, obliging, polite",
+    "t": 1,
+    "l": null,
+    "rawG": "helpful, obliging, polite"
+  },
+  {
+    "w": "accord",
+    "g": "agreement",
+    "d": "an agreement",
+    "t": 1,
+    "l": null,
+    "rawG": "an agreement"
+  },
+  {
+    "w": "accretion",
+    "g": "slow growth in size",
+    "d": "slow growth in size or amount",
+    "t": 3,
+    "l": null,
+    "rawG": "slow growth in size or amount"
+  },
+  {
+    "w": "acute",
+    "g": "sharp",
+    "d": "sharp, severe",
+    "t": 1,
+    "l": null,
+    "rawG": "sharp, severe"
+  },
+  {
+    "w": "adhere",
+    "g": "to stick to something",
+    "d": "to stick to something",
+    "t": 1,
+    "l": null,
+    "rawG": "to stick to something"
+  },
+  {
+    "w": "aerial",
+    "g": "somehow related to the air",
+    "d": "somehow related to the air",
+    "t": 1,
+    "l": null,
+    "rawG": "somehow related to the air"
+  },
+  {
+    "w": "aggrieved",
+    "g": "distressed",
+    "d": "distressed, wronged, injured",
+    "t": 3,
+    "l": null,
+    "rawG": "distressed, wronged, injured"
+  },
+  {
+    "w": "agriculture",
+    "g": "farming",
+    "d": "farming",
+    "t": 1,
+    "l": null,
+    "rawG": "farming"
+  },
+  {
+    "w": "aisle",
+    "g": "passageway between rows of seats",
+    "d": "a passageway between rows of seats",
+    "t": 1,
+    "l": null,
+    "rawG": "a passageway between rows of seats"
+  },
+  {
+    "w": "amenity",
+    "g": "item that increases comfort",
+    "d": "an item that increases comfort",
+    "t": 3,
+    "l": null,
+    "rawG": "an item that increases comfort"
+  },
+  {
+    "w": "analgesic",
+    "g": "something that reduces pain",
+    "d": "something that reduces pain",
+    "t": 3,
+    "l": null,
+    "rawG": "something that reduces pain"
+  },
+  {
+    "w": "anarchist",
+    "g": "one who wants to eliminate all government",
+    "d": "one who wants to eliminate all government",
+    "t": 1,
+    "l": null,
+    "rawG": "one who wants to eliminate all government"
+  },
+  {
+    "w": "anesthesia",
+    "g": "loss of sensation",
+    "d": "loss of sensation",
+    "t": 1,
+    "l": null,
+    "rawG": "loss of sensation"
+  },
+  {
+    "w": "animated",
+    "g": "lively",
+    "d": "lively",
+    "t": 1,
+    "l": null,
+    "rawG": "lively"
+  },
+  {
+    "w": "annex",
+    "g": "incorporate territory",
+    "d": "to incorporate territory or space",
+    "t": 1,
+    "l": null,
+    "rawG": "to incorporate territory or space"
+  },
+  {
+    "w": "anonymous",
+    "g": "being unknown",
+    "d": "being unknown, unrecognized",
+    "t": 1,
+    "l": null,
+    "rawG": "being unknown, unrecognized"
+  },
+  {
+    "w": "anthology",
+    "g": "selected collection of writings",
+    "d": "a selected collection of writings, songs, etc.",
+    "t": 3,
+    "l": null,
+    "rawG": "a selected collection of writings, songs, etc."
+  },
+  {
+    "w": "anxiety",
+    "g": "intense uneasiness",
+    "d": "intense uneasiness",
+    "t": 1,
+    "l": null,
+    "rawG": "intense uneasiness"
+  },
+  {
+    "w": "appalling",
+    "g": "inspiring shock",
+    "d": "inspiring shock, horror, disgust",
+    "t": 1,
+    "l": null,
+    "rawG": "inspiring shock, horror, disgust"
+  },
+  {
+    "w": "appraise",
+    "g": "assess the worth",
+    "d": "to assess the worth or value of",
+    "t": 3,
+    "l": null,
+    "rawG": "to assess the worth or value of"
+  },
+  {
+    "w": "appropriate",
+    "g": "take",
+    "d": "to take, make use of",
+    "t": 1,
+    "l": null,
+    "rawG": "to take, make use of"
+  },
+  {
+    "w": "aquatic",
+    "g": "relating to water",
+    "d": "relating to water",
+    "t": 1,
+    "l": null,
+    "rawG": "relating to water"
+  },
+  {
+    "w": "arbitration",
+    "g": "process",
+    "d": "the process or act of resolving a dispute",
+    "t": 2,
+    "l": null,
+    "rawG": "the process or act of resolving a dispute"
+  },
+  {
+    "w": "archetypal",
+    "g": "most representative",
+    "d": "the most representative or typical example of something",
+    "t": 3,
+    "l": null,
+    "rawG": "the most representative or typical example of something"
+  },
+  {
+    "w": "arid",
+    "g": "excessively dry",
+    "d": "excessively dry",
+    "t": 2,
+    "l": null,
+    "rawG": "excessively dry"
+  },
+  {
+    "w": "assess",
+    "g": "evaluate",
+    "d": "to evaluate",
+    "t": 1,
+    "l": null,
+    "rawG": "to evaluate"
+  },
+  {
+    "w": "attribute",
+    "g": "credit",
+    "d": "to credit, assign",
+    "t": 1,
+    "l": null,
+    "rawG": "to credit, assign"
+  },
+  {
+    "w": "audible",
+    "g": "able to be heard",
+    "d": "able to be heard",
+    "t": 1,
+    "l": null,
+    "rawG": "able to be heard"
+  },
+  {
+    "w": "avenge",
+    "g": "seek revenge",
+    "d": "to seek revenge",
+    "t": 1,
+    "l": null,
+    "rawG": "to seek revenge"
+  },
+  {
+    "w": "ballad",
+    "g": "love song",
+    "d": "a love song",
+    "t": 1,
+    "l": null,
+    "rawG": "a love song"
+  },
+  {
+    "w": "bard",
+    "g": "poet",
+    "d": "a poet, often a singer as well",
+    "t": 1,
+    "l": null,
+    "rawG": "a poet, often a singer as well"
+  },
+  {
+    "w": "bashful",
+    "g": "shy",
+    "d": "shy, excessively timid",
+    "t": 1,
+    "l": null,
+    "rawG": "shy, excessively timid"
+  },
+  {
+    "w": "behemoth",
+    "g": "something of tremendous power",
+    "d": "something of tremendous power or size",
+    "t": 3,
+    "l": null,
+    "rawG": "something of tremendous power or size"
+  },
+  {
+    "w": "bereft",
+    "g": "devoid of",
+    "d": "devoid of, without",
+    "t": 2,
+    "l": null,
+    "rawG": "devoid of, without"
+  },
+  {
+    "w": "blemish",
+    "g": "imperfection",
+    "d": "an imperfection, flaw",
+    "t": 2,
+    "l": null,
+    "rawG": "an imperfection, flaw"
+  },
+  {
+    "w": "buffet",
+    "g": "strike with force",
+    "d": "to strike with force",
+    "t": 1,
+    "l": null,
+    "rawG": "to strike with force"
+  },
+  {
+    "w": "calibrate",
+    "g": "set",
+    "d": "to set, standardize",
+    "t": 3,
+    "l": null,
+    "rawG": "to set, standardize"
+  },
+  {
+    "w": "canvas",
+    "g": "piece of cloth on which an artist paints",
+    "d": "a piece of cloth on which an artist paints",
+    "t": 1,
+    "l": null,
+    "rawG": "a piece of cloth on which an artist paints"
+  },
+  {
+    "w": "carouse",
+    "g": "party",
+    "d": "to party, celebrate",
+    "t": 3,
+    "l": null,
+    "rawG": "to party, celebrate"
+  },
+  {
+    "w": "catalog",
+    "g": "list",
+    "d": "to list, enter into a list",
+    "t": 1,
+    "l": null,
+    "rawG": "to list, enter into a list"
+  },
+  {
+    "w": "catalyze",
+    "g": "charge",
+    "d": "to charge, inspire",
+    "t": 3,
+    "l": null,
+    "rawG": "to charge, inspire"
+  },
+  {
+    "w": "caucus",
+    "g": "meeting usually held by people working toward the same goal",
+    "d": "a meeting usually held by people working toward the same goal",
+    "t": 2,
+    "l": null,
+    "rawG": "a meeting usually held by people working toward the same goal"
+  },
+  {
+    "w": "cavort",
+    "g": "leap about",
+    "d": "to leap about, behave boisterously",
+    "t": 3,
+    "l": null,
+    "rawG": "to leap about, behave boisterously"
+  },
+  {
+    "w": "chaos",
+    "g": "absolute disorder",
+    "d": "absolute disorder",
+    "t": 1,
+    "l": null,
+    "rawG": "absolute disorder"
+  },
+  {
+    "w": "cherish",
+    "g": "feel",
+    "d": "to feel or show affection toward something",
+    "t": 1,
+    "l": null,
+    "rawG": "to feel or show affection toward something"
+  },
+  {
+    "w": "choreography",
+    "g": "arrangement of dances",
+    "d": "the arrangement of dances",
+    "t": 1,
+    "l": null,
+    "rawG": "the arrangement of dances"
+  },
+  {
+    "w": "chronological",
+    "g": "arranged in order of time",
+    "d": "arranged in order of time",
+    "t": 3,
+    "l": null,
+    "rawG": "arranged in order of time"
+  },
+  {
+    "w": "circumscribed",
+    "g": "marked off",
+    "d": "marked off, bounded",
+    "t": 3,
+    "l": null,
+    "rawG": "marked off, bounded"
+  },
+  {
+    "w": "cleave",
+    "g": "divide into parts",
+    "d": "to divide into parts",
+    "t": 1,
+    "l": null,
+    "rawG": "to divide into parts"
+  },
+  {
+    "w": "clergy",
+    "g": "members of christian holy orders",
+    "d": "members of Christian holy orders",
+    "t": 1,
+    "l": null,
+    "rawG": "members of Christian holy orders"
+  },
+  {
+    "w": "cloying",
+    "g": "sickeningly sweet",
+    "d": "sickeningly sweet",
+    "t": 3,
+    "l": null,
+    "rawG": "sickeningly sweet"
+  },
+  {
+    "w": "cobbler",
+    "g": "person who makes",
+    "d": "a person who makes or repairs shoes",
+    "t": 1,
+    "l": null,
+    "rawG": "a person who makes or repairs shoes"
+  },
+  {
+    "w": "cognizant",
+    "g": "aware",
+    "d": "aware, mindful",
+    "t": 3,
+    "l": null,
+    "rawG": "aware, mindful"
+  },
+  {
+    "w": "collateral",
+    "g": "secondary",
+    "d": "secondary",
+    "t": 1,
+    "l": null,
+    "rawG": "secondary"
+  },
+  {
+    "w": "colossus",
+    "g": "gigantic statue",
+    "d": "a gigantic statue or thing",
+    "t": 1,
+    "l": null,
+    "rawG": "a gigantic statue or thing"
+  },
+  {
+    "w": "combustion",
+    "g": "act",
+    "d": "the act or process of burning",
+    "t": 1,
+    "l": null,
+    "rawG": "the act or process of burning"
+  },
+  {
+    "w": "commodious",
+    "g": "roomy",
+    "d": "roomy",
+    "t": 3,
+    "l": null,
+    "rawG": "roomy"
+  },
+  {
+    "w": "compelling",
+    "g": "forceful",
+    "d": "forceful, demanding attention",
+    "t": 1,
+    "l": null,
+    "rawG": "forceful, demanding attention"
+  },
+  {
+    "w": "compliment",
+    "g": "expression of esteem",
+    "d": "an expression of esteem or approval",
+    "t": 1,
+    "l": null,
+    "rawG": "an expression of esteem or approval"
+  },
+  {
+    "w": "comprehensive",
+    "g": "including everything",
+    "d": "including everything",
+    "t": 1,
+    "l": null,
+    "rawG": "including everything"
+  },
+  {
+    "w": "condolence",
+    "g": "expression of sympathy in sorrow",
+    "d": "an expression of sympathy in sorrow",
+    "t": 2,
+    "l": null,
+    "rawG": "an expression of sympathy in sorrow"
+  },
+  {
+    "w": "conduit",
+    "g": "pipe",
+    "d": "a pipe or channel through which something passes",
+    "t": 1,
+    "l": null,
+    "rawG": "a pipe or channel through which something passes"
+  },
+  {
+    "w": "confection",
+    "g": "sweet",
+    "d": "a sweet, fancy food",
+    "t": 3,
+    "l": null,
+    "rawG": "a sweet, fancy food"
+  },
+  {
+    "w": "confidant",
+    "g": "person entrusted with secrets",
+    "d": "a person entrusted with secrets",
+    "t": 2,
+    "l": null,
+    "rawG": "a person entrusted with secrets"
+  },
+  {
+    "w": "congregation",
+    "g": "gathering of people",
+    "d": "a gathering of people, especially for religious services",
+    "t": 1,
+    "l": null,
+    "rawG": "a gathering of people, especially for religious services"
+  },
+  {
+    "w": "consolation",
+    "g": "act of comforting",
+    "d": "an act of comforting",
+    "t": 1,
+    "l": null,
+    "rawG": "an act of comforting"
+  },
+  {
+    "w": "consonant",
+    "g": "in harmony",
+    "d": "in harmony",
+    "t": 3,
+    "l": null,
+    "rawG": "in harmony"
+  },
+  {
+    "w": "construe",
+    "g": "interpret",
+    "d": "to interpret",
+    "t": 3,
+    "l": null,
+    "rawG": "to interpret"
+  },
+  {
+    "w": "consumption",
+    "g": "act of consuming",
+    "d": "the act of consuming",
+    "t": 1,
+    "l": null,
+    "rawG": "the act of consuming"
+  },
+  {
+    "w": "contemporaneous",
+    "g": "existing during the same time",
+    "d": "existing during the same time",
+    "t": 3,
+    "l": null,
+    "rawG": "existing during the same time"
+  },
+  {
+    "w": "contusion",
+    "g": "bruise",
+    "d": "bruise, injury",
+    "t": 2,
+    "l": null,
+    "rawG": "bruise, injury"
+  },
+  {
+    "w": "convention",
+    "g": "assembly of people",
+    "d": "an assembly of people",
+    "t": 1,
+    "l": null,
+    "rawG": "an assembly of people"
+  },
+  {
+    "w": "coronation",
+    "g": "act of crowning",
+    "d": "the act of crowning",
+    "t": 1,
+    "l": null,
+    "rawG": "the act of crowning"
+  },
+  {
+    "w": "counteract",
+    "g": "neutralize",
+    "d": "to neutralize, make ineffective",
+    "t": 1,
+    "l": null,
+    "rawG": "to neutralize, make ineffective"
+  },
+  {
+    "w": "coup",
+    "g": "brilliant",
+    "d": "a brilliant, unexpected act",
+    "t": 1,
+    "l": null,
+    "rawG": "a brilliant, unexpected act"
+  },
+  {
+    "w": "crescendo",
+    "g": "steady increase in intensity",
+    "d": "a steady increase in intensity or volume",
+    "t": 2,
+    "l": null,
+    "rawG": "a steady increase in intensity or volume"
+  },
+  {
+    "w": "criteria",
+    "g": "standards by which something is judged",
+    "d": "standards by which something is judged",
+    "t": 1,
+    "l": null,
+    "rawG": "standards by which something is judged"
+  },
+  {
+    "w": "cultivate",
+    "g": "nurture",
+    "d": "to nurture, improve, refine",
+    "t": 1,
+    "l": null,
+    "rawG": "to nurture, improve, refine"
+  },
+  {
+    "w": "cumulative",
+    "g": "increasing",
+    "d": "increasing, building upon itself",
+    "t": 3,
+    "l": null,
+    "rawG": "increasing, building upon itself"
+  },
+  {
+    "w": "curt",
+    "g": "abruptly and rudely short",
+    "d": "abruptly and rudely short",
+    "t": 1,
+    "l": null,
+    "rawG": "abruptly and rudely short"
+  },
+  {
+    "w": "daunting",
+    "g": "intimidating",
+    "d": "intimidating, causing one to lose courage",
+    "t": 1,
+    "l": null,
+    "rawG": "intimidating, causing one to lose courage"
+  },
+  {
+    "w": "defamatory",
+    "g": "harmful toward another's reputation",
+    "d": "harmful toward another's reputation",
+    "t": 3,
+    "l": null,
+    "rawG": "harmful toward another's reputation"
+  },
+  {
+    "w": "delegate",
+    "g": "hand over responsibility for something",
+    "d": "to hand over responsibility for something",
+    "t": 1,
+    "l": null,
+    "rawG": "to hand over responsibility for something"
+  },
+  {
+    "w": "demarcation",
+    "g": "marking of boundaries",
+    "d": "the marking of boundaries or categories",
+    "t": 3,
+    "l": null,
+    "rawG": "the marking of boundaries or categories"
+  },
+  {
+    "w": "desiccated",
+    "g": "dried up",
+    "d": "dried up, dehydrated",
+    "t": 3,
+    "l": null,
+    "rawG": "dried up, dehydrated"
+  },
+  {
+    "w": "dialect",
+    "g": "variation of a language",
+    "d": "a variation of a language",
+    "t": 1,
+    "l": null,
+    "rawG": "a variation of a language"
+  },
+  {
+    "w": "disaffected",
+    "g": "rebellious",
+    "d": "rebellious, resentful of authority",
+    "t": 3,
+    "l": null,
+    "rawG": "rebellious, resentful of authority"
+  },
+  {
+    "w": "discretion",
+    "g": "quality of being reserved in speech",
+    "d": "the quality of being reserved in speech or action; good judgment",
+    "t": 1,
+    "l": null,
+    "rawG": "the quality of being reserved in speech or action; good judgment"
+  },
+  {
+    "w": "disgruntled",
+    "g": "upset",
+    "d": "upset, not content",
+    "t": 1,
+    "l": null,
+    "rawG": "upset, not content"
+  },
+  {
+    "w": "disheartened",
+    "g": "feeling a loss of spirit",
+    "d": "feeling a loss of spirit or morale",
+    "t": 3,
+    "l": null,
+    "rawG": "feeling a loss of spirit or morale"
+  },
+  {
+    "w": "divine",
+    "g": "godly",
+    "d": "godly, exceedingly wonderful",
+    "t": 1,
+    "l": null,
+    "rawG": "godly, exceedingly wonderful"
+  },
+  {
+    "w": "dogmatic",
+    "g": "aggressively and arrogantly certain about unproved principles",
+    "d": "aggressively and arrogantly certain about unproved principles",
+    "t": 3,
+    "l": null,
+    "rawG": "aggressively and arrogantly certain about unproved principles"
+  },
+  {
+    "w": "dour",
+    "g": "stern",
+    "d": "stern, joyless",
+    "t": 3,
+    "l": null,
+    "rawG": "stern, joyless"
+  },
+  {
+    "w": "dynamic",
+    "g": "actively changing",
+    "d": "actively changing",
+    "t": 1,
+    "l": null,
+    "rawG": "actively changing"
+  },
+  {
+    "w": "ecstatic",
+    "g": "intensely and overpoweringly happy",
+    "d": "intensely and overpoweringly happy",
+    "t": 1,
+    "l": null,
+    "rawG": "intensely and overpoweringly happy"
+  },
+  {
+    "w": "effervescent",
+    "g": "bubbly",
+    "d": "bubbly, lively",
+    "t": 3,
+    "l": null,
+    "rawG": "bubbly, lively"
+  },
+  {
+    "w": "elated",
+    "g": "overjoyed",
+    "d": "overjoyed, thrilled",
+    "t": 2,
+    "l": null,
+    "rawG": "overjoyed, thrilled"
+  },
+  {
+    "w": "emaciated",
+    "g": "very thin",
+    "d": "very thin, enfeebled looking",
+    "t": 3,
+    "l": null,
+    "rawG": "very thin, enfeebled looking"
+  },
+  {
+    "w": "eminent",
+    "g": "distinguished",
+    "d": "distinguished, prominent, famous",
+    "t": 1,
+    "l": null,
+    "rawG": "distinguished, prominent, famous"
+  },
+  {
+    "w": "emollient",
+    "g": "soothing",
+    "d": "soothing",
+    "t": 3,
+    "l": null,
+    "rawG": "soothing"
+  },
+  {
+    "w": "emote",
+    "g": "express emotion",
+    "d": "to express emotion",
+    "t": 3,
+    "l": null,
+    "rawG": "to express emotion"
+  },
+  {
+    "w": "encore",
+    "g": "audience's demand for a repeat performance; also the artist's performance in response to that demand",
+    "d": "the audience's demand for a repeat performance; also the artist's performance in response to that demand",
+    "t": 1,
+    "l": null,
+    "rawG": "the audience's demand for a repeat performance; also the artist's performance in response to that demand"
+  },
+  {
+    "w": "entail",
+    "g": "include as a necessary step",
+    "d": "to include as a necessary step",
+    "t": 2,
+    "l": null,
+    "rawG": "to include as a necessary step"
+  },
+  {
+    "w": "epistolary",
+    "g": "relating to",
+    "d": "relating to or contained in letters",
+    "t": 3,
+    "l": null,
+    "rawG": "relating to or contained in letters"
+  },
+  {
+    "w": "etymology",
+    "g": "history of words",
+    "d": "the history of words, their origin and development",
+    "t": 3,
+    "l": null,
+    "rawG": "the history of words, their origin and development"
+  },
+  {
+    "w": "excursion",
+    "g": "trip",
+    "d": "a trip or outing",
+    "t": 1,
+    "l": null,
+    "rawG": "a trip or outing"
+  },
+  {
+    "w": "fidelity",
+    "g": "loyalty",
+    "d": "loyalty, devotion",
+    "t": 1,
+    "l": null,
+    "rawG": "loyalty, devotion"
+  },
+  {
+    "w": "flabbergasted",
+    "g": "astounded",
+    "d": "astounded",
+    "t": 3,
+    "l": null,
+    "rawG": "astounded"
+  },
+  {
+    "w": "foil",
+    "g": "thwart",
+    "d": "to thwart, frustrate, defeat",
+    "t": 1,
+    "l": null,
+    "rawG": "to thwart, frustrate, defeat"
+  },
+  {
+    "w": "forage",
+    "g": "graze",
+    "d": "to graze, rummage for food",
+    "t": 2,
+    "l": null,
+    "rawG": "to graze, rummage for food"
+  },
+  {
+    "w": "fortitude",
+    "g": "strength",
+    "d": "strength, guts",
+    "t": 1,
+    "l": null,
+    "rawG": "strength, guts"
+  },
+  {
+    "w": "forum",
+    "g": "medium for lecture",
+    "d": "a medium for lecture or discussion",
+    "t": 1,
+    "l": null,
+    "rawG": "a medium for lecture or discussion"
+  },
+  {
+    "w": "gluttony",
+    "g": "overindulgence in food",
+    "d": "overindulgence in food or drink",
+    "t": 2,
+    "l": null,
+    "rawG": "overindulgence in food or drink"
+  },
+  {
+    "w": "gourmand",
+    "g": "someone fond of eating and drinking",
+    "d": "someone fond of eating and drinking",
+    "t": 3,
+    "l": null,
+    "rawG": "someone fond of eating and drinking"
+  },
+  {
+    "w": "grandiloquence",
+    "g": "lofty",
+    "d": "lofty, pompous language",
+    "t": 3,
+    "l": null,
+    "rawG": "lofty, pompous language"
+  },
+  {
+    "w": "hallowed",
+    "g": "revered",
+    "d": "revered, consecrated",
+    "t": 1,
+    "l": null,
+    "rawG": "revered, consecrated"
+  },
+  {
+    "w": "harrowing",
+    "g": "greatly distressing",
+    "d": "greatly distressing, vexing",
+    "t": 2,
+    "l": null,
+    "rawG": "greatly distressing, vexing"
+  },
+  {
+    "w": "hypocrisy",
+    "g": "pretending to believe what one does not",
+    "d": "pretending to believe what one does not",
+    "t": 1,
+    "l": null,
+    "rawG": "pretending to believe what one does not"
+  },
+  {
+    "w": "idolatrous",
+    "g": "excessively worshipping one object",
+    "d": "excessively worshipping one object or person",
+    "t": 3,
+    "l": null,
+    "rawG": "excessively worshipping one object or person"
+  },
+  {
+    "w": "illicit",
+    "g": "forbidden",
+    "d": "forbidden, not permitted",
+    "t": 1,
+    "l": null,
+    "rawG": "forbidden, not permitted"
+  },
+  {
+    "w": "imperative",
+    "g": "necessary",
+    "d": "necessary, pressing",
+    "t": 1,
+    "l": null,
+    "rawG": "necessary, pressing"
+  },
+  {
+    "w": "implement",
+    "g": "instrument",
+    "d": "an instrument, utensil, tool",
+    "t": 1,
+    "l": null,
+    "rawG": "an instrument, utensil, tool"
+  },
+  {
+    "w": "impute",
+    "g": "ascribe",
+    "d": "to ascribe, blame",
+    "t": 3,
+    "l": null,
+    "rawG": "to ascribe, blame"
+  },
+  {
+    "w": "incarnate",
+    "g": "existing in the flesh",
+    "d": "existing in the flesh, embodied",
+    "t": 1,
+    "l": null,
+    "rawG": "existing in the flesh, embodied"
+  },
+  {
+    "w": "incendiary",
+    "g": "person who agitates",
+    "d": "a person who agitates",
+    "t": 1,
+    "l": null,
+    "rawG": "a person who agitates"
+  },
+  {
+    "w": "increment",
+    "g": "enlargement; the process of increasing",
+    "d": "an enlargement; the process of increasing",
+    "t": 3,
+    "l": null,
+    "rawG": "an enlargement; the process of increasing"
+  },
+  {
+    "w": "inextricable",
+    "g": "hopelessly tangled",
+    "d": "hopelessly tangled or entangled",
+    "t": 3,
+    "l": null,
+    "rawG": "hopelessly tangled or entangled"
+  },
+  {
+    "w": "infamy",
+    "g": "notoriety",
+    "d": "notoriety, extreme ill repute",
+    "t": 1,
+    "l": null,
+    "rawG": "notoriety, extreme ill repute"
+  },
+  {
+    "w": "infusion",
+    "g": "injection of one substance into another; the permeation of one substance by another",
+    "d": "an injection of one substance into another; the permeation of one substance by another",
+    "t": 1,
+    "l": null,
+    "rawG": "an injection of one substance into another; the permeation of one substance by another"
+  },
+  {
+    "w": "injunction",
+    "g": "order of official warning",
+    "d": "an order of official warning",
+    "t": 1,
+    "l": null,
+    "rawG": "an order of official warning"
+  },
+  {
+    "w": "innuendo",
+    "g": "insinuation",
+    "d": "an insinuation",
+    "t": 1,
+    "l": null,
+    "rawG": "an insinuation"
+  },
+  {
+    "w": "inoculate",
+    "g": "introduce a microorganism",
+    "d": "to introduce a microorganism, serum, or vaccine into an organism in order to increase immunity to illness; to vaccinate",
+    "t": 3,
+    "l": null,
+    "rawG": "to introduce a microorganism, serum, or vaccine into an organism in order to increase immunity to illness; to vaccinate"
+  },
+  {
+    "w": "insurgent",
+    "g": "one who rebels",
+    "d": "one who rebels",
+    "t": 2,
+    "l": null,
+    "rawG": "one who rebels"
+  },
+  {
+    "w": "interject",
+    "g": "insert between other things",
+    "d": "to insert between other things",
+    "t": 3,
+    "l": null,
+    "rawG": "to insert between other things"
+  },
+  {
+    "w": "interlocutor",
+    "g": "someone who participates in a dialogue",
+    "d": "someone who participates in a dialogue or conversation",
+    "t": 3,
+    "l": null,
+    "rawG": "someone who participates in a dialogue or conversation"
+  },
+  {
+    "w": "intimation",
+    "g": "indirect suggestion",
+    "d": "an indirect suggestion",
+    "t": 3,
+    "l": null,
+    "rawG": "an indirect suggestion"
+  },
+  {
+    "w": "iridescent",
+    "g": "showing rainbow colors",
+    "d": "showing rainbow colors",
+    "t": 3,
+    "l": null,
+    "rawG": "showing rainbow colors"
+  },
+  {
+    "w": "irreverence",
+    "g": "disrespect",
+    "d": "disrespect",
+    "t": 3,
+    "l": null,
+    "rawG": "disrespect"
+  },
+  {
+    "w": "juxtaposition",
+    "g": "act of placing two things next to each other for implicit comparison",
+    "d": "the act of placing two things next to each other for implicit comparison",
+    "t": 3,
+    "l": null,
+    "rawG": "the act of placing two things next to each other for implicit comparison"
+  },
+  {
+    "w": "knell",
+    "g": "solemn sound of a bell",
+    "d": "the solemn sound of a bell, often indicating a death",
+    "t": 3,
+    "l": null,
+    "rawG": "the solemn sound of a bell, often indicating a death"
+  },
+  {
+    "w": "laceration",
+    "g": "cut",
+    "d": "a cut, tear",
+    "t": 1,
+    "l": null,
+    "rawG": "a cut, tear"
+  },
+  {
+    "w": "laudatory",
+    "g": "expressing admiration",
+    "d": "expressing admiration or praise",
+    "t": 3,
+    "l": null,
+    "rawG": "expressing admiration or praise"
+  },
+  {
+    "w": "lenient",
+    "g": "demonstrating tolerance",
+    "d": "demonstrating tolerance or gentleness",
+    "t": 1,
+    "l": null,
+    "rawG": "demonstrating tolerance or gentleness"
+  },
+  {
+    "w": "liability",
+    "g": "something for which one is legally responsible",
+    "d": "something for which one is legally responsible, usually involving a disadvantage or risk",
+    "t": 1,
+    "l": null,
+    "rawG": "something for which one is legally responsible, usually involving a disadvantage or risk"
+  },
+  {
+    "w": "libertarian",
+    "g": "advocating principles of liberty and free will",
+    "d": "advocating principles of liberty and free will",
+    "t": 3,
+    "l": null,
+    "rawG": "advocating principles of liberty and free will"
+  },
+  {
+    "w": "linchpin",
+    "g": "something that holds separate parts together",
+    "d": "something that holds separate parts together",
+    "t": 3,
+    "l": null,
+    "rawG": "something that holds separate parts together"
+  },
+  {
+    "w": "litigant",
+    "g": "someone engaged in a lawsuit",
+    "d": "someone engaged in a lawsuit",
+    "t": 3,
+    "l": null,
+    "rawG": "someone engaged in a lawsuit"
+  },
+  {
+    "w": "mandate",
+    "g": "authoritative command",
+    "d": "an authoritative command",
+    "t": 1,
+    "l": null,
+    "rawG": "an authoritative command"
+  },
+  {
+    "w": "manifold",
+    "g": "diverse",
+    "d": "diverse, varied",
+    "t": 2,
+    "l": null,
+    "rawG": "diverse, varied"
+  },
+  {
+    "w": "medley",
+    "g": "mixture of differing things",
+    "d": "a mixture of differing things",
+    "t": 2,
+    "l": null,
+    "rawG": "a mixture of differing things"
+  },
+  {
+    "w": "meritorious",
+    "g": "worthy of esteem",
+    "d": "worthy of esteem or reward",
+    "t": 3,
+    "l": null,
+    "rawG": "worthy of esteem or reward"
+  },
+  {
+    "w": "modulate",
+    "g": "pass from one state to another",
+    "d": "to pass from one state to another, especially in music",
+    "t": 3,
+    "l": null,
+    "rawG": "to pass from one state to another, especially in music"
+  },
+  {
+    "w": "nominal",
+    "g": "trifling",
+    "d": "trifling, insignificant",
+    "t": 1,
+    "l": null,
+    "rawG": "trifling, insignificant"
+  },
+  {
+    "w": "novice",
+    "g": "beginner",
+    "d": "a beginner, someone without training or experience",
+    "t": 1,
+    "l": null,
+    "rawG": "a beginner, someone without training or experience"
+  },
+  {
+    "w": "obsolete",
+    "g": "no longer used",
+    "d": "no longer used, out of date",
+    "t": 1,
+    "l": null,
+    "rawG": "no longer used, out of date"
+  },
+  {
+    "w": "ostracism",
+    "g": "exclusion from a group",
+    "d": "exclusion from a group",
+    "t": 3,
+    "l": null,
+    "rawG": "exclusion from a group"
+  },
+  {
+    "w": "pacific",
+    "g": "soothing",
+    "d": "soothing",
+    "t": 1,
+    "l": null,
+    "rawG": "soothing"
+  },
+  {
+    "w": "palette",
+    "g": "range of colors",
+    "d": "a range of colors or qualities",
+    "t": 1,
+    "l": null,
+    "rawG": "a range of colors or qualities"
+  },
+  {
+    "w": "patent",
+    "g": "readily seen",
+    "d": "readily seen or understood, clear",
+    "t": 1,
+    "l": null,
+    "rawG": "readily seen or understood, clear"
+  },
+  {
+    "w": "pathology",
+    "g": "deviation from the normal",
+    "d": "a deviation from the normal",
+    "t": 1,
+    "l": null,
+    "rawG": "a deviation from the normal"
+  },
+  {
+    "w": "penultimate",
+    "g": "next to last",
+    "d": "next to last",
+    "t": 3,
+    "l": null,
+    "rawG": "next to last"
+  },
+  {
+    "w": "perusal",
+    "g": "careful examination",
+    "d": "a careful examination, review",
+    "t": 3,
+    "l": null,
+    "rawG": "a careful examination, review"
+  },
+  {
+    "w": "philanthropic",
+    "g": "charitable",
+    "d": "charitable, giving",
+    "t": 3,
+    "l": null,
+    "rawG": "charitable, giving"
+  },
+  {
+    "w": "pinnacle",
+    "g": "highest point",
+    "d": "the highest point",
+    "t": 1,
+    "l": null,
+    "rawG": "the highest point"
+  },
+  {
+    "w": "plaudits",
+    "g": "enthusiastic approval",
+    "d": "enthusiastic approval, applause",
+    "t": 3,
+    "l": null,
+    "rawG": "enthusiastic approval, applause"
+  },
+  {
+    "w": "plausible",
+    "g": "believable",
+    "d": "believable, reasonable",
+    "t": 1,
+    "l": null,
+    "rawG": "believable, reasonable"
+  },
+  {
+    "w": "preponderance",
+    "g": "superiority in importance",
+    "d": "superiority in importance or quantity",
+    "t": 3,
+    "l": null,
+    "rawG": "superiority in importance or quantity"
+  },
+  {
+    "w": "prepossessing",
+    "g": "occupying the mind to the exclusion of other thoughts",
+    "d": "occupying the mind to the exclusion of other thoughts or feelings",
+    "t": 3,
+    "l": null,
+    "rawG": "occupying the mind to the exclusion of other thoughts or feelings"
+  },
+  {
+    "w": "prescribe",
+    "g": "lay down a rule",
+    "d": "to lay down a rule",
+    "t": 1,
+    "l": null,
+    "rawG": "to lay down a rule"
+  },
+  {
+    "w": "pretense",
+    "g": "appearance",
+    "d": "an appearance or action intended to deceive",
+    "t": 1,
+    "l": null,
+    "rawG": "an appearance or action intended to deceive"
+  },
+  {
+    "w": "procure",
+    "g": "obtain",
+    "d": "to obtain, acquire",
+    "t": 1,
+    "l": null,
+    "rawG": "to obtain, acquire"
+  },
+  {
+    "w": "profuse",
+    "g": "plentiful",
+    "d": "plentiful, abundant",
+    "t": 3,
+    "l": null,
+    "rawG": "plentiful, abundant"
+  },
+  {
+    "w": "pungent",
+    "g": "having a pointed",
+    "d": "having a pointed, sharp quality--often used to describe smells",
+    "t": 2,
+    "l": null,
+    "rawG": "having a pointed, sharp quality--often used to describe smells"
+  },
+  {
+    "w": "punitive",
+    "g": "involving punishment",
+    "d": "involving punishment",
+    "t": 2,
+    "l": null,
+    "rawG": "involving punishment"
+  },
+  {
+    "w": "quotidian",
+    "g": "daily",
+    "d": "daily",
+    "t": 3,
+    "l": null,
+    "rawG": "daily"
+  },
+  {
+    "w": "rail",
+    "g": "scold",
+    "d": "to scold, protest",
+    "t": 1,
+    "l": null,
+    "rawG": "to scold, protest"
+  },
+  {
+    "w": "rash",
+    "g": "hasty",
+    "d": "hasty, incautious",
+    "t": 1,
+    "l": null,
+    "rawG": "hasty, incautious"
+  },
+  {
+    "w": "redoubtable",
+    "g": "formidable",
+    "d": "formidable",
+    "t": 3,
+    "l": null,
+    "rawG": "formidable"
+  },
+  {
+    "w": "refurbish",
+    "g": "restore",
+    "d": "to restore, clean up",
+    "t": 3,
+    "l": null,
+    "rawG": "to restore, clean up"
+  },
+  {
+    "w": "regurgitate",
+    "g": "vomit",
+    "d": "to vomit",
+    "t": 3,
+    "l": null,
+    "rawG": "to vomit"
+  },
+  {
+    "w": "remedial",
+    "g": "intended to repair gaps in students' basic knowledge",
+    "d": "intended to repair gaps in students' basic knowledge",
+    "t": 3,
+    "l": null,
+    "rawG": "intended to repair gaps in students' basic knowledge"
+  },
+  {
+    "w": "renown",
+    "g": "honor",
+    "d": "honor, acclaim",
+    "t": 2,
+    "l": null,
+    "rawG": "honor, acclaim"
+  },
+  {
+    "w": "repentant",
+    "g": "penitent",
+    "d": "penitent, sorry",
+    "t": 3,
+    "l": null,
+    "rawG": "penitent, sorry"
+  },
+  {
+    "w": "repose",
+    "g": "rest",
+    "d": "to rest, lie down",
+    "t": 2,
+    "l": null,
+    "rawG": "to rest, lie down"
+  },
+  {
+    "w": "repulse",
+    "g": "disgust",
+    "d": "to disgust",
+    "t": 3,
+    "l": null,
+    "rawG": "to disgust"
+  },
+  {
+    "w": "requisition",
+    "g": "demand for goods",
+    "d": "a demand for goods, usually made by an authority",
+    "t": 1,
+    "l": null,
+    "rawG": "a demand for goods, usually made by an authority"
+  },
+  {
+    "w": "reservoir",
+    "g": "reserves",
+    "d": "reserves, large supply",
+    "t": 1,
+    "l": null,
+    "rawG": "reserves, large supply"
+  },
+  {
+    "w": "revel",
+    "g": "enjoy intensely",
+    "d": "to enjoy intensely",
+    "t": 2,
+    "l": null,
+    "rawG": "to enjoy intensely"
+  },
+  {
+    "w": "revere",
+    "g": "esteem",
+    "d": "to esteem, show deference, venerate",
+    "t": 1,
+    "l": null,
+    "rawG": "to esteem, show deference, venerate"
+  },
+  {
+    "w": "rhapsodize",
+    "g": "engage in excessive enthusiasm",
+    "d": "to engage in excessive enthusiasm",
+    "t": 3,
+    "l": null,
+    "rawG": "to engage in excessive enthusiasm"
+  },
+  {
+    "w": "salutation",
+    "g": "greeting",
+    "d": "a greeting",
+    "t": 3,
+    "l": null,
+    "rawG": "a greeting"
+  },
+  {
+    "w": "salve",
+    "g": "soothing balm",
+    "d": "a soothing balm",
+    "t": 1,
+    "l": null,
+    "rawG": "a soothing balm"
+  },
+  {
+    "w": "scathing",
+    "g": "sharp",
+    "d": "sharp, critical, hurtful",
+    "t": 3,
+    "l": null,
+    "rawG": "sharp, critical, hurtful"
+  },
+  {
+    "w": "scintillating",
+    "g": "sparkling",
+    "d": "sparkling",
+    "t": 3,
+    "l": null,
+    "rawG": "sparkling"
+  },
+  {
+    "w": "semaphore",
+    "g": "visual signal",
+    "d": "a visual signal",
+    "t": 3,
+    "l": null,
+    "rawG": "a visual signal"
+  },
+  {
+    "w": "seminal",
+    "g": "original",
+    "d": "original, important, creating a field",
+    "t": 2,
+    "l": null,
+    "rawG": "original, important, creating a field"
+  },
+  {
+    "w": "sensual",
+    "g": "involving sensory gratification",
+    "d": "involving sensory gratification, usually related to sex",
+    "t": 1,
+    "l": null,
+    "rawG": "involving sensory gratification, usually related to sex"
+  },
+  {
+    "w": "sensuous",
+    "g": "involving sensory gratification",
+    "d": "involving sensory gratification",
+    "t": 2,
+    "l": null,
+    "rawG": "involving sensory gratification"
+  },
+  {
+    "w": "soluble",
+    "g": "able to dissolve",
+    "d": "able to dissolve",
+    "t": 3,
+    "l": null,
+    "rawG": "able to dissolve"
+  },
+  {
+    "w": "solvent",
+    "g": "substance that can dissolve other substances",
+    "d": "a substance that can dissolve other substances",
+    "t": 1,
+    "l": null,
+    "rawG": "a substance that can dissolve other substances"
+  },
+  {
+    "w": "subjugate",
+    "g": "bring under control",
+    "d": "to bring under control, subdue",
+    "t": 3,
+    "l": null,
+    "rawG": "to bring under control, subdue"
+  },
+  {
+    "w": "tome",
+    "g": "large book",
+    "d": "a large book",
+    "t": 1,
+    "l": null,
+    "rawG": "a large book"
+  },
+  {
+    "w": "transgress",
+    "g": "violate",
+    "d": "to violate, go over a limit",
+    "t": 3,
+    "l": null,
+    "rawG": "to violate, go over a limit"
+  },
+  {
+    "w": "travesty",
+    "g": "grossly inferior imitation",
+    "d": "a grossly inferior imitation",
+    "t": 1,
+    "l": null,
+    "rawG": "a grossly inferior imitation"
+  },
+  {
+    "w": "truncate",
+    "g": "shorten by cutting off",
+    "d": "to shorten by cutting off",
+    "t": 3,
+    "l": null,
+    "rawG": "to shorten by cutting off"
+  },
+  {
+    "w": "utilitarian",
+    "g": "relating to",
+    "d": "relating to or aiming at usefulness",
+    "t": 3,
+    "l": null,
+    "rawG": "relating to or aiming at usefulness"
+  },
+  {
+    "w": "variegated",
+    "g": "diversified",
+    "d": "diversified, distinctly marked",
+    "t": 3,
+    "l": null,
+    "rawG": "diversified, distinctly marked"
+  },
+  {
+    "w": "vehemently",
+    "g": "marked by intense force",
+    "d": "marked by intense force or emotion",
+    "t": 3,
+    "l": null,
+    "rawG": "marked by intense force or emotion"
+  },
+  {
+    "w": "vivacious",
+    "g": "lively",
+    "d": "lively, sprightly",
+    "t": 3,
+    "l": null,
+    "rawG": "lively, sprightly"
+  },
+  {
+    "w": "wrath",
+    "g": "vengeful anger",
+    "d": "vengeful anger, punishment",
+    "t": 1,
+    "l": null,
+    "rawG": "vengeful anger, punishment"
+  },
+  {
+    "w": "zenith",
+    "g": "highest point",
+    "d": "the highest point, culminating point",
+    "t": 2,
+    "l": null,
+    "rawG": "the highest point, culminating point"
+  },
+  {
+    "w": "zephyr",
+    "g": "gentle breeze",
+    "d": "a gentle breeze",
+    "t": 2,
+    "l": null,
+    "rawG": "a gentle breeze"
+  }
+]
