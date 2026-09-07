@@ -6,16 +6,31 @@
  *   { version, built, tiers:[...], words:[ {i,w,g,d,t,l,r,x,c:[ids]} ] }
  *     i  id (index)          w  word              g  short gloss (used as answer text)
  *     d  full definition     t  tier 1|2|3        l  lesson label
- *     r  global freq rank    x  difficulty 0..1   c  confusable distractor ids
+ *     r  frequency rank      x  difficulty 0..1   c  confusable distractor ids
+ *     p  part of speech      e  example sentence
+ *
+ *   x is a percentile over the whole corpus (see tools/difficulty.mjs), not a
+ *   position in the source lists; r is a real corpus frequency ordering.
  *
  * Run:  node tools/build-words.mjs
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { scoreDifficulty } from './difficulty.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
+
+/* Corpus frequencies (spoken + written) from tools/fetch-freq.mjs. Without them
+   difficulty falls back to word shape alone, which ranks far worse — the
+   familiarity signal is the backbone of the model. */
+let FREQ = {};
+try {
+  FREQ = JSON.parse(readFileSync(join(HERE, 'word-freq.json'), 'utf8'));
+} catch {
+  console.warn('  ! tools/word-freq.json missing — run: node tools/fetch-freq.mjs');
+}
 
 /* Real part-of-speech data (Moby, public domain) trimmed by tools/fetch-pos.mjs.
    Heuristics on suffixes only got ~77% of these right, and a grammatically odd
@@ -469,19 +484,12 @@ for (const r of raw) {
 }
 
 const words = [...byWord.values()].sort((a, b) => a.t - b.t || order.get(a) - order.get(b));
-words.forEach((w, i) => { w.i = i; w.r = i; });
+words.forEach((w, i) => { w.i = i; });
 console.log(`  deduped: ${words.length} unique words`);
 
-const tierBand = { 1: [0.00, 0.30], 2: [0.28, 0.66], 3: [0.60, 1.00] };
-const tierCounts = words.reduce((m, w) => { m[w.t] = (m[w.t] || 0) + 1; return m; }, {});
-const tierSeen = {};
-for (const w of words) {
-  const n = (tierSeen[w.t] = (tierSeen[w.t] || 0) + 1) - 1;
-  const [lo, hi] = tierBand[w.t];
-  const pos = n / Math.max(1, tierCounts[w.t] - 1);
-  const lenPenalty = Math.min(0.06, Math.max(0, (w.w.replace(/[^a-z]/g, '').length - 7) * 0.012));
-  w.x = Math.round(Math.min(1, lo + (hi - lo) * pos + lenPenalty) * 1000) / 1000;
-}
+/* Difficulty (w.x) and the real frequency rank (w.r) are scored down at the
+   bottom of this file, once the distractors exist — how good a word's own wrong
+   answers are is part of how hard the question is. */
 
 /* part of speech */
 for (const w of words) w.p = resolvePos(w.w, w.g, w.d, w.rawG);
@@ -719,6 +727,28 @@ for (let i = 0; i < words.length; i++) {
 }
 process.stdout.write(`\r  distractors ${words.length}/${words.length}\n`);
 console.log(`  words with <3 usable distractors (runtime falls back): ${thin}`);
+
+/* ------------------------------------------------------------- difficulty */
+
+/* How strong this word's own traps are: the mean look/sound-alikeness of the
+   three distractors the app will reach for first. A word whose best wrong
+   answers are near-twins makes a harder question than one whose are merely
+   plausible. */
+const trapStrength = words.map((w, i) => {
+  const top = (w.c || []).slice(0, 3);
+  if (!top.length) return 0;
+  return top.reduce((a, j) => a + rootConfusion(i, j), 0) / top.length;
+});
+
+const { x, rank, parts } = scoreDifficulty(words, FREQ, { traps: trapStrength });
+words.forEach((w, i) => { w.x = x[i]; w.r = rank[i]; });
+
+{
+  const byX = words.map((w, i) => [w, i]).sort((a, b) => a[0].x - b[0].x);
+  const line = ([w, i]) => `${w.w} (${w.x.toFixed(2)}, zipf ${parts.wordZ[i].toFixed(1)})`;
+  console.log(`  easiest: ${byX.slice(0, 6).map(line).join(', ')}`);
+  console.log(`  hardest: ${byX.slice(-6).reverse().map(line).join(', ')}`);
+}
 
 /* ------------------------------------------------------ example sentences */
 

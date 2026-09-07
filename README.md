@@ -1,9 +1,9 @@
 # SAT Vocab
 
 A short-session SAT vocab trainer that works on a phone and a computer and keeps
-one shared record of what you know. 3,876 words, ordered by how often they
-actually turn up, with a spaced-repetition scheduler and multiple-choice
-questions whose wrong answers are the words people genuinely mix up.
+one shared record of what you know. 3,876 words, each scored for how hard it
+actually is, with a spaced-repetition scheduler and multiple-choice questions
+whose wrong answers are the words people genuinely mix up.
 
 Static site — no server to run. Host it free on GitHub Pages.
 
@@ -11,22 +11,44 @@ Static site — no server to run. Host it free on GitHub Pages.
 
 ## How it decides what to ask
 
-**High-frequency first.** The word list comes from
-[sesamewords](https://sites.google.com/site/sesamewords/home), which is already
-sorted into three frequency bands, plus 216 additional words (drawn from a
-second SAT vocabulary list, deduplicated against the sesame set) slotted into
-those same three bands by real English-usage frequency — see
-`tools/build-sat1000-extra.mjs` — rather than dropped into a pile at the end.
-New words are always introduced in tier order, so the top band is finished
-before the mid band is touched. That is also what keeps difficulty from
-jumping between sessions: tomorrow's session is the same shape as today's, one
-notch along.
+**Difficulty is measured, not assumed.** Every word carries a difficulty score
+`x` in 0..1 — a percentile across the whole list. Frequency is the backbone of
+it, blended from two corpora on purpose (OpenSubtitles for spoken English,
+Wikipedia for written), because a word that is common in either is one you have
+met. But frequency alone gets it badly wrong, so six more signals go in
+alongside it (`tools/difficulty.mjs`):
 
-**Each session ramps on its own.** Items are ordered by how hard they should
-feel *to you* — a rare word you know well is an easy item; a common word you
-keep missing is a hard one. Sessions open with a warm-up you can definitely get,
-and the stretch material lands at the end. Difficulty climbs *within* a session,
-not *across* them.
+| Signal | Why it moves the needle |
+|---|---|
+| Blended Zipf frequency | The backbone. How often you have met the word at all. |
+| Derivational family | *allege* is rare, *alleged* is not. A common relative is most of knowing the word. |
+| Meaning familiarity | How ordinary the words in the definition are. "servile" is a harder thing to be told than "talkative". |
+| Sense gap | A common word with an uncommon meaning is being tested on a sense you do not have yet. |
+| Look-alike shadowing | Words with a commoner near-twin (*ingenuous*/*ingenious*, *noisome*/*noisy*) get misread, not merely missed. |
+| Syllables | A mild cost that survives controlling for frequency. |
+| Trap strength | How good the word's own wrong answers are — difficulty of the *item*, not just the word. |
+| Classical roots | *Subtracts.* A word that decomposes into a high-yield prefix and root can be reasoned out cold. |
+
+The old score was position-in-the-source-list, which is a frequency ordering
+wearing a difficulty label — it rated *obsequious* easier than *retract*, and
+*visible* as mid-hard because of the band it was filed under. Now: *visible*
+0.00, *retract* 0.17, *obsequious* 0.71, *perspicacious* 0.91.
+
+**The ramp follows you, not the list.** `assets/js/ability.js` fits one number
+from your answers — θ, the difficulty at which you are a coin-flip — on the same
+0..1 scale as the words. New words are then drawn from a band around θ rather
+than in list order, so beating today's material raises tomorrow's, and a student
+who is cruising gets rare hard words instead of the rest of the common ones.
+Frequency still breaks ties, because of two words at the right level the one you
+are likelier to meet is worth more. θ is refitted from the record each time, not
+stored, so there is nothing to migrate or merge between devices, and it cannot
+climb more than one step past the hardest word you have actually got right.
+
+**Each session ramps on its own too.** Items are ordered by how hard they should
+feel *to you*: your own record on a word outweighs its corpus difficulty, so a
+rare word you know cold opens the session and a common word you keep missing
+lands near the end. Sessions start with a warm-up you can definitely get, and
+the stretch material arrives last.
 
 **You set the clock.** Pick 3–45 minutes. The app estimates how many questions
 fit from your own answering speed, and tops the queue up if you are moving
@@ -130,6 +152,7 @@ assets/css/style.css    all styling
 assets/js/
   main.js               wiring, rendering, session flow
   session.js            session planning, the difficulty ramp, in-session retries
+  ability.js            fits your level from your answers; predicts item difficulty
   scheduler.js          spaced repetition, mastery, the "skip a session" gate
   quiz.js               question building and distractor fairness rules
   stats.js              every derived number, shared by the UI and the export
@@ -141,11 +164,14 @@ assets/js/
 data/words.json         generated word list
 tools/
   build-words.mjs           word-list + answer-choice generator
+  difficulty.mjs            the difficulty model, used by build-words.mjs
   examples.json             example sentences, word -> sentence
   pos-lexicon.json          part-of-speech data (derived, committed)
   synonyms.json             mutual synonym links (derived, committed)
+  word-freq.json            corpus frequency evidence (derived, committed)
   fetch-pos.mjs             rebuilds pos-lexicon.json
   fetch-thesaurus.mjs       rebuilds synonyms.json
+  fetch-freq.mjs            rebuilds word-freq.json
   parse-sat1000.mjs         parses a supplementary word-list PDF (see below)
   build-sat1000-extra.mjs   dedupes + frequency-tiers that list into sat1000-extra.json
   sat1000-extra.json        its output — extra words merged in by build-words.mjs
@@ -160,8 +186,9 @@ tools/
 
 Word list and definitions from
 [sesamewords](https://sites.google.com/site/sesamewords/home), plus 216
-additional words from a supplementary SAT vocabulary list, tiered by
-real-world frequency data from
+additional words from a supplementary SAT vocabulary list. Frequency data —
+which tiers those extra words and feeds the difficulty model — from
 [hermitdave/FrequencyWords](https://github.com/hermitdave/FrequencyWords)
-(OpenSubtitles-derived English word frequencies).
+(OpenSubtitles-derived) and
+[IlyaSemenov/wikipedia-word-frequency](https://github.com/IlyaSemenov/wikipedia-word-frequency).
 Part-of-speech and thesaurus data from the Moby Project (public domain).

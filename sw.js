@@ -1,7 +1,7 @@
 /* Service worker — makes the app installable and usable offline.
    Bump CACHE when you change the shell or rebuild the word list. */
 
-const CACHE = 'sat-vocab-v8';
+const CACHE = 'sat-vocab-v9';
 const SHELL = [
   './',
   './index.html',
@@ -11,6 +11,7 @@ const SHELL = [
   './assets/js/store.js',
   './assets/js/session.js',
   './assets/js/scheduler.js',
+  './assets/js/ability.js',
   './assets/js/quiz.js',
   './assets/js/stats.js',
   './assets/js/ui.js',

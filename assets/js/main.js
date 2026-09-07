@@ -124,7 +124,7 @@ function updatePlanLine() {
   const due = S.dueNow(state.progress, state.sessions.length);
   const seen = Object.keys(state.progress).length;
   $('#planLine').textContent = seen === 0
-    ? 'Starts with the highest-frequency words.'
+    ? 'Starts easy, then finds your level.'
     : due > 0
       ? `${due} due for review · easiest first, hardest last`
       : 'Nothing due — this session will be mostly new words.';

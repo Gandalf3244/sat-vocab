@@ -1,21 +1,26 @@
 /**
  * session.js — plans and runs one study session.
  *
- * Two ideas do most of the work here:
+ * Two ideas do most of the work here, and both run on the same 0..1 difficulty
+ * scale: the word's own `x` from data/words.json, and the user's level θ from
+ * ability.js.
  *
  *  · WITHIN a session the difficulty ramps. Items are ordered by how hard they
- *    should feel *to this user* (a word you already know well is easy even if
- *    it is a rare word), so a session opens with warm-ups and closes with the
- *    stretch material.
+ *    should feel *to this user* — their record on a word outweighs the corpus,
+ *    so a rare word they know cold opens the session and a common word they
+ *    keep missing lands near the end.
  *
- *  · ACROSS sessions difficulty creeps slowly, because new words are always
- *    drawn in frequency order — the top-450 list is exhausted before the mid
- *    list is touched. Tomorrow's session is not meaningfully harder than
- *    today's; it is the same shape, one notch along.
+ *  · ACROSS sessions difficulty tracks the user. New words are drawn from a
+ *    band around θ, so beating today's material raises tomorrow's. Frequency
+ *    still breaks ties — of two words at the right level, the one you are
+ *    likelier to meet is worth more — but it no longer sets the order on its
+ *    own. Grinding the whole top-frequency band before touching anything rare
+ *    is what made the ramp feel flat and arbitrary.
  */
 
-import { applyAnswer, freshRecord, isDue, overdueRatio, strength, DAY } from './scheduler.js';
+import { applyAnswer, freshRecord, isDue, overdueRatio, DAY } from './scheduler.js';
 import { buildQuestion } from './quiz.js';
+import { fitAbility, newWordLevel, perceivedDifficulty } from './ability.js';
 
 const MS_PER_ITEM_DEFAULT = 7200;
 const MS_PER_ITEM_MIN = 4200;
@@ -38,6 +43,15 @@ const EARLY_REVIEW_READY = 0.7;
 
 // Where new words sit in the finished queue, as a fraction of its length.
 const NEW_BAND = [0.25, 0.88];
+
+// How far either side of the target level a new word may be drawn from. Wide
+// enough that a session is not four synonyms of the same difficulty, narrow
+// enough that the level means something.
+const NEW_SPAN = 0.16;
+// How much a word's usefulness (how often it turns up in English) counts
+// against being at exactly the right level. Below 1, so level wins and
+// frequency only breaks near-ties.
+const USEFULNESS_PULL = 0.4;
 
 /** 0 = just reviewed, 1 = due now. */
 function readiness(rec, now) {
@@ -76,6 +90,7 @@ function retryAllowance(sessions) {
  */
 export function planSession({ words, progress, settings, sessions, minutes, now = Date.now() }) {
   const sessionIndex = sessions.length;
+  const ability = fitAbility(words, progress, { now });
   const budget = estimateItems({ minutes, sessions });
   // Missed words get re-asked inside the same session, so the planned queue has
   // to be shorter than the time budget or the tail never gets reached.
@@ -104,9 +119,15 @@ export function planSession({ words, progress, settings, sessions, minutes, now 
   due.sort((a, b) => overdueRatio(progress[b.i], now) - overdueRatio(progress[a.i], now));
   maintenance.sort((a, b) => overdueRatio(progress[b.i], now) - overdueRatio(progress[a.i], now));
   upcoming.sort((a, b) => readiness(progress[b.i], now) - readiness(progress[a.i], now));
-  // Frequency order: tier first, then rank. This is what keeps the ramp gentle
-  // from one session to the next.
-  fresh.sort((a, b) => a.t - b.t || a.r - b.r);
+
+  // New words: nearest to the level this user is working at, with how often the
+  // word actually turns up breaking ties. As they get better the target moves
+  // up and rarer, harder words come into range on their own — so the list is
+  // never "all of tier 1, then all of tier 2".
+  const newLevel = newWordLevel(ability.theta);
+  const corpus = Math.max(1, words.length);
+  const fit = (w) => Math.abs(w.x - newLevel) / NEW_SPAN + USEFULNESS_PULL * (w.r / corpus);
+  fresh.sort((a, b) => fit(a) - fit(b));
 
   const picked = [];
   const takenIds = new Set();
@@ -135,7 +156,7 @@ export function planSession({ words, progress, settings, sessions, minutes, now 
   take(fresh, target, 'new');
   take(upcoming, target, 'review');
 
-  const queue = rampOrder(picked, words, progress);
+  const queue = rampOrder(picked, words, progress, ability.theta);
 
   // Anything not picked, kept in priority order. If the user answers faster
   // than predicted we extend from here rather than ending the session early.
@@ -158,6 +179,8 @@ export function planSession({ words, progress, settings, sessions, minutes, now 
     reserve,
     target,
     sessionIndex,
+    ability,
+    newLevel,
     counts: {
       review: picked.filter((p) => p.kind === 'review').length,
       new: picked.filter((p) => p.kind === 'new').length,
@@ -169,35 +192,36 @@ export function planSession({ words, progress, settings, sessions, minutes, now 
 }
 
 /**
- * Sort the chosen items easy → hard *for this user*, then pull two genuinely
- * easy familiar items to the very front as a warm-up.
+ * Sort the chosen items easy → hard *for this user*, then pull one genuinely
+ * easy familiar item to the very front as a warm-up.
  */
-function rampOrder(picked, words, progress) {
+function rampOrder(picked, words, progress, theta) {
   const byId = Object.fromEntries(words.map((w) => [w.i, w]));
   const load = ({ id, kind }) => {
-    const w = byId[id];
-    const rec = progress[id];
-    let d = w.x;
-    if (rec) d *= 1 - 0.55 * strength(rec);
-    else d += 0.12;                                   // unseen words cost more
+    let d = perceivedDifficulty(byId[id], progress[id], theta);
+    // A maintenance check on a mastered word is a formality, not a test.
     if (kind === 'maintenance') d *= 0.5;
-    return d + (Math.random() - 0.5) * 0.06;
+    // Just enough noise to break exact ties. Any more and the ramp stops
+    // reading as deliberate, which is most of what makes it work.
+    return d + (Math.random() - 0.5) * 0.03;
   };
 
-  const scored = picked.map((p) => ({ ...p, load: load(p) })).sort((a, b) => a.load - b.load);
+  const out = picked.map((p) => ({ ...p, load: load(p) })).sort((a, b) => a.load - b.load);
 
-  // Unseen words are the heaviest items in any session, so a pure sort parks
-  // them all at the very end — where an over-running session never reaches
-  // them. Spread them across the middle instead: the ramp still climbs, but
-  // new material is guaranteed to get asked.
-  const fresh = scored.filter((p) => p.kind === 'new');
-  const known = scored.filter((p) => p.kind !== 'new');
-  const out = known.slice();
-  if (fresh.length) {
-    const from = Math.floor(out.length * NEW_BAND[0]);
+  // Unseen words are the heaviest items in any session, so a pure sort tends to
+  // park them at the very end — where an over-running session never reaches
+  // them. Only the ones that fall past the band get moved, and they keep their
+  // order relative to each other, so the ramp survives the rescue.
+  const last = Math.floor(out.length * NEW_BAND[1]);
+  const stranded = [];
+  for (let i = out.length - 1; i > last; i--) {
+    if (out[i].kind === 'new') stranded.unshift(...out.splice(i, 1));
+  }
+  if (stranded.length) {
+    const from = Math.max(1, Math.floor(out.length * NEW_BAND[0]));
     const span = Math.max(1, Math.floor(out.length * NEW_BAND[1]) - from);
-    fresh.forEach((item, i) => {
-      const at = Math.min(out.length, from + Math.round((i / fresh.length) * span) + i);
+    stranded.forEach((item, i) => {
+      const at = Math.min(out.length, from + Math.round((i / stranded.length) * span) + i);
       out.splice(at, 0, item);
     });
   }
