@@ -547,7 +547,15 @@ function bindExport() {
 /* -------------------------------------------------------------- account --- */
 
 function bindAccount() {
-  onAuthChange(() => { renderAccount(); renderSyncPill(); });
+  onAuthChange(() => {
+    renderAccount();
+    renderSyncPill();
+    // A remote merge (initial sign-in, or a live update from another device)
+    // changes state.progress/sessions without going through any of the local
+    // action handlers that already re-render Study/Progress themselves.
+    renderStudy();
+    renderProgress();
+  });
   renderSyncPill();
 }
 
