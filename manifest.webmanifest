@@ -1,6 +1,6 @@
 {
-  "name": "Lexicon \u2014 SAT Vocab Trainer",
-  "short_name": "Lexicon",
+  "name": "SAT Vocab",
+  "short_name": "SAT Vocab",
   "description": "Adaptive SAT vocabulary trainer with spaced repetition and cross-device sync.",
   "start_url": "./",
   "scope": "./",
@@ -12,12 +12,6 @@
     "education"
   ],
   "icons": [
-    {
-      "src": "icons/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    },
     {
       "src": "icons/icon-192.png",
       "sizes": "192x192",

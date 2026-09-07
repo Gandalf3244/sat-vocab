@@ -4,3 +4,7 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Large upstream downloads, re-fetched by tools/fetch-*.mjs when needed
+tools/.pos-raw.txt
+tools/.thesaurus-raw.txt

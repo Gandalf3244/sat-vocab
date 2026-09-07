@@ -329,6 +329,14 @@ function showFeedback(result) {
   body.innerHTML = '';
   body.append(el('span', { html: `<b>${escapeHtml(word.w)}</b> — ${escapeHtml(word.d)}` }));
 
+  // Seeing the word used is what makes it stick; the definition alone rarely does.
+  if (word.e) {
+    body.append(el('span', {
+      class: 'example',
+      html: highlightWord(word.e, word.w),
+    }));
+  }
+
   // The teaching moment: name the look-alike that caught them out.
   if (!correct && chosen && !chosen.correct) {
     body.append(el('span', {
@@ -482,7 +490,7 @@ function bindSettings() {
     if (!file) return;
     try {
       const parsed = JSON.parse(await file.text());
-      if (!parsed || typeof parsed !== 'object' || !parsed.progress) throw new Error('Not a Lexicon backup');
+      if (!parsed || typeof parsed !== 'object' || !parsed.progress) throw new Error('Not a SAT Vocab backup');
       replaceState(parsed);
       push({ force: true });
       renderAll();
@@ -524,13 +532,13 @@ function bindExport() {
 
   $('#exportCsvBtn').addEventListener('click', () => {
     if (!Object.keys(state.progress).length) return toast('Study something first.', 'bad');
-    download(`lexicon-words-${S.dateKey(Date.now())}.csv`,
+    download(`sat-vocab-words-${S.dateKey(Date.now())}.csv`,
       wordCsv({ words: WORDS, progress: state.progress, sessions: state.sessions, settings: state.settings }));
     msg.textContent = 'CSV downloaded — File ▸ Import in Google Sheets.';
   });
 
   $('#exportJsonBtn').addEventListener('click', () => {
-    download(`lexicon-backup-${S.dateKey(Date.now())}.json`,
+    download(`sat-vocab-backup-${S.dateKey(Date.now())}.json`,
       JSON.stringify(snapshot(), null, 2), 'application/json');
     msg.textContent = 'Backup downloaded.';
   });
@@ -593,6 +601,15 @@ function renderAccount() {
 }
 
 /* ---------------------------------------------------------------- misc --- */
+
+/** Show the example sentence with the target word picked out. */
+function highlightWord(sentence, word) {
+  const safe = escapeHtml(sentence);
+  const stem = word.replace(/[^a-z]/gi, '').slice(0, Math.max(4, word.length - 3));
+  if (!stem) return safe;
+  const re = new RegExp(`\\b(${stem}[a-z]*)`, 'i');
+  return safe.replace(re, '<em>$1</em>');
+}
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));

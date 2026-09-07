@@ -1,7 +1,7 @@
 /* Service worker — makes the app installable and usable offline.
    Bump CACHE when you change the shell or rebuild the word list. */
 
-const CACHE = 'lexicon-v1';
+const CACHE = 'sat-vocab-v2';
 const SHELL = [
   './',
   './index.html',
@@ -18,7 +18,7 @@ const SHELL = [
   './assets/js/sheets.js',
   './assets/js/config.js',
   './data/words.json',
-  './icons/icon.svg',
+  './icons/icon.png',
 ];
 
 self.addEventListener('install', (e) => {

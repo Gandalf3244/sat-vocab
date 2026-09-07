@@ -1,4 +1,4 @@
-# Lexicon — SAT vocabulary trainer
+# SAT Vocab
 
 A short-session SAT vocab trainer that works on a phone and a computer and keeps
 one shared record of what you know. 3,660 words, ordered by how often they
@@ -42,23 +42,56 @@ un-masters it immediately.
 
 ### The wrong answers
 
-This is the part that makes or breaks a vocabulary quiz. Each question shows a
-word and four short meanings. The three wrong ones are the meanings of words
-that *look or sound like* the target:
+This is the part that makes or breaks a vocabulary quiz. The goal is that
+**nothing can be eliminated without knowing the word** — no throwaway option
+that is obviously the wrong kind of thing.
 
-| Word | Correct | Wrong answers actually belong to |
-|---|---|---|
-| preclude | prevent | precede, seclude, prelate |
-| palatable | acceptable to the taste | palpable, palliate, palliative |
-| disseminate | broadcast | dissemble, dissipate, dissent |
-| expedite | rush | expedient, expiate, exploit |
+| Word | The four choices |
+|---|---|
+| benign | mild · exact · crazed · instinctive |
+| retract | take back · go over · bend sharply · show off |
+| apprehension | dread · specter · criticism · scrape |
+| palatable | acceptable to the taste · impossible to rely on · hard to manage · possible to quantify |
 
-Candidates are precomputed by `tools/build-words.mjs` using a phonetic key, edit
-distance and shared-prefix weighting. Crucially, any candidate whose *meaning*
-overlaps the target's is thrown out — no synonyms, no morphological relatives
-like *innovation/innovative*. A wrong answer is never quietly also right, so if
-you know the word you get it right; if you only half-recognise its shape, you
-don't. When you do slip, the feedback names the word that caught you.
+What makes those work is not that the wrong answers are *close in meaning* —
+they are not. It is that all four are the **same part of speech, the same shape,
+and the same register**, so grammar and style give nothing away. An earlier
+version of this offered "high priest" against "prevent", which anyone can cross
+off on sight.
+
+`tools/build-words.mjs` enforces, in order:
+
+1. **Same part of speech** — from the Moby POS list (public domain), not from
+   guessing at suffixes, which was only ~77% accurate. The *gloss* has to read
+   that way too: "reciprocal" is an adjective but its meaning "exchange" reads
+   as a noun, so it is never offered among adjectives.
+2. **Same surface shape** — one word against one word, phrase against phrase,
+   `-ing` against `-ing`, and matching openings for phrases ("impossible to…"
+   against "hard to…").
+3. **Not a synonym** — checked four ways: definition overlap, shared word stems,
+   each entry's definition naming the other's meaning, and mutual links in the
+   Moby Thesaurus. That last one catches pairs whose definitions look unrelated
+   but whose meanings are not, like *broadcast* / *distribute*.
+4. **Distinct from each other** — candidates are picked greedily so that no two
+   stored options mean the same thing. Two wrong answers that agree would let
+   you rule both out.
+5. **Nothing conspicuous** — options built from rare or very specific words
+   ("having muted rainbow colors") are penalised, because they stand out.
+
+Sound-alikes (*precede* for *preclude*, *palpable* for *palatable*) still get a
+scoring bonus where they survive all of the above — they make excellent traps —
+but they are no longer the basis of selection. When you do slip, the feedback
+names the word that caught you.
+
+### After you answer
+
+The correct meaning is shown with the full definition and, for the
+highest-frequency band, an example sentence with the word picked out in
+context — seeing it used is what makes it stick.
+
+Examples live in `tools/examples.json` as a plain `word: sentence` map and are
+folded into the build. All 449 top-frequency words are covered; add entries to
+that file and re-run the build to cover more.
 
 ---
 
@@ -153,6 +186,18 @@ No Google account? **Download CSV** gives you the All Words table, and
 
 ---
 
+## The logo
+
+Put your artwork at `icons/source-logo.png` and run:
+
+```bash
+python tools/make-icons.py
+```
+
+That centre-crops it to a square, lays **SAT** across it, and writes every icon
+size the app and the phone home screen need. Without a source image it falls
+back to a plain dark tile, so the app still runs.
+
 ## Rebuilding the word list
 
 `data/words.json` is generated. The source HTML pages are in `tools/`.
@@ -162,9 +207,22 @@ node tools/build-words.mjs
 ```
 
 It parses the three frequency lists, de-duplicates across them (a word in more
-than one list keeps its highest-frequency entry), scores difficulty, and
-precomputes each word's confusable set. Bump `CACHE` in `sw.js` afterwards so
-returning visitors pick up the new file.
+than one list keeps its highest-frequency entry), scores difficulty, folds in
+`tools/examples.json`, and precomputes each word's answer choices.
+
+It reads two derived lexicons that are already committed:
+
+```bash
+node tools/fetch-pos.mjs         # part of speech  -> tools/pos-lexicon.json
+node tools/fetch-thesaurus.mjs   # synonyms        -> tools/synonyms.json
+```
+
+Those only need re-running if the word lists change. Each downloads a large
+public-domain file once, caches it under `tools/` (git-ignored), and keeps only
+the slice this project looks up.
+
+Bump `CACHE` in `sw.js` after any rebuild so returning visitors pick up the new
+file.
 
 ## Layout
 
@@ -183,7 +241,14 @@ assets/js/
   ui.js                 DOM helpers and inline SVG charts
   config.js             ← the only file you edit
 data/words.json         generated word list
-tools/build-words.mjs   generator
+tools/
+  build-words.mjs       word-list + answer-choice generator
+  examples.json         example sentences, word -> sentence
+  pos-lexicon.json      part-of-speech data (derived, committed)
+  synonyms.json         mutual synonym links (derived, committed)
+  fetch-pos.mjs         rebuilds pos-lexicon.json
+  fetch-thesaurus.mjs   rebuilds synonyms.json
+  make-icons.py         builds the icon set from icons/source-logo.png
 ```
 
 ## Keyboard
@@ -194,3 +259,4 @@ tools/build-words.mjs   generator
 
 Word list and definitions from
 [sesamewords](https://sites.google.com/site/sesamewords/home).
+Part-of-speech and thesaurus data from the Moby Project (public domain).

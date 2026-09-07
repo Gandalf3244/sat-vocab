@@ -105,7 +105,7 @@ function buildTables({ words, progress, sessions, settings }) {
   /* ---- Dashboard: labels + values, with formulas where staying live helps -- */
   const A = SHEETS.all.title;
   const dashboard = [
-    ['Lexicon — SAT Vocabulary Report', ''],
+    ['SAT Vocab — Vocabulary Report', ''],
     ['Generated', ts(Date.now())],
     ['', ''],
     ['COVERAGE', ''],
@@ -397,7 +397,7 @@ export async function exportToSheets(data, onStatus = () => {}) {
   onStatus('Building the workbook…');
   const t = buildTables(data);
 
-  const title = `Lexicon SAT Vocab — ${S.dateKey(Date.now())}`;
+  const title = `SAT Vocab — ${S.dateKey(Date.now())}`;
   const created = await api(API, 'POST', {
     properties: { title, locale: 'en_US' },
     sheets: Object.values(SHEETS).map((s) => ({

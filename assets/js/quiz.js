@@ -55,17 +55,36 @@ function orderedPool(word) {
   return [...top, ...rest].sort((a, b) => used.indexOf(a) - used.indexOf(b));
 }
 
+/** Surface shape of an answer text — must match, or one option stands out. */
+function glossClass(g) {
+  const parts = String(g || '').trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 1) {
+    if (/ly$/.test(parts[0]) && parts[0].length > 4) return '1ly';
+    if (/ing$/.test(parts[0])) return '1ing';
+    return '1';
+  }
+  return 'n';
+}
+
+/**
+ * Used only for the ~2% of words with too few precomputed candidates. It holds
+ * to the same rules the build applies: same part of speech, same surface shape,
+ * similar length — so a fallback question still cannot be solved by spotting
+ * the odd one out.
+ */
 function fallbackPool(word, words) {
-  // Same tier, nearby difficulty — used only for the handful of words with
-  // too few look-alikes to fill four choices.
   const out = [];
+  const cls = glossClass(word.g);
+  const targetLen = String(word.g).trim().split(/\s+/).length;
   const n = words.length;
   let cursor = Math.floor(Math.random() * n);
-  for (let guard = 0; guard < 400 && out.length < 30; guard++) {
+  for (let guard = 0; guard < 1200 && out.length < 30; guard++) {
     cursor = (cursor + 1 + Math.floor(Math.random() * 17)) % n;
     const cand = words[cursor];
     if (!cand || cand.i === word.i) continue;
-    if (cand.t !== word.t && Math.abs(cand.x - word.x) > 0.25) continue;
+    if (word.p && cand.p && cand.p !== word.p) continue;
+    if (glossClass(cand.g) !== cls) continue;
+    if (Math.abs(String(cand.g).trim().split(/\s+/).length - targetLen) > 1) continue;
     out.push(cand.i);
   }
   return out;
