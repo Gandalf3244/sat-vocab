@@ -47,6 +47,24 @@ function chartWidth(host) {
   return Math.round(host.clientWidth) || 320;
 }
 
+/** Draws evenly-spaced gridlines, but skips a tick's label when rounding
+ *  (via `yFormat`) makes it read the same as a tick already drawn — e.g. a
+ *  0/0.5/1 scale rounds to 0/1/1, and a duplicate "1" label is more confusing
+ *  than a missing middle one. */
+function yAxis(svg, { ticks, py, yFormat, padL, W, padR }) {
+  const seen = new Set();
+  for (const v of ticks) {
+    const text = String(yFormat(v));
+    if (seen.has(text)) continue;
+    seen.add(text);
+    const y = py(v);
+    svg.append(svgEl('line', { class: 'gridline', x1: padL, x2: W - padR, y1: y, y2: y }));
+    const label = svgEl('text', { class: 'lbl', x: 2, y: y + 3.5 });
+    label.textContent = text;
+    svg.append(label);
+  }
+}
+
 function frame(host, { width = 320, height = 148 } = {}) {
   host.textContent = '';
   const svg = svgEl('svg', { viewBox: `0 0 ${width} ${height}`, preserveAspectRatio: 'none', width: '100%', height: '100%' });
@@ -73,14 +91,7 @@ export function lineChart(host, points, { yMax = null, yFormat = (v) => v, good 
   const px = (i) => padL + (points.length === 1 ? iw / 2 : (i / (points.length - 1)) * iw);
   const py = (v) => padT + ih - ((v - min) / (max - min || 1)) * ih;
 
-  for (let g = 0; g <= 2; g++) {
-    const v = min + ((max - min) * g) / 2;
-    const y = py(v);
-    svg.append(svgEl('line', { class: 'gridline', x1: padL, x2: W - padR, y1: y, y2: y }));
-    const label = svgEl('text', { class: 'lbl', x: 2, y: y + 3.5 });
-    label.textContent = yFormat(v);
-    svg.append(label);
-  }
+  yAxis(svg, { ticks: [min, max, (min + max) / 2], py, yFormat, padL, W, padR });
 
   const d = points.map((p, i) => `${i ? 'L' : 'M'}${px(i).toFixed(1)},${py(p.y).toFixed(1)}`).join(' ');
   svg.append(svgEl('path', { class: 'area', d: `${d} L${px(points.length - 1).toFixed(1)},${padT + ih} L${px(0).toFixed(1)},${padT + ih} Z` }));
@@ -114,14 +125,8 @@ export function barChart(host, points, { yFormat = (v) => v, emptyText = 'Nothin
   const iw = W - padL - padR, ih = H - padT - padB;
   const bw = iw / points.length;
 
-  for (let g = 0; g <= 2; g++) {
-    const v = (max * g) / 2;
-    const y = padT + ih - (v / max) * ih;
-    svg.append(svgEl('line', { class: 'gridline', x1: padL, x2: W - padR, y1: y, y2: y }));
-    const label = svgEl('text', { class: 'lbl', x: 2, y: y + 3.5 });
-    label.textContent = yFormat(v);
-    svg.append(label);
-  }
+  const py = (v) => padT + ih - (v / max) * ih;
+  yAxis(svg, { ticks: [0, max, max / 2], py, yFormat, padL, W, padR });
 
   points.forEach((p, i) => {
     const h = (p.y / max) * ih;
