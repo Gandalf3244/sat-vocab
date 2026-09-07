@@ -1,7 +1,7 @@
 /* Service worker — makes the app installable and usable offline.
    Bump CACHE when you change the shell or rebuild the word list. */
 
-const CACHE = 'sat-vocab-v9';
+const CACHE = 'sat-vocab-v12';
 const SHELL = [
   './',
   './index.html',
@@ -22,12 +22,34 @@ const SHELL = [
   './icons/icon.png',
 ];
 
+/**
+ * Precache the shell, bypassing the HTTP cache.
+ *
+ * `cache.addAll()` cannot do this: its requests go through the browser's own
+ * HTTP cache, and GitHub Pages serves assets with a ten-minute max-age behind a
+ * CDN. So a returning user would bump to a new CACHE version and then fill it
+ * with the *old* files — which are then served cache-first, and the deploy
+ * never arrives no matter how many times they reload. Bumping CACHE looked like
+ * it forced an update; it only forced a re-copy of whatever was already stale.
+ *
+ * `cache: 'reload'` skips the HTTP cache on the way out and still writes the
+ * fresh response to it on the way back, which is exactly what precaching wants.
+ */
+async function precache() {
+  const cache = await caches.open(CACHE);
+  await Promise.all(SHELL.map(async (url) => {
+    try {
+      const res = await fetch(new Request(url, { cache: 'reload' }));
+      if (res.ok) await cache.put(url, res);
+      else console.warn('[sw] skipped', url, res.status);
+    } catch (err) {
+      console.warn('[sw] skipped', url, err);
+    }
+  }));
+}
+
 self.addEventListener('install', (e) => {
-  e.waitUntil(
-    caches.open(CACHE)
-      .then((c) => c.addAll(SHELL).catch((err) => console.warn('[sw] partial precache', err)))
-      .then(() => self.skipWaiting()),
-  );
+  e.waitUntil(precache().then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (e) => {

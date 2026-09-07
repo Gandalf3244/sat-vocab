@@ -17,6 +17,8 @@ let BY_ID = {};
 let META = {};
 let session = null;
 let timerId = null;
+// Set when a new build lands mid-session; acted on once the session is closed.
+let pendingReload = false;
 
 /* ------------------------------------------------------------------ boot -- */
 
@@ -191,7 +193,11 @@ function bindNav() {
     const view = tab.dataset.view;
     $$('.tab').forEach((t) => t.classList.toggle('is-on', t === tab));
     $$('.view').forEach((v) => v.classList.toggle('is-active', v.id === `view-${view}`));
+    // Both tabs read live state, so redraw on the way in rather than trusting
+    // whatever was rendered last. Cheap, and it means nothing can sit stale
+    // behind a tab the user is not looking at.
     if (view === 'progress') renderProgress();
+    else if (view === 'study') renderStudy();
     window.scrollTo(0, 0);
   }));
   $('#accountBtn').addEventListener('click', () => {
@@ -406,6 +412,9 @@ function closeQuiz() {
   $('#quiz').hidden = true;
   $('#app').hidden = false;
   renderAll();
+  // A new build arrived while they were studying. The session is saved, so
+  // this is the safe moment to pick it up.
+  if (pendingReload) location.reload();
 }
 
 /** Called by StudySession.finish — appends to the log and syncs. */
@@ -650,8 +659,35 @@ function beep(good) {
   } catch { /* audio is a nicety */ }
 }
 
+/**
+ * Register the service worker, and reload once when a new one takes over.
+ *
+ * Without the reload a deploy costs every returning user a whole stale visit:
+ * the old worker serves the old cache to the page that is already loading, the
+ * new one installs behind it, and the new build only appears the *next* time
+ * the app is opened. Which looks exactly like the update never shipped.
+ *
+ * `controllerchange` fires when the new worker claims the page (sw.js calls
+ * skipWaiting + clients.claim), so that is the moment the fresh files become
+ * available. Never mid-session, though — a reload there would throw away the
+ * questions already answered.
+ */
 function registerServiceWorker() {
   if (!('serviceWorker' in navigator)) return;
   if (location.protocol === 'file:') return;
-  navigator.serviceWorker.register('sw.js').catch((err) => console.warn('[sw]', err));
+
+  // No controller yet means this is a first install, not an update: the page
+  // already loaded from the network, so there is nothing stale to replace.
+  const hadController = !!navigator.serviceWorker.controller;
+  let reloaded = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!hadController || reloaded) return;
+    reloaded = true;
+    if (session) { pendingReload = true; return; }
+    location.reload();
+  });
+
+  navigator.serviceWorker.register('sw.js')
+    .then((reg) => reg.update())
+    .catch((err) => console.warn('[sw]', err));
 }
