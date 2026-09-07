@@ -19,7 +19,7 @@ export const firebaseConfig = {
  * OAuth 2.0 **Web application** client ID from the same Google Cloud project.
  * Only needed for "Export to Google Sheets".
  */
-export const googleClientId = '';
+export const googleClientId = '612306725918-0kssc2nknq5o7iotdao65apq8g7gle82.apps.googleusercontent.com';
 
 export const hasSync = () => Boolean(firebaseConfig.apiKey && firebaseConfig.projectId && firebaseConfig.appId);
 export const hasSheets = () => Boolean(googleClientId);
