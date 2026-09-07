@@ -11,6 +11,7 @@ import { $, $$, el, toast, lineChart, barChart, renderHeatmap } from './ui.js';
 import { hasSync, hasSheets } from './config.js';
 import { initAuth, onAuthChange, signIn, signOut, authState, push, flush } from './auth.js';
 import { exportToSheets, wordCsv, download } from './sheets.js';
+import { AVATARS, avatarSrc, findAvatar, randomUsername, ensureProfile, MAX_USERNAME } from './avatars.js';
 
 let WORDS = [];
 let BY_ID = {};
@@ -38,7 +39,10 @@ let pendingReload = false;
     return;
   }
 
+  if (ensureProfile(state.settings)) save();
+
   bindSettings();
+  bindProfile();
   bindNav();
   bindStudy();
   bindQuiz();
@@ -62,6 +66,7 @@ let pendingReload = false;
 function renderAll() {
   renderStudy();
   renderProgress();
+  renderProfile();
   renderAccount();
   $('#dataMeta').textContent = `${META.count.toLocaleString()} words · built ${META.built}`;
 }
@@ -184,6 +189,85 @@ function renderProgress() {
   fillWordList($('#leechList'), leech.length
     ? leech.map((r) => ({ word: r.word, gloss: r.gloss, meta: `${r.lapses} lapses`, bad: true }))
     : [{ word: '—', gloss: 'No words are giving you repeated trouble.', meta: '' }]);
+}
+
+/* ------------------------------------------------------------- profile --- */
+
+function renderProfile() {
+  const { avatar, username } = state.settings;
+  const who = findAvatar(avatar);
+
+  const top = $('#topAvatar');
+  if (who) {
+    top.src = avatarSrc(who.id);
+    top.hidden = false;
+    $('#topAvatarFallback').hidden = true;
+    $('#accountBtn').setAttribute('aria-label', `Profile — ${username}`);
+  } else {
+    top.hidden = true;
+    $('#topAvatarFallback').hidden = false;
+  }
+
+  if (who) $('#profileAvatar').src = avatarSrc(who.id);
+  $('#profileWho').textContent = who ? `${who.name} · ${who.title}` : '';
+  const input = $('#usernameInput');
+  if (document.activeElement !== input) input.value = username || '';
+
+  const grid = $('#avatarGrid');
+  grid.textContent = '';
+  for (const a of AVATARS) {
+    const on = a.id === avatar;
+    grid.append(el('button', {
+      class: `avatar-pick${on ? ' is-on' : ''}`,
+      type: 'button',
+      role: 'radio',
+      'aria-checked': on ? 'true' : 'false',
+      'data-id': a.id,
+      onclick: () => chooseAvatar(a.id),
+    }, [
+      el('img', { src: avatarSrc(a.id), alt: '', loading: 'lazy' }),
+      el('b', { text: a.name }),
+      el('small', { text: a.title }),
+    ]));
+  }
+}
+
+/**
+ * Picking a face re-rolls the username to match, because the surname in it is
+ * the whole point — unless they have typed their own, which is theirs to keep.
+ */
+function chooseAvatar(id) {
+  if (!findAvatar(id)) return;
+  state.settings.avatar = id;
+  if (!state.settings.nameCustom) state.settings.username = randomUsername(id);
+  save();
+  renderProfile();
+}
+
+function bindProfile() {
+  const input = $('#usernameInput');
+  input.maxLength = MAX_USERNAME;
+  input.addEventListener('input', () => {
+    state.settings.username = input.value.slice(0, MAX_USERNAME);
+    state.settings.nameCustom = true;
+    save();
+  });
+  // An empty box is not a username. Put a generated one back rather than
+  // leaving them nameless.
+  input.addEventListener('blur', () => {
+    if (input.value.trim()) return;
+    state.settings.nameCustom = false;
+    state.settings.username = randomUsername(state.settings.avatar);
+    save();
+    renderProfile();
+  });
+
+  $('#shuffleNameBtn').addEventListener('click', () => {
+    state.settings.nameCustom = false;
+    state.settings.username = randomUsername(state.settings.avatar);
+    save();
+    renderProfile();
+  });
 }
 
 /* ----------------------------------------------------------------- nav --- */
@@ -511,6 +595,7 @@ function bindSettings() {
       const parsed = JSON.parse(await file.text());
       if (!parsed || typeof parsed !== 'object' || !parsed.progress) throw new Error('Not a SAT Vocab backup');
       replaceState(parsed);
+      if (ensureProfile(state.settings)) save();
       push({ force: true });
       renderAll();
       toast('Backup restored.', 'good');
@@ -572,8 +657,10 @@ function bindAccount() {
     // A remote merge (initial sign-in, or a live update from another device)
     // changes state.progress/sessions without going through any of the local
     // action handlers that already re-render Study/Progress themselves.
+    if (ensureProfile(state.settings)) save();
     renderStudy();
     renderProgress();
+    renderProfile();
   });
   renderSyncPill();
 }

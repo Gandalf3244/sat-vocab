@@ -27,8 +27,9 @@
     <div class="brand"><img class="brand-mark" src="icons/icon.png" alt=""> SAT Vocab</div>
     <div class="topbar-right">
       <span id="syncPill" class="pill pill-muted" title="Sync status">Local</span>
-      <button id="accountBtn" class="icon-btn" aria-label="Account">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4 0-7 2.2-7 5v1h14v-1c0-2.8-3-5-7-5Z"/></svg>
+      <button id="accountBtn" class="icon-btn icon-btn-avatar" aria-label="Profile">
+        <img id="topAvatar" alt="" hidden>
+        <svg id="topAvatarFallback" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4 0-7 2.2-7 5v1h14v-1c0-2.8-3-5-7-5Z"/></svg>
       </button>
     </div>
   </header>
@@ -119,6 +120,21 @@
 
     <!-- ---------------------------------------------------- SETTINGS -->
     <section id="view-settings" class="view">
+      <div class="card">
+        <div class="card-head"><h2>Profile</h2></div>
+        <div class="profile-now">
+          <img id="profileAvatar" class="avatar-lg" alt="">
+          <div class="profile-id">
+            <input id="usernameInput" class="text-input" maxlength="32" autocomplete="off"
+                   spellcheck="false" aria-label="Username">
+            <small id="profileWho" class="hint"></small>
+          </div>
+          <button id="shuffleNameBtn" class="btn btn-ghost btn-inline" type="button">Shuffle</button>
+        </div>
+        <div id="avatarGrid" class="avatar-grid" role="radiogroup" aria-label="Profile picture"></div>
+        <p class="hint">Your picture sets the surname in your username. Change either whenever you like.</p>
+      </div>
+
       <div class="card">
         <div class="card-head"><h2>Account</h2></div>
         <div id="accountBox" class="account-box"></div>

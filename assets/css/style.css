@@ -269,6 +269,62 @@ select {
 .account-user b { display: block; font-size: 14.5px; }
 .account-user small { color: var(--ink-3); font-size: 12.5px; word-break: break-all; }
 
+/* ========================================================== profile === */
+.icon-btn-avatar { padding: 0; overflow: hidden; }
+.icon-btn-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
+
+.avatar-lg {
+  width: 64px; height: 64px; flex: none;
+  border-radius: 50%; object-fit: cover;
+  border: 1px solid var(--line-2);
+  background: var(--card-2);
+}
+
+/* Top-aligned, so the Shuffle button lines up with the name box rather than
+   drifting when the job title under it wraps to two lines on a phone. */
+.profile-now { display: flex; align-items: flex-start; gap: 12px; }
+.profile-id { min-width: 0; flex: 1; }
+.profile-id .hint { margin-top: 5px; }
+
+.text-input {
+  width: 100%; min-height: 40px;
+  padding: 8px 11px;
+  border: 1px solid var(--line-2); border-radius: var(--radius-sm);
+  background: var(--card-2); color: var(--ink);
+  font: 600 15px/1.3 var(--font);
+}
+.text-input:focus { outline: none; border-color: var(--accent); }
+
+.btn-inline { width: auto; flex: none; min-height: 40px; padding: 0 14px; font-size: 13.5px; margin-top: 0; }
+
+/* Three across on a phone, which is the width one face needs to stay readable
+   with a name and a job title under it. */
+.avatar-grid {
+  display: grid; gap: 8px; margin-top: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (min-width: 560px) { .avatar-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+
+.avatar-pick {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 10px 6px 9px;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--card-2); color: var(--ink-2);
+  cursor: pointer; text-align: center;
+  font: inherit;
+}
+.avatar-pick:hover { border-color: var(--line-2); color: var(--ink); }
+.avatar-pick img {
+  width: 56px; height: 56px; border-radius: 50%; object-fit: cover;
+  border: 2px solid transparent;
+}
+/* Names and titles vary in length; without a floor the tiles in a row end up
+   different heights and the grid looks broken rather than ragged. */
+.avatar-pick b { font-size: 12.5px; line-height: 1.25; color: var(--ink); font-weight: 600; min-height: 2.5em; }
+.avatar-pick small { font-size: 11px; line-height: 1.25; color: var(--ink-3); }
+.avatar-pick.is-on { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--card-2)); }
+.avatar-pick.is-on img { border-color: var(--accent); }
+
 /* =========================================================== tabbar === */
 .tabbar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;

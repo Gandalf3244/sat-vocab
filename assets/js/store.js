@@ -3,7 +3,8 @@
  * agree after they have both been used offline.
  *
  * Shape:
- *   settings  { minutes, reverse, sound, autoAdvance, tierMode, dailyGoal }
+ *   settings  { minutes, reverse, sound, autoAdvance, tierMode, dailyGoal,
+ *               avatar, username, nameCustom }
  *   progress  { [wordId]: Rec }          per-word spaced-repetition record
  *   sessions  [ Session ]                append-only log (daily stats derive from it)
  *   meta      { device, updatedAt, schema }
@@ -28,6 +29,12 @@ export const DEFAULT_SETTINGS = {
   autoAdvance: false,
   tierMode: 'auto',
   dailyGoal: 1,
+  // Filled in on first run by ensureProfile() in avatars.js. `nameCustom`
+  // records that the user typed their own name, so changing picture stops
+  // rewriting it.
+  avatar: null,
+  username: '',
+  nameCustom: false,
 };
 
 function freshState() {
