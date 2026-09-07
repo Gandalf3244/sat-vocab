@@ -95,6 +95,21 @@ main {
 .hint.center { text-align: center; margin-top: 10px; min-height: 1.2em; }
 
 /* ============================================================== hero === */
+/* ========================================================= greeting === */
+.greeting { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; padding: 0 2px; }
+.greeting-text { min-width: 0; }
+/* Wraps rather than truncates: "Good afternoon, AffableColeman6" does not fit
+   one line on a 375px phone, and the name is the half worth keeping. */
+.greeting-text b {
+  display: block; font-size: 19px; font-weight: 650; letter-spacing: -.015em;
+  line-height: 1.25; overflow-wrap: anywhere;
+}
+@media (max-width: 420px) { .greeting-text b { font-size: 17px; } }
+.greeting-text small { display: block; color: var(--ink-3); font-size: 12.5px; margin-top: 1px; }
+
+/* The College Board mark, cut out of the lockup by tools/make-cb-mark.py. */
+.acorn { width: 32px; height: 32px; flex: none; display: block; }
+
 .hero {
   display: flex; align-items: center; gap: 18px;
   background: linear-gradient(160deg, var(--card-2), var(--card));

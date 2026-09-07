@@ -11,6 +11,7 @@ tools/.thesaurus-raw.txt
 tools/.freq-subtitles.txt
 tools/.freq-enwiki.txt
 tools/.avatar-sheet.jpg
+tools/.cb-mark-check.png
 
 # Large intermediate files for tools/build-sat1000-extra.mjs — re-fetch/re-run
 # rather than commit; only sat1000-extra.json (its small output) is checked in.

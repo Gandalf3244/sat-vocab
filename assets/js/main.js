@@ -71,8 +71,44 @@ function renderAll() {
   $('#dataMeta').textContent = `${META.count.toLocaleString()} words · built ${META.built}`;
 }
 
+/**
+ * The line at the top of the Study tab. Time of day when they have already
+ * studied today, "welcome back" when they have not, and a plain welcome the
+ * very first time — so it reads as the app noticing, rather than as a template
+ * with a name dropped into it.
+ */
+function renderGreeting() {
+  const { sessions, settings } = state;
+  const name = settings.username || 'there';
+  const last = sessions.length ? sessions[sessions.length - 1] : null;
+
+  const today = S.dateKey(Date.now());
+  const studiedToday = last && S.dateKey(last.start) === today;
+
+  const hour = new Date().getHours();
+  const partOfDay = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
+
+  let line, sub;
+  if (!last) {
+    line = `Welcome, ${name}`;
+    sub = 'Pick a length below and the first session will find your level.';
+  } else if (studiedToday) {
+    const n = S.daily(sessions).get(today)?.sessions || 1;
+    line = `${partOfDay}, ${name}`;
+    sub = n === 1 ? 'One session done today.' : `${n} sessions done today.`;
+  } else {
+    const days = Math.max(1, Math.round((Date.now() - last.start) / 86400000));
+    line = `Welcome back, ${name}`;
+    sub = days === 1 ? 'Last studied yesterday.' : `Last studied ${days} days ago.`;
+  }
+
+  $('#greetLine').textContent = line;
+  $('#greetSub').textContent = sub;
+}
+
 function renderStudy() {
   const { progress, sessions, settings } = state;
+  renderGreeting();
   const ov = S.overview(WORDS, progress, sessions);
   const st = S.streaks(sessions, settings.dailyGoal);
   const due = S.dueNow(progress, sessions.length);
@@ -242,6 +278,7 @@ function chooseAvatar(id) {
   if (!state.settings.nameCustom) state.settings.username = randomUsername(id);
   save();
   renderProfile();
+  renderGreeting();
 }
 
 function bindProfile() {
@@ -251,6 +288,7 @@ function bindProfile() {
     state.settings.username = input.value.slice(0, MAX_USERNAME);
     state.settings.nameCustom = true;
     save();
+    renderGreeting();
   });
   // An empty box is not a username. Put a generated one back rather than
   // leaving them nameless.
@@ -260,6 +298,7 @@ function bindProfile() {
     state.settings.username = randomUsername(state.settings.avatar);
     save();
     renderProfile();
+    renderGreeting();
   });
 
   $('#shuffleNameBtn').addEventListener('click', () => {
@@ -267,6 +306,7 @@ function bindProfile() {
     state.settings.username = randomUsername(state.settings.avatar);
     save();
     renderProfile();
+    renderGreeting();
   });
 }
 
