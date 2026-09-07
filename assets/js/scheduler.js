@@ -43,6 +43,7 @@ export function freshRecord(now = Date.now()) {
     fs: now, ls: now, ms: 0,
     sq: -1,   // session index when last answered
     sg: 1,    // sessions that must pass before it may return
+    tr: -1,   // id of the wrong answer that caught them last, or -1
     ma: 0, up: now,
   };
 }

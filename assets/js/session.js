@@ -308,6 +308,10 @@ export class StudySession {
       byId: this.byId,
       allowReverse: this.settings.reverse && !!rec && rec.n > 0,
       seen: !!rec,
+      // Whatever caught them last time comes back with the word. Same
+      // mechanism for the retry a few questions later and for the review a
+      // fortnight from now — the record carries it either way.
+      pin: rec && rec.tr >= 0 ? rec.tr : -1,
     });
     this.current = { ...q, entry };
     this.questionShownAt = Date.now();
@@ -338,9 +342,16 @@ export class StudySession {
     if (!isRetry) {
       this.firstSeenIds.add(id);
       applyAnswer(rec, { correct, ms, sessionIndex: this.sessionIndex });
+      // Getting it right first time, unprompted, is what retires the trap.
+      // Until then the same wrong answer keeps coming back with the word.
+      if (correct) rec.tr = -1;
+      else if (optionId !== q.correctId) rec.tr = optionId;
     } else {
       rec.n += 1;
       if (correct) { rec.k += 1; this.recoveredIds.add(id); } else rec.m += 1;
+      // Beating it on the retry does not clear the trap: they had just been
+      // shown the answer. It stays pinned until they get it cold.
+      if (!correct && optionId !== q.correctId) rec.tr = optionId;
       rec.up = Date.now();
       // Still fighting it at the end of the session — make sure it is not
       // scheduled out too far.

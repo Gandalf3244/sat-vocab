@@ -9,6 +9,12 @@
  *
  * The rule this enforces: someone who actually knows the word gets it right;
  * someone who only half-recognises the shape of it does not.
+ *
+ * Distractors otherwise rotate between encounters so a word does not become a
+ * memorised pattern of four boxes — with one exception. Once a particular wrong
+ * answer has actually caught you, it is pinned to that word (`ctx.pin`) until
+ * you beat it. Re-asking with three fresh wrong answers would be re-asking an
+ * easier question, and passing it would prove nothing.
  */
 
 const OPTIONS = 4;
@@ -94,7 +100,9 @@ function fallbackPool(word, words) {
  * Build a question.
  *
  * @param {object}  word     entry from words.json
- * @param {object}  ctx      { words, byId, allowReverse, seen }
+ * @param {object}  ctx      { words, byId, allowReverse, seen, pin }
+ *                           `pin` is a word id that must appear as a wrong
+ *                           answer — the distractor that caught them last.
  * @returns {{ word, mode, prompt, subPrompt, correctId, options: [{id,text,word,gloss}] }}
  */
 export function buildQuestion(word, ctx) {
@@ -117,6 +125,12 @@ export function buildQuestion(word, ctx) {
     chosen.push(cand);
     texts.push(text);
   };
+
+  // The answer that caught them last time goes in first, so it cannot be
+  // rotated out. Swapping in three fresh wrong answers on the retry turns the
+  // question into a different, easier one — you can be re-asked a word you have
+  // not learned and get it right because the thing that fooled you is gone.
+  if (ctx.pin >= 0 && ctx.pin !== word.i) consider(ctx.pin);
 
   for (const id of orderedPool(word)) consider(id);
   if (chosen.length < OPTIONS - 1) for (const id of fallbackPool(word, words)) consider(id);

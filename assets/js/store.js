@@ -14,6 +14,7 @@
  *   iv interval in days   ea ease factor        du due timestamp (ms)
  *   fs first seen (ms)    ls last seen (ms)     ms mean answer time (ms)
  *   ma mastered flag      up updated at (ms)
+ *   tr the wrong answer that last caught them (word id), or -1
  */
 
 const KEY = 'lexicon.state.v1';
