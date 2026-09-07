@@ -13,7 +13,7 @@ Android's safe circle so it is not clipped on a home screen.
 """
 import os
 
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -51,43 +51,50 @@ def square(img):
 
 def draw_wordmark(img, text="SAT", safe=1.0):
     """
-    Lay `text` across the artwork. `safe` shrinks the wordmark toward the centre
-    for maskable icons, whose corners get cut off.
+    Set `text` in a solid bar across the foot of the icon.
+
+    An earlier version floated the letters over the middle on a blurred plate,
+    which read as a smudge and buried the face. A caption bar looks deliberate,
+    keeps the artwork above it fully visible, and stays legible at 64px.
+
+    `safe` pulls the bar inward for maskable icons, whose edges get cropped to
+    a circle on Android home screens.
     """
     size = img.size[0]
+    band_h = size * (0.30 if safe == 1.0 else 0.26)
+    band_top = size - band_h - (0 if safe == 1.0 else size * 0.14)
+
+    # Solid bar, fading in at the top edge so it sits on the picture rather
+    # than looking pasted over it.
+    band = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(band)
+    feather = max(1, int(band_h * 0.28))
+    for i in range(feather):
+        a = int(235 * (i / feather))
+        d.line([(0, band_top + i), (size, band_top + i)], fill=(12, 16, 24, a))
+    d.rectangle([0, band_top + feather, size, band_top + band_h],
+                fill=(12, 16, 24, 235))
+    img = Image.alpha_composite(img, band)
+
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(layer)
 
-    target_w = size * 0.74 * safe
-    pt = int(size * 0.30)
+    target_w = size * 0.56 * (1.0 if safe == 1.0 else 0.92)
+    pt = max(6, int(size * 0.10))
     font = load_font(pt)
-    for _ in range(40):
+    for _ in range(200):
         box = draw.textbbox((0, 0), text, font=font)
         if box[2] - box[0] >= target_w or pt > size:
             break
-        pt += max(1, size // 100)
+        pt += max(1, size // 120)
         font = load_font(pt)
 
     box = draw.textbbox((0, 0), text, font=font)
     tw, th = box[2] - box[0], box[3] - box[1]
     x = (size - tw) / 2 - box[0]
-    y = size * (0.60 if safe == 1.0 else 0.56) - th / 2 - box[1]
+    y = band_top + (band_h - th) / 2 - box[1]
 
-    # A soft dark plate keeps the letters readable over the busy line art.
-    pad = size * 0.05
-    plate = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    ImageDraw.Draw(plate).rounded_rectangle(
-        [x - pad, y - pad * 0.55, x + tw + pad, y + th + pad * 0.75],
-        radius=int(size * 0.045),
-        fill=(10, 14, 22, 170),
-    )
-    plate = plate.filter(ImageFilter.GaussianBlur(size * 0.012))
-    img = Image.alpha_composite(img, plate)
-
-    draw = ImageDraw.Draw(layer)
-    stroke = max(1, int(size * 0.012))
-    draw.text((x, y), text, font=font, fill=(255, 255, 255, 255),
-              stroke_width=stroke, stroke_fill=(8, 12, 20, 255))
+    draw.text((x, y), text, font=font, fill=(255, 255, 255, 255))
     return Image.alpha_composite(img, layer)
 
 
