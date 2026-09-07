@@ -9,10 +9,10 @@
  */
 
 export const firebaseConfig = {
-  apiKey: '',
-  authDomain: '',
-  projectId: '',
-  appId: '',
+  apiKey: 'AIzaSyC9_QlBMHtytYK_bHlQ2eb8BN7yJY1onnI',
+  authDomain: 'sat-vocab-be75a.firebaseapp.com',
+  projectId: 'sat-vocab-be75a',
+  appId: '1:612306725918:web:eb2649933174be68f8920f',
 };
 
 /**
