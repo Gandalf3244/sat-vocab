@@ -95,77 +95,6 @@ that file and re-run the build to cover more.
 
 ---
 
-## Running it
-
-Any static file server. Opening `index.html` directly will **not** work — ES
-modules and `fetch` need a real origin.
-
-```bash
-python -m http.server 8000
-```
-
-Then open <http://localhost:8000>.
-
-## Putting it on GitHub Pages
-
-```bash
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO.git
-git push -u origin main
-```
-
-In the repo, **Settings ▸ Pages ▸ Source: GitHub Actions**. The included
-workflow (`.github/workflows/deploy.yml`) publishes on every push to `main`.
-Your app lands at `https://YOUR-USERNAME.github.io/YOUR-REPO/`.
-
-On your phone, open that URL and use **Add to Home Screen** — it installs as an
-app and works offline.
-
----
-
-## Turning on sync (optional)
-
-Without this, progress is saved per-browser and the app says "Local". Everything
-else works. To share progress between devices you need a free Firebase project.
-
-1. <https://console.firebase.google.com> → **Add project** (disable Analytics).
-2. **Build ▸ Authentication ▸ Get started ▸ Google** → enable → Save.
-3. **Build ▸ Firestore Database ▸ Create database** → production mode.
-4. Firestore ▸ **Rules** → paste this and Publish. It lets each person read and
-   write only their own document:
-
-   ```
-   rules_version = '2';
-   service cloud.firestore {
-     match /databases/{database}/documents {
-       match /users/{uid} {
-         allow read, write: if request.auth != null && request.auth.uid == uid;
-       }
-     }
-   }
-   ```
-
-5. **Project settings ▸ General ▸ Your apps ▸ Web (`</>`)** → register the app →
-   copy the config values into `assets/js/config.js`.
-6. **Authentication ▸ Settings ▸ Authorized domains** → add
-   `YOUR-USERNAME.github.io`.
-
-Sign in with the same Google account on both devices and they stay in step.
-Merges are per-word: a session studied on the phone while offline is not erased
-by the laptop's next write.
-
-## Turning on Google Sheets export (optional)
-
-1. <https://console.cloud.google.com> → pick the same project as Firebase.
-2. **APIs & Services ▸ Library** → enable **Google Sheets API**.
-3. **OAuth consent screen** → External → add yourself under **Test users**.
-4. **Credentials ▸ Create credentials ▸ OAuth client ID ▸ Web application**.
-   Under *Authorised JavaScript origins* add `http://localhost:8000` and
-   `https://YOUR-USERNAME.github.io`.
-5. Paste the client ID into `googleClientId` in `assets/js/config.js`.
-
-The export asks only for the `drive.file` scope, which grants access to files
-this app itself creates — it cannot see anything else in your Drive.
-
 ### What lands in the spreadsheet
 
 Eight tabs, formatted, with four charts and live formulas:
@@ -186,43 +115,7 @@ No Google account? **Download CSV** gives you the All Words table, and
 
 ---
 
-## The logo
 
-Put your artwork at `icons/source-logo.png` and run:
-
-```bash
-python tools/make-icons.py
-```
-
-That centre-crops it to a square, lays **SAT** across it, and writes every icon
-size the app and the phone home screen need. Without a source image it falls
-back to a plain dark tile, so the app still runs.
-
-## Rebuilding the word list
-
-`data/words.json` is generated. The source HTML pages are in `tools/`.
-
-```bash
-node tools/build-words.mjs
-```
-
-It parses the three frequency lists, de-duplicates across them (a word in more
-than one list keeps its highest-frequency entry), scores difficulty, folds in
-`tools/examples.json`, and precomputes each word's answer choices.
-
-It reads two derived lexicons that are already committed:
-
-```bash
-node tools/fetch-pos.mjs         # part of speech  -> tools/pos-lexicon.json
-node tools/fetch-thesaurus.mjs   # synonyms        -> tools/synonyms.json
-```
-
-Those only need re-running if the word lists change. Each downloads a large
-public-domain file once, caches it under `tools/` (git-ignored), and keeps only
-the slice this project looks up.
-
-Bump `CACHE` in `sw.js` after any rebuild so returning visitors pick up the new
-file.
 
 ## Layout
 
