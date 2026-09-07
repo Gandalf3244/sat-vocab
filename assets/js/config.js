@@ -1,0 +1,25 @@
+/**
+ * config.js — the only file you edit to turn on accounts + Sheets export.
+ *
+ * Leave it exactly as-is and the app still works: everything is stored in the
+ * browser on that one device ("Local" mode). Fill it in and the same progress
+ * follows you between your phone and your computer.
+ *
+ * See README.md → "Turning on sync" for where these values come from.
+ */
+
+export const firebaseConfig = {
+  apiKey: '',
+  authDomain: '',
+  projectId: '',
+  appId: '',
+};
+
+/**
+ * OAuth 2.0 **Web application** client ID from the same Google Cloud project.
+ * Only needed for "Export to Google Sheets".
+ */
+export const googleClientId = '';
+
+export const hasSync = () => Boolean(firebaseConfig.apiKey && firebaseConfig.projectId && firebaseConfig.appId);
+export const hasSheets = () => Boolean(googleClientId);

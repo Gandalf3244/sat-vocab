@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>Lexicon — SAT Vocab Trainer</title>
+<meta name="description" content="Adaptive SAT vocabulary trainer with spaced repetition and cross-device sync.">
+<meta name="theme-color" content="#0f1117">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="boot" class="boot">
+  <div class="boot-mark">L</div>
+  <div class="boot-text">Loading word list…</div>
+</div>
+
+<!-- ===================================================== APP SHELL ==== -->
+<div id="app" hidden>
+
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">L</span> Lexicon</div>
+    <div class="topbar-right">
+      <span id="syncPill" class="pill pill-muted" title="Sync status">Local</span>
+      <button id="accountBtn" class="icon-btn" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4 0-7 2.2-7 5v1h14v-1c0-2.8-3-5-7-5Z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="views">
+
+    <!-- ------------------------------------------------------- STUDY -->
+    <section id="view-study" class="view is-active">
+      <div class="hero">
+        <div class="ring-wrap">
+          <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+            <circle id="goalRing" class="ring-fill" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="ring-center">
+            <div id="streakNum" class="ring-num">0</div>
+            <div class="ring-label">day streak</div>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat"><b id="statDue">0</b><span>due now</span></div>
+          <div class="hstat"><b id="statMastered">0</b><span>mastered</span></div>
+          <div class="hstat"><b id="statSeen">0</b><span>words seen</span></div>
+          <div class="hstat"><b id="statAcc">—</b><span>accuracy</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2>Session length</h2>
+          <span id="itemEstimate" class="hint">~0 words</span>
+        </div>
+        <div id="lenChips" class="chips" role="group" aria-label="Session length">
+          <button class="chip" data-min="3">3 min</button>
+          <button class="chip" data-min="5">5 min</button>
+          <button class="chip is-on" data-min="10">10 min</button>
+          <button class="chip" data-min="15">15 min</button>
+          <button class="chip" data-min="20">20 min</button>
+          <button class="chip" data-min="30">30 min</button>
+        </div>
+        <label class="slider-row">
+          <input id="lenSlider" type="range" min="1" max="45" value="10" step="1" aria-label="Custom session length">
+          <output id="lenOut">10 min</output>
+        </label>
+        <button id="startBtn" class="btn btn-primary btn-lg">Start session</button>
+        <p id="planLine" class="hint center"></p>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>Coverage</h2><span class="hint">high-frequency first</span></div>
+        <div id="tierBars" class="tierbars"></div>
+      </div>
+
+      <div class="card" id="weakCard" hidden>
+        <div class="card-head"><h2>Needs work</h2><span class="hint">most-missed</span></div>
+        <ul id="weakList" class="wordlist"></ul>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------- PROGRESS -->
+    <section id="view-progress" class="view">
+      <div class="card">
+        <div class="card-head"><h2>Accuracy over time</h2><span class="hint">per session</span></div>
+        <div id="chartAcc" class="chart"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Words mastered</h2><span class="hint">cumulative</span></div>
+        <div id="chartMastered" class="chart"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Study activity</h2><span class="hint">last 18 weeks</span></div>
+        <div id="heatmap" class="heatmap"></div>
+        <div class="heat-legend"><span>less</span><i data-l="0"></i><i data-l="1"></i><i data-l="2"></i><i data-l="3"></i><i data-l="4"></i><span>more</span></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Upcoming reviews</h2><span class="hint">next 14 days</span></div>
+        <div id="chartForecast" class="chart"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Lifetime</h2></div>
+        <div id="lifetime" class="kv"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Trouble words</h2><span class="hint">tap to see meaning</span></div>
+        <ul id="leechList" class="wordlist"></ul>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------- SETTINGS -->
+    <section id="view-settings" class="view">
+      <div class="card">
+        <div class="card-head"><h2>Account</h2></div>
+        <div id="accountBox" class="account-box"></div>
+        <p class="hint">Signing in keeps your progress identical on your phone and your computer.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>Export</h2></div>
+        <button id="exportSheetBtn" class="btn btn-secondary">Export to Google Sheets</button>
+        <button id="exportCsvBtn" class="btn btn-ghost">Download CSV</button>
+        <button id="exportJsonBtn" class="btn btn-ghost">Download JSON backup</button>
+        <p id="exportMsg" class="hint"></p>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>Study options</h2></div>
+        <label class="row-toggle">
+          <span><b>Reverse questions</b><small>Sometimes show the meaning and ask for the word</small></span>
+          <input type="checkbox" id="optReverse" class="switch">
+        </label>
+        <label class="row-toggle">
+          <span><b>Sound</b><small>Short tone on right/wrong</small></span>
+          <input type="checkbox" id="optSound" class="switch">
+        </label>
+        <label class="row-toggle">
+          <span><b>Auto-advance</b><small>Move on automatically after feedback</small></span>
+          <input type="checkbox" id="optAuto" class="switch">
+        </label>
+        <label class="row-select">
+          <span><b>Word pool</b><small>Which frequency bands to draw new words from</small></span>
+          <select id="optTier">
+            <option value="auto">Automatic (finish high-frequency first)</option>
+            <option value="1">Highest frequency only</option>
+            <option value="2">Highest + mid frequency</option>
+            <option value="3">Everything (3,660 words)</option>
+          </select>
+        </label>
+        <label class="row-select">
+          <span><b>Daily goal</b><small>Sessions per day for the streak ring</small></span>
+          <select id="optGoal">
+            <option value="1">1 session</option>
+            <option value="2">2 sessions</option>
+            <option value="3">3 sessions</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2>Data</h2></div>
+        <button id="importBtn" class="btn btn-ghost">Restore from JSON backup</button>
+        <input id="importFile" type="file" accept="application/json" hidden>
+        <button id="resetBtn" class="btn btn-danger">Erase all progress</button>
+        <p class="hint">Word list: <span id="dataMeta">—</span></p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabbar" role="tablist">
+    <button class="tab is-on" data-view="study" role="tab">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5v-15ZM6.5 19H19v2H6.5A2.5 2.5 0 0 1 4 18.5 2.5 2.5 0 0 0 6.5 19Z"/></svg>
+      <span>Study</span>
+    </button>
+    <button class="tab" data-view="progress" role="tab">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10h4v10H4Zm6 0V4h4v16h-4Zm6 0v-7h4v7h-4Z"/></svg>
+      <span>Progress</span>
+    </button>
+    <button class="tab" data-view="settings" role="tab">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 15.5-3.5 2 .9-4-3.1-2.7 4.1-.4L12 6.5l1.6 3.9 4.1.4-3.1 2.7.9 4-3.5-2Z"/><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Z"/></svg>
+      <span>Settings</span>
+    </button>
+  </nav>
+</div>
+
+<!-- ==================================================== SESSION VIEW ==== -->
+<div id="quiz" class="quiz" hidden>
+  <div class="quiz-top">
+    <button id="quitBtn" class="icon-btn" aria-label="End session">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6 6.4 5Z"/></svg>
+    </button>
+    <div class="timebar"><div id="timeFill" class="timebar-fill"></div></div>
+    <div id="quizCount" class="quiz-count">0/0</div>
+  </div>
+
+  <div class="quiz-body">
+    <div id="qKind" class="q-kind">What does this word mean?</div>
+    <div id="qPrompt" class="q-prompt">—</div>
+    <div id="qTag" class="q-tag"></div>
+    <div id="qOptions" class="options"></div>
+  </div>
+
+  <div id="qFeedback" class="feedback" hidden>
+    <div id="fbTitle" class="fb-title"></div>
+    <div id="fbBody" class="fb-body"></div>
+    <button id="nextBtn" class="btn btn-primary btn-lg">Continue</button>
+  </div>
+</div>
+
+<!-- ==================================================== SUMMARY VIEW ==== -->
+<div id="summary" class="summary" hidden>
+  <div class="summary-inner">
+    <h1 id="sumTitle">Session complete</h1>
+    <div class="sum-stats">
+      <div class="sstat"><b id="sumAcc">0%</b><span>accuracy</span></div>
+      <div class="sstat"><b id="sumItems">0</b><span>questions</span></div>
+      <div class="sstat"><b id="sumNew">0</b><span>new words</span></div>
+      <div class="sstat"><b id="sumTime">0m</b><span>studied</span></div>
+    </div>
+    <div id="sumMissedWrap" hidden>
+      <h2>Review these</h2>
+      <ul id="sumMissed" class="wordlist"></ul>
+    </div>
+    <div id="sumLearnedWrap" hidden>
+      <h2>New this session</h2>
+      <ul id="sumLearned" class="wordlist"></ul>
+    </div>
+    <div class="sum-actions">
+      <button id="againBtn" class="btn btn-primary btn-lg">Another session</button>
+      <button id="doneBtn" class="btn btn-ghost">Done</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
