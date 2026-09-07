@@ -197,6 +197,16 @@ function bindNav() {
   $('#accountBtn').addEventListener('click', () => {
     $$('.tab').find((t) => t.dataset.view === 'settings')?.click();
   });
+
+  // Charts are drawn at the container's current pixel width, so a resize
+  // (e.g. maximizing the window) needs a redraw or the SVG stretches again.
+  let resizeTimer = null;
+  window.addEventListener('resize', () => {
+    if ($('#view-progress').classList.contains('is-active')) {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(renderProgress, 150);
+    }
+  });
 }
 
 /* --------------------------------------------------------------- study --- */

@@ -39,6 +39,14 @@ const svgEl = (tag, attrs = {}) => {
   return n;
 };
 
+/** The chart is drawn in real CSS pixels so line/text strokes aren't stretched
+ *  non-uniformly by the SVG's `preserveAspectRatio="none"` scaling. Falls back
+ *  to a sane width when the host is offscreen (e.g. the Progress tab isn't the
+ *  active view yet), where clientWidth reads 0. */
+function chartWidth(host) {
+  return Math.round(host.clientWidth) || 320;
+}
+
 function frame(host, { width = 320, height = 148 } = {}) {
   host.textContent = '';
   const svg = svgEl('svg', { viewBox: `0 0 ${width} ${height}`, preserveAspectRatio: 'none', width: '100%', height: '100%' });
@@ -57,7 +65,7 @@ function empty(host, message) {
  */
 export function lineChart(host, points, { yMax = null, yFormat = (v) => v, good = false, minPoints = 2 } = {}) {
   if (!points || points.length < minPoints) return empty(host, 'Not enough sessions yet');
-  const W = 320, H = 148, padL = 30, padR = 8, padT = 10, padB = 20;
+  const W = chartWidth(host), H = 148, padL = 30, padR = 8, padT = 10, padB = 20;
   const svg = frame(host, { width: W, height: H });
   const max = yMax ?? Math.max(1, ...points.map((p) => p.y));
   const min = 0;
@@ -100,7 +108,7 @@ export function lineChart(host, points, { yMax = null, yFormat = (v) => v, good 
 /** Column chart. `points` is [{x: label, y: number}]. */
 export function barChart(host, points, { yFormat = (v) => v, emptyText = 'Nothing scheduled' } = {}) {
   if (!points || !points.length || points.every((p) => !p.y)) return empty(host, emptyText);
-  const W = 320, H = 148, padL = 26, padR = 6, padT = 10, padB = 20;
+  const W = chartWidth(host), H = 148, padL = 26, padR = 6, padT = 10, padB = 20;
   const svg = frame(host, { width: W, height: H });
   const max = Math.max(1, ...points.map((p) => p.y));
   const iw = W - padL - padR, ih = H - padT - padB;
