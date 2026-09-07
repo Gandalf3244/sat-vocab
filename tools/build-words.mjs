@@ -555,7 +555,7 @@ words.forEach((w, i) => {
   arr.push(i);
 });
 
-const SYN_COSINE_MAX = 0.24;
+const SYN_COSINE_MAX = 0.30;
 
 /* An "oddness" score per gloss: the mean rarity of its content words. Glosses
  * like "having muted rainbow colors" score high and are conspicuous in a list
@@ -626,17 +626,19 @@ function distractorScore(i, j, sim) {
   const shape = 1 - Math.min(1, Math.abs(gwc[i] - gwc[j]) / 2);
   const register = 1 - Math.min(1, Math.abs(conc[i] - conc[j]) / 1.5);
   const root = rootConfusion(i, j);
-  // Closeness of meaning is NOT a virtue. What makes "widespread" a fair wrong
-  // answer for benign is that it is a one-word adjective of the same register,
-  // not that it is near "harmless" in meaning. Drifting toward the target's
-  // sense only risks a distractor a marker would have to accept.
+  // A trap should feel plausible, not just parallel in shape. tooSimilarMeaning
+  // (a hard filter, unaffected by this score) still throws out anything close
+  // enough to be arguably also correct — so within the surviving candidates,
+  // sitting nearer the target's sense makes an option harder to rule out on
+  // "clearly unrelated" grounds alone, and is rewarded rather than punished.
   const odd = Math.max(0, oddness[j] - oddness[i]);
   const familyMatch = gclass[i] === '1' ? 1 : (lead[i] === lead[j] ? 1 : 0);
   return 1.6 * familyMatch
     + 2.6 * shape
     + 1.2 * register
-    + 0.9 * root
-    - 2.0 * Math.max(0, sim - 0.08)    // push away from the target's own sense
+    + 1.3 * root                       // look/sound-alikes are the classic hard trap
+    + 1.1 * Math.min(sim, 0.22)        // reward closeness up to the fairness ceiling
+    - 1.0 * Math.max(0, sim - 0.16)    // only rein in the very closest survivors
     - 1.3 * conc[j]                    // never offer a conspicuously specific answer
     - 3.4 * odd                        // nor one built from conspicuously rare words
     - (gwc[j] > 4 ? 1.5 : 0);
