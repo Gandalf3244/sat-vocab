@@ -1,0 +1,3197 @@
+{
+ "founder": {
+  "p": "v",
+  "g": "fail",
+  "d": "fail utterly; sink or collapse"
+ },
+ "innovation": {
+  "g": "new idea or method"
+ },
+ "qualification": {
+  "d": "a restriction or limiting condition; a skill or quality that fits someone for a task"
+ },
+ "sensitive": {
+  "d": "easily hurt or affected; quick to detect or respond to slight changes"
+ },
+ "spare": {
+  "d": "extra; kept in reserve for use when needed"
+ },
+ "suspect": {
+  "p": "v",
+  "g": "doubt",
+  "d": "believe to be likely or true without proof; doubt the genuineness of"
+ },
+ "discipline": {
+  "d": "training that produces obedience or self-control; a controlled way of behaving"
+ },
+ "integrity": {
+  "d": "honesty and firm moral principles; the state of being whole and undivided"
+ },
+ "conventional": {
+  "g": "customary"
+ },
+ "deficit": {
+  "g": "shortfall",
+  "d": "the amount by which something falls short of what is required"
+ },
+ "embrace": {
+  "p": "v",
+  "d": "hold closely in one's arms; accept or support willingly"
+ },
+ "exploit": {
+  "g": "take advantage of",
+  "d": "use someone or something unfairly for one's own advantage"
+ },
+ "instrumental": {
+  "d": "serving as a means; helpful in bringing something about"
+ },
+ "legitimate": {
+  "d": "lawful; genuine and reasonable"
+ },
+ "stimulate": {
+  "d": "rouse to action or interest; excite"
+ },
+ "derivative": {
+  "d": "something that is derived from or based on another source; not original"
+ },
+ "disturb": {
+  "d": "interfere with; upset the calm or order of"
+ },
+ "resist": {
+  "p": "v",
+  "d": "withstand or oppose; refuse to give in to"
+ },
+ "aesthetic": {
+  "d": "relating to beauty or the appreciation of beauty"
+ },
+ "diplomatic": {
+  "d": "tactful and skilled in dealing with people"
+ },
+ "concord": {
+  "d": "agreement or harmony between people or groups"
+ },
+ "contend": {
+  "d": "struggle or compete; assert as a position in an argument"
+ },
+ "controversy": {
+  "d": "a prolonged public dispute or debate"
+ },
+ "suspicious": {
+  "g": "distrustful"
+ },
+ "predator": {
+  "d": "an animal or person that preys on others"
+ },
+ "articulate": {
+  "d": "express clearly and effectively in words"
+ },
+ "dazzle": {
+  "p": "v",
+  "d": "amaze or overpower with brilliance or intense light"
+ },
+ "jade": {
+  "p": "v",
+  "d": "wear out or make weary through overuse"
+ },
+ "sovereign": {
+  "g": "supreme ruler"
+ },
+ "undermine": {
+  "d": "weaken gradually or secretly"
+ },
+ "diligence": {
+  "g": "careful hard work",
+  "d": "careful and persistent effort in one's work"
+ },
+ "irrelevant": {
+  "g": "unrelated"
+ },
+ "repetitive": {
+  "d": "repeated many times; monotonous"
+ },
+ "cosmopolitan": {
+  "d": "familiar with and at ease in many countries and cultures; worldly"
+ },
+ "indulge": {
+  "g": "give in to"
+ },
+ "lavish": {
+  "d": "given or produced in great amounts; extravagant"
+ },
+ "liberate": {
+  "d": "set free"
+ },
+ "placid": {
+  "d": "calm and peaceful; not easily upset"
+ },
+ "tenacious": {
+  "d": "holding firmly; persistent and determined"
+ },
+ "archipelago": {
+  "g": "group of islands"
+ },
+ "elusive": {
+  "p": "adj",
+  "g": "hard to pin down",
+  "d": "difficult to find, catch, or describe"
+ },
+ "eradicate": {
+  "d": "destroy completely; root out"
+ },
+ "extremity": {
+  "d": "the farthest point or limit; an extreme degree"
+ },
+ "orderly": {
+  "d": "neatly and methodically arranged; well behaved"
+ },
+ "ornate": {
+  "g": "elaborately decorated",
+  "d": "highly decorated with complex patterns; elaborate"
+ },
+ "propensity": {
+  "g": "natural tendency"
+ },
+ "extravagant": {
+  "g": "wasteful",
+  "d": "spending or costing far more than is reasonable; excessive"
+ },
+ "revitalize": {
+  "g": "give new life to"
+ },
+ "consign": {
+  "d": "hand over or deliver to someone's care; commit to a place or condition"
+ },
+ "convoluted": {
+  "d": "extremely complex and difficult to follow; twisted"
+ },
+ "curative": {
+  "p": "adj",
+  "d": "able to cure; healing"
+ },
+ "divisive": {
+  "d": "causing disagreement or hostility between people"
+ },
+ "indulgent": {
+  "g": "lenient"
+ },
+ "inept": {
+  "d": "lacking skill or ability; clumsy"
+ },
+ "consecrate": {
+  "d": "declare sacred; dedicate to a holy purpose"
+ },
+ "disdain": {
+  "d": "regard with contempt; consider unworthy of oneself"
+ },
+ "elitist": {
+  "d": "believing that a select group deserves special treatment or authority; snobbish"
+ },
+ "gratuitous": {
+  "d": "uncalled for; done without good reason"
+ },
+ "recessive": {
+  "d": "tending to recede or go back; (of a gene) masked by a dominant trait"
+ },
+ "somber": {
+  "d": "dark and gloomy; grave and serious"
+ },
+ "succulent": {
+  "d": "juicy; full of fluid"
+ },
+ "demonstrative": {
+  "d": "showing feelings openly; serving to demonstrate"
+ },
+ "dilettante": {
+  "p": "n",
+  "g": "dabbler"
+ },
+ "fragility": {
+  "g": "frailty"
+ },
+ "precipitous": {
+  "d": "very steep; done hastily and without thought"
+ },
+ "tenuous": {
+  "d": "thin, weak, or flimsy; not well supported"
+ },
+ "accost": {
+  "g": "approach boldly",
+  "d": "approach and speak to someone boldly or aggressively"
+ },
+ "ascetic": {
+  "g": "self-denying person"
+ },
+ "belittle": {
+  "g": "put down"
+ },
+ "cloy": {
+  "g": "sicken with excess",
+  "d": "sicken or disgust through an excess of sweetness or pleasure"
+ },
+ "deride": {
+  "g": "mock"
+ },
+ "commendable": {
+  "g": "praiseworthy"
+ },
+ "obstinate": {
+  "d": "stubbornly refusing to change one's opinion or course of action"
+ },
+ "obtuse": {
+  "d": "slow to understand; dull"
+ },
+ "scintillate": {
+  "d": "give off sparks; sparkle with wit"
+ },
+ "stymie": {
+  "p": "v"
+ },
+ "cathartic": {
+  "d": "providing emotional release; purging"
+ },
+ "outmoded": {
+  "d": "no longer in fashion or use; outdated"
+ },
+ "vapid": {
+  "d": "offering nothing stimulating; dull and flat"
+ },
+ "intemperate": {
+  "d": "lacking self-control; excessive"
+ },
+ "lackadaisical": {
+  "g": "listless"
+ },
+ "ossify": {
+  "d": "harden into bone; become rigid and set in one's ways"
+ },
+ "redolent": {
+  "d": "strongly smelling of something; strongly suggestive of"
+ },
+ "abort": {
+  "g": "cut short",
+  "d": "end something before it is finished; give up on a half-finished effort"
+ },
+ "acute": {
+  "p": "adj"
+ },
+ "adhere": {
+  "g": "stick to"
+ },
+ "aerial": {
+  "p": "adj",
+  "g": "relating to the air",
+  "d": "existing or happening in the air"
+ },
+ "anesthesia": {
+  "p": "n"
+ },
+ "anxiety": {
+  "p": "n"
+ },
+ "appalling": {
+  "p": "adj"
+ },
+ "appropriate": {
+  "d": "take for one's own use, often without permission"
+ },
+ "ballad": {
+  "g": "narrative song",
+  "d": "a song or poem that tells a story"
+ },
+ "cherish": {
+  "g": "hold dear",
+  "d": "hold dear; care for lovingly"
+ },
+ "clergy": {
+  "p": "n"
+ },
+ "cobbler": {
+  "g": "shoemaker"
+ },
+ "collateral": {
+  "p": "adj",
+  "d": "secondary; running side by side"
+ },
+ "combustion": {
+  "g": "burning"
+ },
+ "coup": {
+  "g": "sudden takeover",
+  "d": "a sudden, brilliant, and successful act; a sudden seizure of power"
+ },
+ "criteria": {
+  "p": "n",
+  "g": "standards of judgment"
+ },
+ "curt": {
+  "g": "rudely brief"
+ },
+ "daunting": {
+  "p": "adj"
+ },
+ "discretion": {
+  "g": "good judgment",
+  "d": "the quality of being reserved in speech or action; good judgment about what to say or do"
+ },
+ "disgruntled": {
+  "p": "adj"
+ },
+ "dynamic": {
+  "p": "adj"
+ },
+ "encore": {
+  "g": "repeat performance",
+  "d": "an audience's demand for a repeat performance, or the extra performance given in response"
+ },
+ "forum": {
+  "g": "place for public discussion"
+ },
+ "hallowed": {
+  "p": "adj"
+ },
+ "hypocrisy": {
+  "p": "n",
+  "g": "false show of virtue"
+ },
+ "illicit": {
+  "p": "adj"
+ },
+ "incarnate": {
+  "p": "adj"
+ },
+ "injunction": {
+  "g": "official order",
+  "d": "an official order, especially a court order forbidding an action"
+ },
+ "liability": {
+  "g": "legal responsibility"
+ },
+ "rash": {
+  "p": "adj"
+ },
+ "reservoir": {
+  "p": "n",
+  "g": "large supply",
+  "d": "a large supply of something; a lake used to store water"
+ },
+ "sensual": {
+  "p": "adj",
+  "g": "pleasing to the senses"
+ },
+ "wrath": {
+  "p": "n"
+ },
+ "animate": {
+  "d": "bring to life; give energy and spirit to"
+ },
+ "compound": {
+  "d": "a thing composed of two or more separate elements; a mixture"
+ },
+ "consistent": {
+  "d": "unchanging over time; in agreement with something"
+ },
+ "derive": {
+  "d": "obtain from a source; originate from"
+ },
+ "proceed": {
+  "d": "go forward; continue with a course of action"
+ },
+ "transform": {
+  "p": "v",
+  "d": "change markedly in form, appearance, or nature"
+ },
+ "welfare": {
+  "d": "health, happiness, and well-being"
+ },
+ "brochure": {
+  "g": "pamphlet"
+ },
+ "concentrate": {
+  "d": "focus one's attention; gather together in one place"
+ },
+ "decline": {
+  "d": "a gradual loss of strength, number, or value"
+ },
+ "eventual": {
+  "g": "final"
+ },
+ "investigate": {
+  "d": "examine carefully to discover the facts"
+ },
+ "liberal": {
+  "p": "adj",
+  "d": "open to new ideas; favoring reform; generous"
+ },
+ "resolve": {
+  "p": "n",
+  "d": "firm determination; a decision to do something"
+ },
+ "severe": {
+  "g": "harsh"
+ },
+ "chronicle": {
+  "d": "a written record of events in the order they happened"
+ },
+ "encounter": {
+  "d": "an unexpected meeting"
+ },
+ "intermediate": {
+  "p": "adj"
+ },
+ "offset": {
+  "p": "v",
+  "d": "counterbalance; compensate for"
+ },
+ "orient": {
+  "d": "find one's position; adjust to new surroundings"
+ },
+ "somewhat": {
+  "g": "slightly"
+ },
+ "constraint": {
+  "d": "a limitation or restriction"
+ },
+ "dispatch": {
+  "g": "send off",
+  "d": "send off to a destination or for a purpose; deal with quickly"
+ },
+ "excerpt": {
+  "p": "n",
+  "d": "a short passage taken from a book, film, or piece of music"
+ },
+ "expose": {
+  "d": "make visible; reveal something hidden"
+ },
+ "globe": {
+  "g": "sphere",
+  "d": "a spherical object; the earth"
+ },
+ "pose": {
+  "d": "a particular way of standing or sitting; an attitude put on for effect"
+ },
+ "practitioner": {
+  "g": "professional"
+ },
+ "substantial": {
+  "g": "sizeable"
+ },
+ "spectrum": {
+  "d": "a wide range of related things"
+ },
+ "warrant": {
+  "g": "justify"
+ },
+ "alloy": {
+  "p": "n",
+  "g": "mixture of metals",
+  "d": "a mixture of two or more metals; something added that reduces purity"
+ },
+ "breach": {
+  "d": "a gap or break; a violation of a law, duty, or agreement"
+ },
+ "bulk": {
+  "d": "the mass or size of something; the greater part"
+ },
+ "complement": {
+  "d": "something that completes or makes perfect"
+ },
+ "franchise": {
+  "d": "the right to vote; authorization to sell a company's goods in a certain area"
+ },
+ "nevertheless": {
+  "g": "even so"
+ },
+ "offensive": {
+  "d": "causing displeasure or resentment; used for attacking"
+ },
+ "sanction": {
+  "d": "give official approval to; also, a penalty for disobeying a rule"
+ },
+ "trigger": {
+  "p": "v",
+  "d": "set off; cause something to happen"
+ },
+ "validate": {
+  "g": "confirm",
+  "d": "prove or confirm to be sound or true"
+ },
+ "aggregate": {
+  "d": "a whole formed by combining several separate elements"
+ },
+ "eclipse": {
+  "p": "v",
+  "d": "obscure or overshadow; surpass"
+ },
+ "evolve": {
+  "d": "develop gradually"
+ },
+ "hypothesis": {
+  "g": "proposed explanation"
+ },
+ "partition": {
+  "g": "dividing wall"
+ },
+ "proportion": {
+  "p": "n",
+  "g": "relative amount"
+ },
+ "rally": {
+  "g": "gather together",
+  "d": "come together for a common purpose; recover strength"
+ },
+ "synthesis": {
+  "d": "the combining of separate elements into a whole"
+ },
+ "cant": {
+  "p": "n"
+ },
+ "caption": {
+  "d": "a title or brief explanation printed with a picture"
+ },
+ "inclusive": {
+  "p": "adj"
+ },
+ "incidence": {
+  "g": "rate of occurrence"
+ },
+ "integral": {
+  "g": "essential part of"
+ },
+ "sphere": {
+  "d": "a round solid figure; an area of activity or interest"
+ },
+ "suspend": {
+  "d": "hang from above; stop temporarily"
+ },
+ "underlie": {
+  "g": "form the basis of"
+ },
+ "arbitrary": {
+  "p": "adj"
+ },
+ "distinction": {
+  "d": "a difference between things; excellence that sets someone apart"
+ },
+ "gravity": {
+  "d": "seriousness or importance; also the force that draws objects toward the earth"
+ },
+ "provincial": {
+  "g": "unsophisticated",
+  "d": "relating to the regions outside the capital; narrow-minded and unsophisticated"
+ },
+ "rant": {
+  "d": "a long, loud, angry speech"
+ },
+ "subsidiary": {
+  "p": "adj",
+  "d": "less important; serving to supplement something more important"
+ },
+ "acclaim": {
+  "d": "enthusiastic public praise"
+ },
+ "affinity": {
+  "d": "a natural liking or attraction; a close resemblance or relationship"
+ },
+ "affirm": {
+  "g": "state firmly",
+  "d": "state firmly as true; confirm"
+ },
+ "consume": {
+  "d": "use up; eat or drink"
+ },
+ "deprecate": {
+  "g": "disapprove of"
+ },
+ "immune": {
+  "d": "protected from a disease; not affected by something"
+ },
+ "sage": {
+  "g": "wise person"
+ },
+ "susceptible": {
+  "g": "easily affected"
+ },
+ "volatile": {
+  "g": "unstable"
+ },
+ "asylum": {
+  "g": "place of refuge"
+ },
+ "forthcoming": {
+  "d": "about to happen or appear; willing to give information"
+ },
+ "inherent": {
+  "g": "built-in"
+ },
+ "paramount": {
+  "g": "supreme"
+ },
+ "symmetry": {
+  "d": "balanced correspondence of parts on either side of a dividing line"
+ },
+ "converse": {
+  "d": "opposite or reverse"
+ },
+ "depress": {
+  "d": "press down; make sad and dispirited"
+ },
+ "empirical": {
+  "g": "based on observation"
+ },
+ "expedite": {
+  "p": "v"
+ },
+ "inhibit": {
+  "d": "hold back; restrain"
+ },
+ "manifest": {
+  "d": "clear and obvious to the eye or mind"
+ },
+ "paradigm": {
+  "d": "a typical example or model; a framework of ideas"
+ },
+ "coincidence": {
+  "g": "chance occurrence"
+ },
+ "conceive": {
+  "g": "form an idea of"
+ },
+ "dispose": {
+  "d": "get rid of; arrange or settle"
+ },
+ "incline": {
+  "d": "lean or slope; have a tendency toward"
+ },
+ "revoke": {
+  "d": "officially cancel; take back"
+ },
+ "secular": {
+  "d": "not religious or spiritual; worldly"
+ },
+ "strut": {
+  "p": "v"
+ },
+ "transient": {
+  "p": "adj",
+  "d": "lasting only a short time"
+ },
+ "awe": {
+  "g": "wonder"
+ },
+ "censor": {
+  "p": "v",
+  "d": "examine and suppress the objectionable parts of"
+ },
+ "ironic": {
+  "g": "sarcastic",
+  "d": "expressing the opposite of what is meant, often for humorous effect"
+ },
+ "lament": {
+  "p": "v",
+  "g": "mourn",
+  "d": "express grief or sorrow"
+ },
+ "veneer": {
+  "d": "a thin decorative covering; a superficial appearance"
+ },
+ "contingent": {
+  "p": "adj",
+  "d": "dependent on something else; possible but not certain"
+ },
+ "contradict": {
+  "g": "say the opposite of",
+  "d": "assert the opposite of a statement made by someone"
+ },
+ "deter": {
+  "d": "discourage from acting"
+ },
+ "fugitive": {
+  "p": "n",
+  "g": "runaway",
+  "d": "a person who flees, especially from the law"
+ },
+ "nurture": {
+  "p": "v"
+ },
+ "perennial": {
+  "d": "lasting a very long time; continually recurring"
+ },
+ "pore": {
+  "d": "read or study something attentively"
+ },
+ "surpass": {
+  "d": "be greater or better than"
+ },
+ "trough": {
+  "d": "a long narrow container for animals to eat from; a low point"
+ },
+ "humane": {
+  "d": "showing compassion or kindness"
+ },
+ "marshal": {
+  "d": "arrange in order; gather together"
+ },
+ "prone": {
+  "d": "lying face down; having a tendency toward"
+ },
+ "skeptical": {
+  "g": "doubting",
+  "d": "not easily convinced; having doubts"
+ },
+ "artifact": {
+  "g": "man-made object"
+ },
+ "anomaly": {
+  "g": "irregularity"
+ },
+ "outwit": {
+  "g": "exceed in cleverness"
+ },
+ "infest": {
+  "g": "overrun"
+ },
+ "stylize": {
+  "g": "make conventional",
+  "d": "represent in a conventional, non-realistic style"
+ },
+ "falsification": {
+  "g": "misrepresentation"
+ },
+ "increment": {
+  "g": "small increase"
+ },
+ "dogmatic": {
+  "g": "arrogantly certain"
+ },
+ "prepossessing": {
+  "p": "adj",
+  "g": "attractive",
+  "d": "attractive or appealing in appearance"
+ },
+ "remedial": {
+  "g": "intended to correct",
+  "p": "adj"
+ },
+ "juxtaposition": {
+  "g": "side by side placement"
+ },
+ "subpoena": {
+  "d": "a legal order requiring someone to appear in court"
+ },
+ "betray": {
+  "g": "be disloyal to"
+ },
+ "covert": {
+  "p": "adj",
+  "d": "not openly acknowledged; secret"
+ },
+ "glossy": {
+  "d": "smooth and shiny; superficially attractive"
+ },
+ "heed": {
+  "p": "v",
+  "d": "pay close attention to a warning or advice"
+ },
+ "invert": {
+  "d": "turn upside down or inside out; reverse"
+ },
+ "pastoral": {
+  "d": "relating to the countryside or country life"
+ },
+ "permeable": {
+  "g": "possible to pass through"
+ },
+ "purge": {
+  "d": "the removal of unwanted people or things"
+ },
+ "recurrent": {
+  "p": "adj",
+  "d": "occurring again and again"
+ },
+ "relic": {
+  "g": "object from the past"
+ },
+ "remnant": {
+  "g": "leftover part"
+ },
+ "renegade": {
+  "p": "n",
+  "g": "traitor",
+  "d": "a person who deserts a cause or group for another"
+ },
+ "superficial": {
+  "g": "shallow"
+ },
+ "authoritarian": {
+  "p": "adj",
+  "g": "dictatorial",
+  "d": "favoring strict obedience to authority at the expense of personal freedom"
+ },
+ "jabber": {
+  "p": "v",
+  "g": "chatter",
+  "d": "talk rapidly and unintelligibly"
+ },
+ "obsess": {
+  "d": "preoccupy the mind continually"
+ },
+ "pivot": {
+  "d": "turn or rotate on a central point"
+ },
+ "recount": {
+  "p": "v"
+ },
+ "rhetoric": {
+  "g": "persuasive speaking"
+ },
+ "subordinate": {
+  "g": "lower-ranking person"
+ },
+ "tense": {
+  "d": "make or become tight or strained"
+ },
+ "babble": {
+  "p": "v",
+  "d": "talk rapidly and foolishly"
+ },
+ "bestow": {
+  "d": "give as a gift or honor"
+ },
+ "boon": {
+  "d": "a thing that is helpful or beneficial; a blessing"
+ },
+ "bustle": {
+  "d": "busy, energetic activity"
+ },
+ "craven": {
+  "g": "cowardly"
+ },
+ "exemplify": {
+  "g": "serve as an example of",
+  "d": "be a typical example of"
+ },
+ "ferment": {
+  "d": "stir up; undergo agitation or turmoil"
+ },
+ "fluctuate": {
+  "d": "rise and fall irregularly"
+ },
+ "pique": {
+  "d": "arouse resentment or irritation; stimulate interest or curiosity"
+ },
+ "rectify": {
+  "d": "set right; correct"
+ },
+ "respiration": {
+  "g": "breathing"
+ },
+ "ascendant": {
+  "d": "rising in power or influence; dominant"
+ },
+ "curtail": {
+  "d": "cut short; reduce"
+ },
+ "dissipate": {
+  "d": "scatter or disperse; gradually disappear; squander"
+ },
+ "negate": {
+  "d": "nullify or cancel out; deny"
+ },
+ "pathological": {
+  "d": "relating to or caused by disease; compulsive"
+ },
+ "potency": {
+  "d": "power or strength; effectiveness"
+ },
+ "savory": {
+  "d": "pleasant to taste or smell, especially salty or spicy; morally acceptable"
+ },
+ "caricature": {
+  "d": "a picture or description that exaggerates someone's features for comic effect"
+ },
+ "cull": {
+  "g": "select",
+  "d": "select from a large quantity; remove the weak or unwanted"
+ },
+ "dupe": {
+  "d": "a person who is easily deceived"
+ },
+ "fawn": {
+  "p": "v",
+  "g": "flatter servilely",
+  "d": "show excessive flattery or affection to gain favor"
+ },
+ "flattery": {
+  "g": "insincere praise"
+ },
+ "libel": {
+  "d": "a published false statement that damages someone's reputation"
+ },
+ "reciprocate": {
+  "g": "give in return"
+ },
+ "rift": {
+  "d": "a crack or split; a serious break in friendly relations"
+ },
+ "shimmer": {
+  "p": "v",
+  "d": "shine with a soft, wavering light"
+ },
+ "unravel": {
+  "d": "undo twisted threads; solve or explain something complicated"
+ },
+ "allude": {
+  "g": "refer indirectly"
+ },
+ "corrosive": {
+  "d": "tending to eat away gradually; harmfully destructive"
+ },
+ "lurk": {
+  "p": "v"
+ },
+ "monumental": {
+  "d": "great in importance or size; massive"
+ },
+ "rancid": {
+  "d": "smelling or tasting unpleasant because of being stale"
+ },
+ "thwart": {
+  "p": "v"
+ },
+ "travail": {
+  "p": "n"
+ },
+ "bourgeois": {
+  "p": "adj",
+  "d": "relating to the middle class; conventional and materialistic"
+ },
+ "endemic": {
+  "p": "adj",
+  "g": "native to a region",
+  "d": "regularly found in a particular area or among a group of people"
+ },
+ "hackneyed": {
+  "p": "adj"
+ },
+ "levee": {
+  "g": "river embankment",
+  "d": "an embankment built to prevent a river from flooding"
+ },
+ "rejuvenate": {
+  "d": "make young or lively again"
+ },
+ "scamp": {
+  "d": "a mischievous person; a rascal"
+ },
+ "stigma": {
+  "d": "a mark of disgrace or shame"
+ },
+ "stint": {
+  "d": "a fixed period of work or activity"
+ },
+ "tranquil": {
+  "d": "free from disturbance; calm"
+ },
+ "abstain": {
+  "g": "refrain",
+  "d": "hold oneself back from doing something"
+ },
+ "disjoint": {
+  "d": "having no elements in common; separated"
+ },
+ "precipitate": {
+  "g": "hasten"
+ },
+ "refractory": {
+  "d": "stubborn or unmanageable; resistant to treatment"
+ },
+ "slag": {
+  "d": "waste matter separated from metal during smelting"
+ },
+ "stifle": {
+  "d": "smother or suppress; prevent from breathing freely"
+ },
+ "turmoil": {
+  "g": "confusion"
+ },
+ "affluent": {
+  "p": "adj",
+  "d": "having a great deal of money; wealthy"
+ },
+ "attenuate": {
+  "d": "make thinner or weaker"
+ },
+ "secretive": {
+  "g": "mysterious"
+ },
+ "podium": {
+  "g": "raised platform"
+ },
+ "incite": {
+  "g": "stir up"
+ },
+ "perpetuate": {
+  "g": "cause to continue"
+ },
+ "verbose": {
+  "g": "wordy"
+ },
+ "insolvent": {
+  "p": "adj",
+  "d": "unable to pay one's debts"
+ },
+ "oblivion": {
+  "g": "state of being forgotten"
+ },
+ "ramble": {
+  "p": "v"
+ },
+ "rampant": {
+  "d": "flourishing or spreading unchecked"
+ },
+ "relegate": {
+  "d": "assign to a lower position or rank"
+ },
+ "reluctance": {
+  "d": "unwillingness or hesitation"
+ },
+ "spartan": {
+  "g": "austere",
+  "d": "marked by simplicity and self-discipline; without comfort or luxury"
+ },
+ "antiseptic": {
+  "p": "adj",
+  "g": "germ-killing",
+  "d": "preventing the growth of disease-causing organisms"
+ },
+ "caustic": {
+  "p": "adj",
+  "d": "able to burn or corrode; sarcastic in a scathing way"
+ },
+ "culpable": {
+  "g": "blameworthy"
+ },
+ "derelict": {
+  "d": "abandoned and in poor condition; neglectful of duty"
+ },
+ "discord": {
+  "p": "n",
+  "d": "disagreement between people; lack of harmony"
+ },
+ "fiasco": {
+  "d": "a complete and humiliating failure"
+ },
+ "fissure": {
+  "p": "n",
+  "d": "a long narrow crack or opening"
+ },
+ "panacea": {
+  "d": "a remedy for all difficulties or diseases"
+ },
+ "smolder": {
+  "p": "v"
+ },
+ "attrition": {
+  "d": "a gradual reduction in strength or numbers through sustained pressure"
+ },
+ "buoyant": {
+  "g": "able to float"
+ },
+ "burgeon": {
+  "p": "v"
+ },
+ "candor": {
+  "d": "the quality of being open and honest"
+ },
+ "clemency": {
+  "d": "mercy; leniency in punishment"
+ },
+ "ephemeral": {
+  "g": "fleeting"
+ },
+ "gouge": {
+  "d": "scoop or dig out; overcharge"
+ },
+ "kindle": {
+  "d": "light a fire; arouse an emotion"
+ },
+ "plummet": {
+  "p": "v"
+ },
+ "acumen": {
+  "d": "the ability to make good judgments; keen insight"
+ },
+ "bungle": {
+  "g": "botch"
+ },
+ "impromptu": {
+  "d": "done without preparation"
+ },
+ "metamorphosis": {
+  "d": "a complete change of form or nature"
+ },
+ "profane": {
+  "d": "not sacred; showing disrespect for religion; vulgar"
+ },
+ "smelt": {
+  "p": "v",
+  "d": "extract metal from ore by heating and melting"
+ },
+ "viscous": {
+  "g": "thick and sticky"
+ },
+ "antecedent": {
+  "d": "a thing that comes before another; a predecessor"
+ },
+ "burnish": {
+  "p": "v"
+ },
+ "disinterest": {
+  "d": "impartiality; freedom from self-interest"
+ },
+ "quibble": {
+  "d": "a minor objection or criticism"
+ },
+ "reactionary": {
+  "p": "adj",
+  "d": "opposing political or social progress; extremely conservative"
+ },
+ "allusion": {
+  "g": "indirect reference"
+ },
+ "aloft": {
+  "p": "adv",
+  "g": "high up",
+  "d": "up in the air; overhead"
+ },
+ "bastion": {
+  "g": "stronghold",
+  "d": "a stronghold; something that defends a principle"
+ },
+ "connotation": {
+  "g": "implied meaning",
+  "d": "an idea or feeling a word suggests beyond its literal meaning"
+ },
+ "fetter": {
+  "d": "a chain for the feet; a restraint"
+ },
+ "malign": {
+  "d": "speak harmful untruths about; slander"
+ },
+ "preempt": {
+  "g": "forestall"
+ },
+ "sobriety": {
+  "d": "the state of being sober; seriousness and self-restraint"
+ },
+ "stalwart": {
+  "p": "adj",
+  "d": "loyal, reliable, and hardworking; sturdy"
+ },
+ "tiller": {
+  "d": "a lever used to steer a boat's rudder"
+ },
+ "undulate": {
+  "d": "move with a smooth wavelike motion"
+ },
+ "admonish": {
+  "d": "warn or reprimand firmly"
+ },
+ "blasphemy": {
+  "g": "sacrilege"
+ },
+ "buttress": {
+  "d": "a structure that supports a wall; something that props up or strengthens"
+ },
+ "meander": {
+  "p": "v"
+ },
+ "oscillate": {
+  "d": "swing back and forth; waver between opinions"
+ },
+ "patronize": {
+  "g": "treat condescendingly",
+  "d": "treat with an air of superiority; also, be a regular customer of"
+ },
+ "precarious": {
+  "d": "not securely held; dangerously likely to fall or collapse"
+ },
+ "prodigal": {
+  "d": "recklessly wasteful"
+ },
+ "quip": {
+  "p": "n",
+  "d": "a witty remark"
+ },
+ "concoct": {
+  "g": "cook up",
+  "d": "make by combining ingredients; invent a story or plan"
+ },
+ "encrusted": {
+  "d": "covered with a hard crust"
+ },
+ "incongruous": {
+  "g": "out of place"
+ },
+ "presumptuous": {
+  "g": "overconfident"
+ },
+ "denigrate": {
+  "d": "criticize unfairly; belittle"
+ },
+ "ductile": {
+  "d": "able to be drawn out into wire; pliable"
+ },
+ "impermeable": {
+  "g": "not allowing passage"
+ },
+ "virtuoso": {
+  "g": "highly skilled performer"
+ },
+ "savant": {
+  "d": "a learned person; a scholar"
+ },
+ "overbear": {
+  "d": "dominate; overwhelm by force or authority"
+ },
+ "precocious": {
+  "g": "advanced for one's age"
+ },
+ "stoic": {
+  "g": "unemotional"
+ },
+ "blithe": {
+  "d": "carefree and lighthearted; casually indifferent"
+ },
+ "brandish": {
+  "d": "wave something, especially a weapon, in a threatening way"
+ },
+ "congenial": {
+  "d": "pleasant and friendly; suited to one's taste"
+ },
+ "goad": {
+  "d": "provoke or urge to action"
+ },
+ "hermetic": {
+  "d": "completely sealed; isolated from outside influence"
+ },
+ "malleable": {
+  "d": "able to be shaped or molded; easily influenced"
+ },
+ "mortify": {
+  "d": "cause to feel embarrassed or humiliated"
+ },
+ "pessimism": {
+  "g": "negative outlook"
+ },
+ "repulsion": {
+  "d": "a feeling of intense distaste or disgust"
+ },
+ "sequester": {
+  "d": "isolate or hide away"
+ },
+ "acquittal": {
+  "g": "verdict of not guilty"
+ },
+ "boor": {
+  "g": "rude person"
+ },
+ "emancipate": {
+  "d": "set free, especially from legal or political restrictions"
+ },
+ "fortuitous": {
+  "d": "happening by chance; lucky"
+ },
+ "inanimate": {
+  "d": "not alive; showing no sign of life"
+ },
+ "neophyte": {
+  "d": "a beginner or novice"
+ },
+ "occlude": {
+  "d": "stop, close up, or obstruct"
+ },
+ "tarry": {
+  "d": "stay longer than intended; linger"
+ },
+ "trite": {
+  "p": "adj"
+ },
+ "audacious": {
+  "g": "daring"
+ },
+ "fester": {
+  "p": "v"
+ },
+ "obviate": {
+  "d": "remove a need or difficulty; prevent"
+ },
+ "scavenge": {
+  "g": "search through discards",
+  "d": "search for and collect anything usable from discarded waste"
+ },
+ "voracious": {
+  "g": "extremely hungry"
+ },
+ "apostate": {
+  "p": "n",
+  "g": "defector",
+  "d": "a person who renounces a religious or political belief"
+ },
+ "euphemism": {
+  "g": "milder substitute expression"
+ },
+ "gregarious": {
+  "g": "sociable",
+  "d": "fond of company; sociable"
+ },
+ "infinitesimal": {
+  "d": "extremely small"
+ },
+ "loath": {
+  "d": "reluctant; unwilling"
+ },
+ "stalemate": {
+  "d": "a situation in which no progress can be made; a deadlock"
+ },
+ "warble": {
+  "p": "v"
+ },
+ "chaff": {
+  "p": "n",
+  "g": "worthless matter",
+  "d": "husks separated from grain; worthless things"
+ },
+ "comely": {
+  "d": "pleasant to look at; attractive"
+ },
+ "equivocal": {
+  "g": "ambiguous"
+ },
+ "harangue": {
+  "d": "a lengthy and aggressive speech"
+ },
+ "idolatry": {
+  "d": "extreme admiration or worship, especially of idols"
+ },
+ "itinerant": {
+  "d": "a person who travels from place to place"
+ },
+ "luxuriant": {
+  "d": "rich and profuse in growth; lush"
+ },
+ "staid": {
+  "g": "sedate"
+ },
+ "downcast": {
+  "d": "sad and dejected; (of eyes) looking downward"
+ },
+ "impertinent": {
+  "d": "rude and disrespectful; not pertinent"
+ },
+ "stupor": {
+  "d": "a state of near-unconsciousness or insensibility"
+ },
+ "swill": {
+  "p": "v",
+  "g": "drink greedily",
+  "d": "drink greedily; also, kitchen refuse fed to pigs"
+ },
+ "facetious": {
+  "p": "adj",
+  "g": "joking",
+  "d": "treating serious issues with inappropriate humor"
+ },
+ "feint": {
+  "d": "a deceptive movement, especially in boxing or fencing"
+ },
+ "heckle": {
+  "p": "v",
+  "d": "interrupt a public speaker with derisive comments"
+ },
+ "implacable": {
+  "g": "impossible to appease"
+ },
+ "jaunty": {
+  "d": "having a lively, self-confident manner"
+ },
+ "laggard": {
+  "g": "one who lags behind"
+ },
+ "perfectionism": {
+  "g": "demand for flawlessness"
+ },
+ "restive": {
+  "g": "restless",
+  "d": "unable to keep still; resisting control"
+ },
+ "toady": {
+  "g": "suck up"
+ },
+ "defeatist": {
+  "d": "showing readiness to accept failure"
+ },
+ "deign": {
+  "g": "stoop to do"
+ },
+ "indomitable": {
+  "g": "unconquerable"
+ },
+ "begrudge": {
+  "d": "give reluctantly; resent someone's enjoyment of something"
+ },
+ "servile": {
+  "g": "slavishly submissive"
+ },
+ "truism": {
+  "g": "obvious truth"
+ },
+ "welter": {
+  "g": "confused mass"
+ },
+ "debase": {
+  "g": "lower in quality",
+  "d": "reduce in quality or value; degrade"
+ },
+ "firebrand": {
+  "d": "a person who stirs up trouble or revolt"
+ },
+ "martinet": {
+  "g": "strict disciplinarian"
+ },
+ "skulk": {
+  "p": "v"
+ },
+ "striated": {
+  "d": "marked with stripes or ridges"
+ },
+ "desultory": {
+  "g": "aimless"
+ },
+ "felicitous": {
+  "d": "well chosen or suited to the occasion; pleasing"
+ },
+ "foible": {
+  "d": "a minor weakness or eccentricity in character"
+ },
+ "impudence": {
+  "d": "rude, bold behavior"
+ },
+ "ingratiate": {
+  "g": "win favor"
+ },
+ "irksome": {
+  "d": "irritating; annoying"
+ },
+ "profligate": {
+  "d": "recklessly extravagant; shamelessly immoral"
+ },
+ "reprobate": {
+  "p": "n",
+  "d": "an unprincipled, wicked person"
+ },
+ "disabuse": {
+  "g": "free from error"
+ },
+ "inchoate": {
+  "p": "adj"
+ },
+ "portly": {
+  "d": "somewhat fat; stout"
+ },
+ "stolid": {
+  "g": "showing little emotion"
+ },
+ "effervescence": {
+  "d": "bubbling; lively enthusiasm"
+ },
+ "inopportune": {
+  "g": "badly timed",
+  "d": "occurring at an inconvenient time"
+ },
+ "soporific": {
+  "p": "adj",
+  "d": "tending to induce sleep"
+ },
+ "spendthrift": {
+  "p": "n",
+  "g": "wasteful spender"
+ },
+ "stodgy": {
+  "d": "dull and old-fashioned; heavy and hard to digest"
+ },
+ "abstemious": {
+  "g": "self-restrained"
+ },
+ "disinclination": {
+  "d": "a reluctance or unwillingness"
+ },
+ "grandiloquent": {
+  "g": "pompous in speech"
+ },
+ "lassitude": {
+  "d": "a state of physical or mental weariness"
+ },
+ "lilliputian": {
+  "p": "adj",
+  "d": "extremely small"
+ },
+ "nonentity": {
+  "d": "an unimportant person or thing"
+ },
+ "obtrude": {
+  "d": "impose oneself or one's ideas on others; stick out"
+ },
+ "arbitration": {
+  "g": "settlement by a third party"
+ },
+ "caucus": {
+  "g": "party meeting"
+ },
+ "condolence": {
+  "g": "expression of sympathy"
+ },
+ "elated": {
+  "p": "adj"
+ },
+ "pungent": {
+  "g": "sharp-smelling",
+  "d": "having a sharp, strong taste or smell; biting"
+ },
+ "renown": {
+  "p": "n",
+  "g": "fame"
+ },
+ "seminal": {
+  "p": "adj",
+  "g": "highly influential",
+  "d": "strongly influencing later developments; original"
+ },
+ "bureaucracy": {
+  "d": "a system of government administration with complex rules and procedures"
+ },
+ "abstinence": {
+  "g": "self-denial"
+ },
+ "agitation": {
+  "g": "anxious disturbance"
+ },
+ "anoint": {
+  "d": "smear with oil as part of a ceremony; choose for a role"
+ },
+ "antic": {
+  "g": "playful prank"
+ },
+ "arroyo": {
+  "d": "a steep-sided gully cut by running water, usually dry"
+ },
+ "assertive": {
+  "g": "self-assured"
+ },
+ "assimilate": {
+  "d": "absorb and integrate; take in fully"
+ },
+ "atrocity": {
+  "g": "act of extreme cruelty"
+ },
+ "attentive": {
+  "p": "adj",
+  "g": "paying attention"
+ },
+ "auspice": {
+  "g": "favorable omen"
+ },
+ "azure": {
+  "d": "bright blue like a clear sky"
+ },
+ "backlash": {
+  "d": "a strong negative reaction to a development"
+ },
+ "bane": {
+  "g": "cause of ruin"
+ },
+ "barren": {
+  "p": "adj",
+  "g": "infertile",
+  "d": "unable to produce offspring or crops; empty and bleak"
+ },
+ "barter": {
+  "g": "trade goods"
+ },
+ "bask": {
+  "g": "lie in warmth",
+  "d": "lie exposed to warmth; take great pleasure in something"
+ },
+ "bode": {
+  "d": "be an omen of"
+ },
+ "bonanza": {
+  "d": "a source of sudden wealth or luck"
+ },
+ "boomerang": {
+  "d": "a plan or action that recoils on its originator"
+ },
+ "bromide": {
+  "d": "a trite, commonplace remark"
+ },
+ "byzantine": {
+  "p": "adj",
+  "d": "excessively complicated and intricate"
+ },
+ "cadence": {
+  "d": "a rhythmic flow of sounds; the rise and fall of the voice"
+ },
+ "categorical": {
+  "d": "unambiguously explicit and direct; absolute"
+ },
+ "chisel": {
+  "g": "cutting tool"
+ },
+ "circumvent": {
+  "d": "find a way around; evade"
+ },
+ "citadel": {
+  "g": "fortress"
+ },
+ "coerce": {
+  "d": "force to act by threats or pressure"
+ },
+ "combatant": {
+  "d": "a person engaged in fighting"
+ },
+ "combustible": {
+  "p": "adj",
+  "d": "able to catch fire and burn easily"
+ },
+ "commonplace": {
+  "p": "adj",
+  "d": "ordinary; not unusual"
+ },
+ "concomitant": {
+  "d": "naturally accompanying or associated"
+ },
+ "confiscate": {
+  "g": "seize by authority"
+ },
+ "crux": {
+  "d": "the decisive or most important point"
+ },
+ "cubicle": {
+  "d": "a small partitioned space in a large room"
+ },
+ "cunning": {
+  "d": "skilled in deception; crafty"
+ },
+ "dampen": {
+  "d": "make slightly wet; lessen or discourage"
+ },
+ "deceit": {
+  "d": "the act of deceiving; dishonesty"
+ },
+ "decoy": {
+  "d": "something used to lure or trap"
+ },
+ "deflect": {
+  "d": "cause to change direction; turn aside"
+ },
+ "delimit": {
+  "d": "set the limits or boundaries of"
+ },
+ "devour": {
+  "d": "eat hungrily or quickly; consume destructively"
+ },
+ "discontent": {
+  "d": "dissatisfied; not content"
+ },
+ "distrust": {
+  "p": "v",
+  "d": "regard with suspicion; have no confidence in"
+ },
+ "dole": {
+  "d": "give out in small portions"
+ },
+ "drench": {
+  "p": "v",
+  "d": "wet thoroughly; soak"
+ },
+ "drone": {
+  "d": "a continuous low humming sound; also, a male bee"
+ },
+ "elixir": {
+  "d": "a magical or medicinal potion; a cure-all"
+ },
+ "engross": {
+  "d": "absorb all the attention of"
+ },
+ "escalation": {
+  "g": "rapid increase",
+  "d": "a rapid increase; an intensification"
+ },
+ "ethos": {
+  "g": "characteristic spirit"
+ },
+ "exhibitionist": {
+  "d": "a person who behaves in a way designed to attract attention"
+ },
+ "expatriate": {
+  "d": "a person living outside their native country"
+ },
+ "facade": {
+  "d": "the front of a building; a deceptive outward appearance"
+ },
+ "famine": {
+  "d": "an extreme scarcity of food"
+ },
+ "felicity": {
+  "d": "intense happiness; a pleasing and appropriate manner"
+ },
+ "feud": {
+  "p": "n",
+  "d": "a prolonged bitter quarrel"
+ },
+ "flounder": {
+  "d": "struggle clumsily; be in difficulty"
+ },
+ "fluke": {
+  "g": "lucky accident"
+ },
+ "fodder": {
+  "p": "n",
+  "d": "food for livestock; raw material for a purpose"
+ },
+ "fray": {
+  "d": "a fight or heated dispute"
+ },
+ "fresco": {
+  "d": "a painting done on wet plaster"
+ },
+ "frugal": {
+  "g": "thrifty"
+ },
+ "garnish": {
+  "d": "decorate food; also, seize wages by court order"
+ },
+ "gentry": {
+  "d": "people of good social position, just below the nobility"
+ },
+ "glacial": {
+  "d": "icy cold; extremely slow; relating to glaciers"
+ },
+ "grapple": {
+  "d": "struggle or wrestle with"
+ },
+ "groundbreaking": {
+  "p": "adj",
+  "d": "innovative; introducing new ideas"
+ },
+ "grouse": {
+  "p": "v",
+  "g": "grumble",
+  "d": "complain pettily"
+ },
+ "harmonious": {
+  "d": "free from disagreement; forming a pleasing whole"
+ },
+ "hysterical": {
+  "d": "affected by uncontrolled extreme emotion"
+ },
+ "imaginable": {
+  "g": "possible to imagine"
+ },
+ "impeach": {
+  "d": "charge a public official with misconduct; challenge the honesty of"
+ },
+ "infiltrate": {
+  "d": "enter or gain access secretly and gradually"
+ },
+ "infuse": {
+  "d": "fill with a quality; steep in liquid to extract flavor"
+ },
+ "insecurity": {
+  "d": "uncertainty or anxiety about oneself; lack of safety"
+ },
+ "insensitive": {
+  "g": "lacking sensitivity"
+ },
+ "intimidation": {
+  "g": "scare tactics"
+ },
+ "kindred": {
+  "d": "one's family and relations"
+ },
+ "marquee": {
+  "d": "a large tent; a projecting canopy or sign over an entrance"
+ },
+ "melancholy": {
+  "d": "sad, gloomy, or depressed"
+ },
+ "mellow": {
+  "g": "soften",
+  "d": "make or become soft, gentle, or relaxed"
+ },
+ "mince": {
+  "g": "cut into small pieces",
+  "d": "cut into very small pieces; walk with short quick steps; soften one's words"
+ },
+ "molten": {
+  "d": "liquefied by heat"
+ },
+ "nemesis": {
+  "d": "a long-standing rival; an inescapable agent of downfall"
+ },
+ "neutralize": {
+  "d": "make ineffective by counterbalancing"
+ },
+ "nudge": {
+  "d": "a light push with the elbow"
+ },
+ "officiate": {
+  "g": "preside at a ceremony"
+ },
+ "ooze": {
+  "g": "seep out slowly"
+ },
+ "parry": {
+  "p": "v",
+  "d": "ward off a blow; evade a question"
+ },
+ "patriarch": {
+  "d": "the male head of a family or tribe"
+ },
+ "phenomenal": {
+  "d": "remarkable; extraordinary"
+ },
+ "plunder": {
+  "d": "steal goods by force, especially in war"
+ },
+ "poignant": {
+  "d": "evoking a keen sense of sadness or regret"
+ },
+ "equinox": {
+  "g": "time of equal day and night"
+ },
+ "potable": {
+  "p": "adj",
+  "d": "safe to drink"
+ },
+ "precept": {
+  "g": "rule of conduct"
+ },
+ "predatory": {
+  "p": "adj",
+  "g": "preying on others"
+ },
+ "profess": {
+  "d": "declare openly; claim, often falsely"
+ },
+ "protagonist": {
+  "d": "the main character in a story or play"
+ },
+ "quirk": {
+  "d": "an odd habit or peculiarity"
+ },
+ "quiver": {
+  "p": "v",
+  "d": "tremble or shake slightly"
+ },
+ "ravage": {
+  "d": "cause severe damage to; devastate"
+ },
+ "rehabilitate": {
+  "g": "restore"
+ },
+ "remission": {
+  "d": "a temporary lessening of a disease; the cancellation of a debt or penalty"
+ },
+ "repute": {
+  "p": "n",
+  "g": "reputation",
+  "d": "the opinion generally held of someone or something"
+ },
+ "resilience": {
+  "d": "the ability to recover quickly from difficulties"
+ },
+ "respite": {
+  "g": "short break"
+ },
+ "ridicule": {
+  "p": "v",
+  "d": "make fun of; mock"
+ },
+ "scavenger": {
+  "d": "an animal that feeds on dead or decaying matter"
+ },
+ "scour": {
+  "p": "v",
+  "d": "clean by rubbing hard; search thoroughly"
+ },
+ "segregate": {
+  "g": "set apart",
+  "d": "set apart from the rest; separate by race or class"
+ },
+ "shroud": {
+  "d": "a cloth for wrapping a corpse; something that conceals"
+ },
+ "shun": {
+  "g": "avoid deliberately"
+ },
+ "slander": {
+  "g": "defame"
+ },
+ "smirk": {
+  "d": "a smug or conceited smile"
+ },
+ "sophistication": {
+  "g": "worldly refinement",
+  "d": "the quality of being worldly, refined, and experienced"
+ },
+ "spar": {
+  "p": "v",
+  "d": "make the motions of boxing; argue or dispute"
+ },
+ "speculative": {
+  "p": "adj",
+  "g": "based on guesswork",
+  "d": "based on conjecture rather than knowledge; involving financial risk"
+ },
+ "succumb": {
+  "d": "give way to superior force; yield; die"
+ },
+ "suture": {
+  "d": "a stitch used to close a wound"
+ },
+ "tangent": {
+  "d": "a digression; a line touching a curve at a single point"
+ },
+ "taunt": {
+  "p": "v"
+ },
+ "temperate": {
+  "d": "mild; moderate; showing self-restraint"
+ },
+ "throwback": {
+  "g": "reversion to an earlier type"
+ },
+ "tonic": {
+  "p": "n",
+  "d": "a medicine that invigorates; something that restores"
+ },
+ "torment": {
+  "g": "torture",
+  "d": "severe physical or mental suffering"
+ },
+ "tribulation": {
+  "g": "great trouble"
+ },
+ "unavoidable": {
+  "d": "impossible to avoid or prevent"
+ },
+ "unqualified": {
+  "d": "lacking the necessary qualifications; also, not limited or restricted"
+ },
+ "vacate": {
+  "d": "leave empty; give up occupancy of"
+ },
+ "verve": {
+  "g": "vigor",
+  "d": "vigor and spirit"
+ },
+ "waggish": {
+  "p": "adj",
+  "g": "playfully humorous"
+ },
+ "wean": {
+  "p": "v"
+ },
+ "wilt": {
+  "d": "become limp; droop"
+ },
+ "yoke": {
+  "d": "a wooden crosspiece fastened over the necks of two animals; a burden or bondage"
+ },
+ "abysmal": {
+  "d": "extremely bad; bottomless"
+ },
+ "acuity": {
+  "g": "sharpness of perception"
+ },
+ "agnostic": {
+  "g": "doubter of god's existence",
+  "d": "a person who believes nothing can be known about the existence of God"
+ },
+ "amalgam": {
+  "d": "a mixture or blend; an alloy of mercury"
+ },
+ "annihilate": {
+  "d": "destroy utterly"
+ },
+ "apropos": {
+  "g": "relevant",
+  "d": "appropriate to the situation; with reference to"
+ },
+ "backfire": {
+  "p": "v",
+  "g": "rebound on",
+  "d": "have the opposite effect to the one intended"
+ },
+ "barrage": {
+  "d": "a concentrated outpouring of artillery fire, questions, or complaints"
+ },
+ "brawl": {
+  "d": "a rough, noisy fight"
+ },
+ "bullion": {
+  "g": "gold or silver bars"
+ },
+ "bygone": {
+  "d": "belonging to an earlier time"
+ },
+ "cabal": {
+  "g": "secret plotting group",
+  "d": "a secret political clique or faction"
+ },
+ "canter": {
+  "g": "easy gallop",
+  "d": "a horse's gait between a trot and a gallop"
+ },
+ "canto": {
+  "d": "a major division of a long poem"
+ },
+ "cask": {
+  "d": "a large barrel for storing liquids"
+ },
+ "catapult": {
+  "p": "v",
+  "d": "hurl or launch forcefully"
+ },
+ "chaperon": {
+  "d": "an older person who accompanies and supervises young people"
+ },
+ "cleft": {
+  "d": "split or divided"
+ },
+ "clout": {
+  "p": "n",
+  "d": "influence or power; a heavy blow"
+ },
+ "coincidental": {
+  "d": "happening by chance; occurring together"
+ },
+ "consummate": {
+  "d": "complete or make perfect"
+ },
+ "cordon": {
+  "g": "close off",
+  "d": "close off an area with a line of guards or barriers"
+ },
+ "credence": {
+  "g": "belief"
+ },
+ "cynicism": {
+  "g": "distrust of motives"
+ },
+ "dabble": {
+  "d": "take part in an activity in a casual or superficial way"
+ },
+ "dainty": {
+  "d": "delicately small and pretty"
+ },
+ "decimate": {
+  "d": "kill or destroy a large proportion of"
+ },
+ "defile": {
+  "d": "make dirty or impure; desecrate"
+ },
+ "depreciate": {
+  "d": "decrease in value; belittle"
+ },
+ "derogatory": {
+  "g": "belittling"
+ },
+ "desist": {
+  "d": "stop doing something; cease"
+ },
+ "desolate": {
+  "g": "deserted and bleak",
+  "d": "empty and bleak; feeling lonely and wretched"
+ },
+ "devout": {
+  "g": "deeply religious"
+ },
+ "discontinuous": {
+  "d": "having gaps or breaks; not continuous"
+ },
+ "distillation": {
+  "g": "purified essence"
+ },
+ "dither": {
+  "p": "v",
+  "g": "waver indecisively"
+ },
+ "drivel": {
+  "d": "silly nonsense"
+ },
+ "earthy": {
+  "d": "coarse and unrefined; down-to-earth"
+ },
+ "engulf": {
+  "d": "swallow up or completely surround"
+ },
+ "ewe": {
+  "d": "a female sheep"
+ },
+ "existential": {
+  "g": "concerning existence",
+  "d": "relating to existence, especially human existence"
+ },
+ "fend": {
+  "d": "ward off; manage without help"
+ },
+ "fleck": {
+  "d": "a very small patch of color or light"
+ },
+ "gamut": {
+  "d": "the complete range or scope of something"
+ },
+ "girth": {
+  "d": "the measurement around something, especially a person's waist"
+ },
+ "glut": {
+  "g": "excess supply",
+  "d": "an excessively abundant supply"
+ },
+ "harbinger": {
+  "d": "a person or thing that signals the approach of something"
+ },
+ "hospitable": {
+  "d": "friendly and welcoming to guests"
+ },
+ "huddle": {
+  "p": "v"
+ },
+ "idealistic": {
+  "d": "guided by ideals rather than practical considerations"
+ },
+ "immunize": {
+  "d": "make immune to infection, especially by vaccination"
+ },
+ "inflame": {
+  "d": "provoke strong feeling; make a situation worse"
+ },
+ "insular": {
+  "d": "narrow-minded; isolated; relating to an island"
+ },
+ "interdependence": {
+  "g": "mutual reliance"
+ },
+ "interrogate": {
+  "d": "question aggressively and formally"
+ },
+ "intertwine": {
+  "p": "v"
+ },
+ "invigorate": {
+  "d": "give strength or energy to"
+ },
+ "judgmental": {
+  "d": "overly critical of others"
+ },
+ "knack": {
+  "g": "special skill"
+ },
+ "libertine": {
+  "g": "dissolute person"
+ },
+ "maul": {
+  "d": "attack and injure severely"
+ },
+ "melodrama": {
+  "d": "a sensational drama with exaggerated emotions"
+ },
+ "microcosm": {
+  "g": "world in miniature"
+ },
+ "minuscule": {
+  "p": "adj",
+  "d": "extremely small"
+ },
+ "mismanagement": {
+  "g": "careless management"
+ },
+ "mistrust": {
+  "d": "lack of trust; suspicion"
+ },
+ "molt": {
+  "p": "v"
+ },
+ "monstrous": {
+  "d": "extremely large; shockingly wrong or evil"
+ },
+ "mottle": {
+  "p": "v",
+  "d": "mark with spots or patches of color"
+ },
+ "mutilate": {
+  "g": "disfigure"
+ },
+ "pall": {
+  "g": "become tiresome"
+ },
+ "pander": {
+  "d": "gratify or indulge an immoral or distasteful desire"
+ },
+ "parochial": {
+  "d": "having a narrow outlook; relating to a parish"
+ },
+ "pelt": {
+  "p": "v",
+  "d": "strike repeatedly with missiles; also, an animal's skin"
+ },
+ "perceptive": {
+  "d": "having keen insight and understanding"
+ },
+ "permissive": {
+  "d": "allowing great freedom; tolerant"
+ },
+ "pert": {
+  "d": "boldly lively; saucy"
+ },
+ "pillage": {
+  "p": "v"
+ },
+ "posit": {
+  "d": "put forward as a basis of argument; assume"
+ },
+ "prim": {
+  "d": "stiffly formal and respectable"
+ },
+ "prostrate": {
+  "p": "adj",
+  "g": "lying flat",
+  "d": "lying stretched out on the ground, face down; overcome"
+ },
+ "rabid": {
+  "d": "having extreme, fanatical opinions; affected with rabies"
+ },
+ "reek": {
+  "d": "give off a strong unpleasant smell"
+ },
+ "regress": {
+  "d": "return to an earlier or less advanced state"
+ },
+ "retort": {
+  "p": "n",
+  "d": "a sharp, witty, or angry reply"
+ },
+ "retrograde": {
+  "d": "moving backward; reverting to an earlier, worse state"
+ },
+ "rife": {
+  "g": "widespread"
+ },
+ "salvo": {
+  "g": "simultaneous discharge"
+ },
+ "scoff": {
+  "p": "v",
+  "g": "jeer",
+  "d": "speak about something in a scornfully mocking way"
+ },
+ "scourge": {
+  "d": "a cause of great suffering; a whip"
+ },
+ "scurry": {
+  "p": "v"
+ },
+ "seethe": {
+  "d": "be filled with intense but unexpressed anger; boil"
+ },
+ "simian": {
+  "p": "adj",
+  "d": "relating to or resembling apes or monkeys"
+ },
+ "slur": {
+  "d": "an insulting remark; an indistinct pronunciation"
+ },
+ "snicker": {
+  "p": "v",
+  "d": "give a half-suppressed, scornful laugh"
+ },
+ "sojourn": {
+  "g": "temporary stay"
+ },
+ "spangle": {
+  "p": "v",
+  "d": "glitter with small sparkling objects"
+ },
+ "strew": {
+  "d": "scatter untidily over a surface"
+ },
+ "suffrage": {
+  "d": "the right to vote"
+ },
+ "sully": {
+  "d": "damage the purity or integrity of; soil"
+ },
+ "sultry": {
+  "d": "hot and humid; passionate or sensual"
+ },
+ "tantalize": {
+  "g": "tease",
+  "d": "torment with the sight of something desired but out of reach"
+ },
+ "treacherous": {
+  "d": "guilty of betrayal; dangerously unreliable"
+ },
+ "trinket": {
+  "g": "small ornament"
+ },
+ "trove": {
+  "g": "valuable collection"
+ },
+ "undercut": {
+  "d": "weaken; sell cheaper than a competitor"
+ },
+ "upbringing": {
+  "d": "the way a child is raised and educated"
+ },
+ "untested": {
+  "g": "untried"
+ },
+ "veritable": {
+  "d": "being truly so; genuine"
+ },
+ "vernacular": {
+  "d": "the everyday language of ordinary people in a region"
+ },
+ "visceral": {
+  "d": "relating to deep inward feelings rather than intellect"
+ },
+ "wanton": {
+  "d": "deliberate and unprovoked; sexually unrestrained; reckless"
+ },
+ "waver": {
+  "p": "v",
+  "d": "be undecided; become unsteady"
+ },
+ "zany": {
+  "p": "adj",
+  "d": "amusingly unconventional and idiosyncratic"
+ },
+ "academician": {
+  "g": "member of an academy"
+ },
+ "anathema": {
+  "g": "something detested",
+  "d": "something or someone intensely disliked; a curse"
+ },
+ "apprehensive": {
+  "d": "anxious or fearful that something bad will happen"
+ },
+ "approachable": {
+  "d": "friendly and easy to talk to"
+ },
+ "arbitrate": {
+  "g": "settle a dispute"
+ },
+ "asunder": {
+  "p": "adv"
+ },
+ "autocratic": {
+  "g": "domineering"
+ },
+ "balmy": {
+  "g": "mild and pleasant",
+  "d": "(of weather) pleasantly warm"
+ },
+ "bandy": {
+  "p": "v",
+  "d": "pass back and forth; discuss casually"
+ },
+ "bauble": {
+  "d": "a small, showy trinket of little value"
+ },
+ "berserk": {
+  "d": "out of control with anger or excitement; wild"
+ },
+ "boisterous": {
+  "g": "noisily energetic"
+ },
+ "bulwark": {
+  "g": "defensive wall",
+  "d": "a defensive wall; a person or thing that acts as a defense"
+ },
+ "burlesque": {
+  "g": "mocking imitation",
+  "d": "a comic, exaggerated imitation; a variety show"
+ },
+ "circumstantial": {
+  "d": "based on inference rather than direct evidence; incidental"
+ },
+ "cistern": {
+  "d": "a tank for storing water"
+ },
+ "clapper": {
+  "g": "bell tongue",
+  "d": "the tongue of a bell"
+ },
+ "conscript": {
+  "p": "v"
+ },
+ "counterbalance": {
+  "p": "v"
+ },
+ "cower": {
+  "p": "v",
+  "g": "cringe in fear"
+ },
+ "cursive": {
+  "g": "flowing",
+  "d": "written with the letters joined; flowing"
+ },
+ "dapple": {
+  "p": "v"
+ },
+ "detractor": {
+  "g": "critic who belittles"
+ },
+ "dingy": {
+  "g": "dirty and dull"
+ },
+ "discursive": {
+  "g": "rambling",
+  "d": "moving from topic to topic; rambling"
+ },
+ "dogged": {
+  "d": "having or showing tenacity and grim persistence"
+ },
+ "dote": {
+  "d": "be extremely and uncritically fond of"
+ },
+ "douse": {
+  "d": "drench with liquid; extinguish"
+ },
+ "dramatize": {
+  "g": "exaggerate",
+  "d": "present as more exciting or serious than it really is"
+ },
+ "egalitarian": {
+  "p": "adj",
+  "g": "believing in equality",
+  "d": "believing that all people are equal and deserve equal rights"
+ },
+ "epithet": {
+  "g": "descriptive nickname",
+  "d": "a descriptive word or phrase; an abusive term"
+ },
+ "expropriation": {
+  "g": "seizure of property"
+ },
+ "extort": {
+  "g": "obtain by force"
+ },
+ "extravagance": {
+  "d": "excessive spending; lack of restraint"
+ },
+ "extrovert": {
+  "p": "n",
+  "d": "an outgoing, socially confident person"
+ },
+ "fallible": {
+  "g": "capable of error"
+ },
+ "fecundity": {
+  "d": "fertility; productiveness"
+ },
+ "figment": {
+  "g": "imaginary thing"
+ },
+ "filial": {
+  "g": "relating to a son or daughter",
+  "d": "due from or befitting a son or daughter"
+ },
+ "flamboyant": {
+  "g": "showy",
+  "d": "attracting attention through exuberance or style"
+ },
+ "flit": {
+  "g": "dart about"
+ },
+ "flotilla": {
+  "d": "a small fleet of ships or boats"
+ },
+ "frigid": {
+  "d": "very cold; stiff and unfriendly"
+ },
+ "furor": {
+  "d": "an outbreak of public anger or excitement"
+ },
+ "gallantry": {
+  "d": "courageous behavior; polite attention to women"
+ },
+ "gash": {
+  "d": "a long deep cut"
+ },
+ "gibe": {
+  "d": "make insulting or mocking remarks"
+ },
+ "gloat": {
+  "p": "v",
+  "d": "dwell on one's own success with smug satisfaction"
+ },
+ "grimace": {
+  "g": "twisted facial expression",
+  "d": "a twisted facial expression of pain or disgust"
+ },
+ "headlong": {
+  "g": "rashly headfirst",
+  "d": "with the head foremost; recklessly hasty"
+ },
+ "incriminate": {
+  "g": "make appear guilty"
+ },
+ "inescapable": {
+  "d": "unable to be avoided or denied"
+ },
+ "infirm": {
+  "g": "feeble"
+ },
+ "impenetrable": {
+  "g": "impossible to pass through"
+ },
+ "insistent": {
+  "d": "demanding attention; persistent"
+ },
+ "jaunt": {
+  "p": "n",
+  "d": "a short trip for pleasure"
+ },
+ "jeer": {
+  "p": "v",
+  "d": "make rude and mocking remarks"
+ },
+ "leeway": {
+  "g": "freedom to act",
+  "d": "the amount of freedom to move or act that is available"
+ },
+ "lighthearted": {
+  "g": "carefree"
+ },
+ "livid": {
+  "d": "furiously angry; bluish-gray in color"
+ },
+ "loner": {
+  "g": "person who avoids others"
+ },
+ "lurid": {
+  "p": "adj",
+  "g": "sensational",
+  "d": "vivid in shocking detail; glaringly bright"
+ },
+ "nuptial": {
+  "p": "adj",
+  "g": "relating to marriage",
+  "d": "relating to marriage or weddings"
+ },
+ "patrician": {
+  "d": "belonging to the aristocracy; refined"
+ },
+ "pestilence": {
+  "d": "a deadly epidemic disease"
+ },
+ "polemic": {
+  "p": "n",
+  "g": "strong verbal attack",
+  "d": "a strong verbal or written attack on someone or something"
+ },
+ "profiteer": {
+  "p": "n",
+  "d": "a person who makes excessive profits, especially illegally or in wartime"
+ },
+ "recast": {
+  "p": "v"
+ },
+ "rehash": {
+  "p": "v",
+  "d": "reuse old ideas without significant change"
+ },
+ "replete": {
+  "p": "adj",
+  "d": "filled or well-supplied with something"
+ },
+ "revisionist": {
+  "g": "one who revises accepted views",
+  "d": "a person who advocates revising an accepted view or theory"
+ },
+ "sanguine": {
+  "p": "adj",
+  "g": "optimistic",
+  "d": "cheerfully optimistic; blood-red"
+ },
+ "scald": {
+  "p": "v",
+  "d": "burn with hot liquid or steam"
+ },
+ "scruple": {
+  "d": "a moral hesitation or doubt"
+ },
+ "scuttle": {
+  "p": "v",
+  "d": "run hurriedly with short steps; deliberately sink a ship"
+ },
+ "seedy": {
+  "p": "adj",
+  "d": "shabby and disreputable"
+ },
+ "shoddy": {
+  "d": "badly made or done; of poor quality"
+ },
+ "singe": {
+  "p": "v"
+ },
+ "spate": {
+  "g": "sudden outpouring"
+ },
+ "stasis": {
+  "d": "a period of inactivity or equilibrium"
+ },
+ "stigmatize": {
+  "g": "brand as disgraceful"
+ },
+ "stricture": {
+  "d": "a restriction; a severe criticism"
+ },
+ "swagger": {
+  "p": "v"
+ },
+ "symbiotic": {
+  "d": "involving a close association between two organisms, typically to the advantage of both"
+ },
+ "titular": {
+  "d": "holding a title without real power; in name only"
+ },
+ "vaporize": {
+  "d": "convert into vapor; destroy completely"
+ },
+ "variegate": {
+  "g": "mark with different colors"
+ },
+ "whelp": {
+  "d": "a puppy or cub"
+ },
+ "wrangle": {
+  "d": "a long, complicated dispute or argument"
+ },
+ "writhe": {
+  "p": "v"
+ },
+ "yore": {
+  "p": "n"
+ },
+ "absolutist": {
+  "d": "favoring absolute rule; uncompromising"
+ },
+ "acrid": {
+  "d": "unpleasantly bitter or pungent"
+ },
+ "aggrandize": {
+  "g": "increase the power of",
+  "d": "increase the power, status, or wealth of"
+ },
+ "bilk": {
+  "p": "v"
+ },
+ "bluster": {
+  "g": "loud empty talk",
+  "d": "loud, aggressive, or boastful talk"
+ },
+ "brawn": {
+  "d": "physical strength"
+ },
+ "careen": {
+  "d": "move swiftly and unsteadily; tilt"
+ },
+ "celibate": {
+  "p": "adj",
+  "g": "abstaining from sex",
+  "d": "abstaining from marriage and sexual relations"
+ },
+ "cession": {
+  "g": "giving up",
+  "d": "the formal giving up of rights or territory"
+ },
+ "chasten": {
+  "g": "humble by discipline",
+  "d": "have a restraining or humbling effect on"
+ },
+ "chortle": {
+  "p": "v"
+ },
+ "cognizance": {
+  "d": "knowledge or awareness"
+ },
+ "conformist": {
+  "g": "one who follows convention"
+ },
+ "daub": {
+  "p": "v",
+  "d": "coat or smear carelessly"
+ },
+ "dint": {
+  "g": "force",
+  "d": "force or effort, as in 'by dint of hard work'"
+ },
+ "dowdy": {
+  "d": "unfashionable and dull in appearance"
+ },
+ "egocentric": {
+  "p": "adj",
+  "d": "thinking only of oneself"
+ },
+ "embezzle": {
+  "g": "steal entrusted funds"
+ },
+ "florid": {
+  "g": "flowery",
+  "d": "elaborately ornate; having a red complexion"
+ },
+ "flotsam": {
+  "p": "n",
+  "g": "floating wreckage"
+ },
+ "forbear": {
+  "p": "v"
+ },
+ "gnarl": {
+  "d": "a knotty twisted lump on a tree"
+ },
+ "grovel": {
+  "d": "behave in an excessively servile way"
+ },
+ "guffaw": {
+  "p": "v"
+ },
+ "hieroglyph": {
+  "d": "a picture or symbol used in ancient Egyptian writing"
+ },
+ "iconoclast": {
+  "g": "attacker of cherished beliefs",
+  "d": "a person who attacks cherished beliefs or institutions"
+ },
+ "inattention": {
+  "p": "n",
+  "g": "lack of attention"
+ },
+ "insufferable": {
+  "d": "intolerable; unbearably arrogant"
+ },
+ "labyrinthine": {
+  "d": "like a labyrinth; intricate and confusing"
+ },
+ "largess": {
+  "g": "generous giving"
+ },
+ "limber": {
+  "d": "supple; flexible"
+ },
+ "loll": {
+  "p": "v"
+ },
+ "nonconformity": {
+  "g": "refusal to conform",
+  "d": "failure or refusal to conform to prevailing rules or practices"
+ },
+ "postmodernist": {
+  "g": "reacting against modernism",
+  "d": "relating to postmodernism, a late-20th-century movement reacting against modernism"
+ },
+ "precis": {
+  "d": "a summary or abstract of a text"
+ },
+ "preen": {
+  "g": "groom oneself proudly",
+  "d": "tidy one's feathers or appearance; congratulate oneself"
+ },
+ "propagandist": {
+  "g": "spreader of propaganda"
+ },
+ "raiment": {
+  "d": "clothing"
+ },
+ "rapt": {
+  "d": "completely fascinated or absorbed"
+ },
+ "recrimination": {
+  "g": "counter-accusation"
+ },
+ "renege": {
+  "p": "v"
+ },
+ "retrench": {
+  "d": "reduce costs or spending; economize"
+ },
+ "ruminate": {
+  "d": "think deeply about something; chew the cud"
+ },
+ "scurvy": {
+  "d": "worthless or contemptible"
+ },
+ "skimp": {
+  "g": "be sparing",
+  "d": "spend or use less than is needed"
+ },
+ "stickler": {
+  "g": "insister on precision"
+ },
+ "stupefy": {
+  "d": "make unable to think clearly; astonish"
+ },
+ "succor": {
+  "g": "aid in distress"
+ },
+ "temperamental": {
+  "d": "liable to unreasonable changes of mood"
+ },
+ "tussle": {
+  "d": "a vigorous struggle or scuffle"
+ },
+ "vacuous": {
+  "d": "having or showing a lack of thought or intelligence; empty"
+ },
+ "askance": {
+  "p": "adv",
+  "g": "with suspicion"
+ },
+ "aureole": {
+  "g": "halo",
+  "d": "a circle of light around the head of a holy figure; a halo"
+ },
+ "belabor": {
+  "g": "discuss excessively",
+  "d": "argue or discuss at excessive length"
+ },
+ "bilious": {
+  "g": "bad-tempered",
+  "d": "bad-tempered; relating to bile"
+ },
+ "blase": {
+  "d": "unimpressed because of familiarity; bored"
+ },
+ "cavil": {
+  "g": "raise petty objections"
+ },
+ "consonance": {
+  "d": "agreement or harmony; the repetition of consonant sounds"
+ },
+ "dalliance": {
+  "d": "a casual romantic relationship; frivolous waste of time"
+ },
+ "discomfit": {
+  "d": "make uneasy or embarrassed"
+ },
+ "estimable": {
+  "g": "worthy of respect"
+ },
+ "gambol": {
+  "p": "v"
+ },
+ "humdrum": {
+  "p": "adj",
+  "d": "lacking excitement or variety; dull"
+ },
+ "inviolate": {
+  "d": "free from injury or violation"
+ },
+ "liberality": {
+  "d": "generosity; open-mindedness"
+ },
+ "mendicant": {
+  "g": "beggar",
+  "d": "a beggar; a member of a religious order living on alms"
+ },
+ "peripatetic": {
+  "p": "adj",
+  "d": "traveling from place to place; itinerant"
+ },
+ "pugnacious": {
+  "d": "eager or quick to argue or fight"
+ },
+ "rapacious": {
+  "g": "greedy",
+  "d": "aggressively greedy or grasping"
+ },
+ "ribald": {
+  "d": "referring to sexual matters in an amusingly coarse way"
+ },
+ "scrimp": {
+  "d": "be thrifty or economical"
+ },
+ "seamy": {
+  "d": "sordid and disreputable"
+ },
+ "simper": {
+  "d": "a silly, self-conscious smile"
+ },
+ "snivel": {
+  "p": "v",
+  "g": "whine tearfully",
+  "d": "cry and sniffle; complain in a whining way"
+ },
+ "surfeit": {
+  "d": "an excessive amount"
+ },
+ "threadbare": {
+  "d": "worn thin; hackneyed"
+ },
+ "antediluvian": {
+  "p": "adj",
+  "d": "ridiculously old-fashioned; from before the biblical Flood"
+ },
+ "catcall": {
+  "g": "jeering cry"
+ },
+ "chimerical": {
+  "g": "wildly fanciful",
+  "d": "hoped for but illusory; wildly fanciful"
+ },
+ "dilatory": {
+  "p": "adj",
+  "g": "slow to act",
+  "d": "slow to act; intended to cause delay"
+ },
+ "indisposed": {
+  "d": "slightly ill; unwilling"
+ },
+ "languor": {
+  "d": "tiredness or inactivity; a dreamy laziness"
+ },
+ "lionize": {
+  "g": "treat as a celebrity"
+ },
+ "overweening": {
+  "d": "showing excessive confidence or pride"
+ },
+ "solipsistic": {
+  "g": "extremely self-centered"
+ },
+ "ungovernable": {
+  "g": "uncontrollable",
+  "d": "impossible to control or govern"
+ },
+ "venial": {
+  "d": "(of a sin) minor and forgivable"
+ },
+ "time-worn": {
+  "p": "adj"
+ },
+ "mettlesome": {
+  "d": "having a proud, unbroken spirit; spirited"
+ },
+ "accretion": {
+  "p": "n"
+ },
+ "archetypal": {
+  "p": "adj",
+  "d": "very typical of a certain kind of person or thing"
+ },
+ "calibrate": {
+  "g": "adjust precisely"
+ },
+ "catalyze": {
+  "g": "spark",
+  "d": "cause or speed up a reaction or change"
+ },
+ "confection": {
+  "g": "sweet treat"
+ },
+ "desiccated": {
+  "p": "adj"
+ },
+ "disheartened": {
+  "p": "adj",
+  "g": "discouraged"
+ },
+ "dour": {
+  "p": "adj"
+ },
+ "epistolary": {
+  "g": "in letter form"
+ },
+ "flabbergasted": {
+  "p": "adj"
+ },
+ "grandiloquence": {
+  "p": "n",
+  "g": "pompous language"
+ },
+ "inoculate": {
+  "g": "vaccinate"
+ },
+ "libertarian": {
+  "p": "n",
+  "g": "advocate of liberty",
+  "d": "a person who advocates individual liberty and minimal government"
+ },
+ "penultimate": {
+  "p": "adj"
+ },
+ "plaudits": {
+  "p": "n"
+ },
+ "repulse": {
+  "d": "drive back; cause disgust"
+ },
+ "scathing": {
+  "p": "adj"
+ },
+ "scintillating": {
+  "p": "adj"
+ },
+ "utilitarian": {
+  "g": "practical",
+  "d": "designed to be useful rather than attractive"
+ },
+ "variegated": {
+  "p": "adj"
+ },
+ "vehemently": {
+  "p": "adv",
+  "g": "with intense force"
+ },
+ "rebel": {
+  "p": "v",
+  "g": "resist authority",
+  "d": "rise in opposition to authority or control"
+ },
+ "palliative": {
+  "p": "adj",
+  "g": "easing without curing",
+  "d": "relieving pain or symptoms without curing the underlying cause"
+ },
+ "infusion": {
+  "g": "permeation of one substance by another"
+ },
+ "superior": {
+  "d": "higher in rank, quality, or importance"
+ },
+ "recover": {
+  "d": "get back something lost; return to health"
+ },
+ "exasperate": {
+  "d": "irritate intensely; infuriate"
+ },
+ "impinge": {
+  "d": "have an effect on; encroach upon"
+ },
+ "unyielding": {
+  "d": "refusing to give way; firm and stubborn"
+ },
+ "glorify": {
+  "d": "praise or honor highly; make seem more splendid than it is"
+ },
+ "solidify": {
+  "d": "make or become hard or solid"
+ },
+ "germinate": {
+  "d": "begin to grow and put out shoots"
+ },
+ "parch": {
+  "d": "make extremely dry, especially through heat"
+ },
+ "fluster": {
+  "d": "make agitated or confused"
+ },
+ "emote": {
+  "d": "show emotion in an exaggerated way"
+ },
+ "tether": {
+  "d": "tie an animal with a rope or chain to restrict its movement"
+ },
+ "caulk": {
+  "d": "seal the seams or joints of something to make them watertight"
+ },
+ "blight": {
+  "d": "spoil, harm, or ruin"
+ },
+ "leaven": {
+  "d": "add a substance such as yeast to dough to make it rise; lighten or enliven"
+ },
+ "sheathe": {
+  "d": "put a blade into its case; cover in a protective layer"
+ },
+ "condescend": {
+  "d": "behave as though one is superior to others; lower oneself to do something"
+ },
+ "detach": {
+  "d": "separate or unfasten; remove"
+ },
+ "gingerly": {
+  "d": "in a careful or cautious manner"
+ },
+ "thicken": {
+  "d": "make or become denser or more solid"
+ },
+ "lubricate": {
+  "d": "apply oil or grease to reduce friction"
+ },
+ "typify": {
+  "d": "be a typical example of"
+ },
+ "mystify": {
+  "d": "utterly bewilder or perplex"
+ },
+ "bewilder": {
+  "d": "cause to become perplexed and confused"
+ },
+ "satirize": {
+  "d": "mock through the use of irony or exaggeration"
+ },
+ "nettle": {
+  "d": "irritate or annoy"
+ },
+ "conclude": {
+  "d": "decide by reasoning; bring to an end"
+ },
+ "dovetail": {
+  "d": "fit or join together neatly"
+ },
+ "teem": {
+  "d": "be full of or swarming with"
+ },
+ "jostle": {
+  "d": "push, elbow, or bump against roughly"
+ },
+ "nauseate": {
+  "d": "make someone feel sick; fill with disgust"
+ },
+ "unflagging": {
+  "d": "tireless and persistent"
+ },
+ "vagabond": {
+  "d": "a person who wanders from place to place without a home or job"
+ },
+ "transmit": {
+  "d": "pass on from one person or place to another; broadcast"
+ },
+ "restrict": {
+  "d": "put a limit on; keep under control"
+ },
+ "legislate": {
+  "d": "make or enact laws"
+ },
+ "invalidate": {
+  "d": "make legally void; prove wrong"
+ },
+ "liquefy": {
+  "d": "make or become liquid"
+ },
+ "solace": {
+  "d": "give comfort in distress"
+ },
+ "idolize": {
+  "d": "admire or love excessively"
+ },
+ "lethal": {
+  "d": "sufficient to cause death; deadly"
+ }
+}

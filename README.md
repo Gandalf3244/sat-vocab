@@ -111,14 +111,26 @@ names the word that caught you.
 
 ### After you answer
 
-The correct meaning is shown with the full definition and, for the
-highest-frequency band, an example sentence with the word picked out in
-context — seeing it used is what makes it stick.
+The correct meaning is shown with the full definition and an example sentence
+with the word picked out in context — seeing it used is what makes it stick.
 
 Examples live in `tools/examples.json` as a plain `word: sentence` map and are
-folded into the build. All 449 top-frequency words are covered, plus 665 more
-across the other tiers; add entries to that file and re-run the build to cover
-more.
+folded into the build. Every word has one.
+
+### Hand corrections
+
+The source pages carry WordNet's *first* sense, which is often not the one the
+SAT tests — *crux* arrived as a constellation, *concord* as a state capital,
+*panacea* as a Greek goddess — and the automatic gloss cleaner can chop a phrase
+into a fragment ("person who makes or repairs shoes" → "person who makes").
+Both feed straight into the questions: the gloss is the answer text, the
+definition is the reverse-mode prompt, and a mislabelled part of speech
+surrounds the answer with wrong answers of the wrong kind.
+
+`tools/overrides.json` holds the corrections, keyed by word, each with any of
+`g` (gloss), `d` (definition) and `p` (part of speech). They are applied by
+`build-words.mjs` after parsing and before the distractors are chosen, so a
+fix changes the wrong answers too. Add an entry and re-run the build.
 
 ---
 
@@ -166,6 +178,7 @@ tools/
   build-words.mjs           word-list + answer-choice generator
   difficulty.mjs            the difficulty model, used by build-words.mjs
   examples.json             example sentences, word -> sentence
+  overrides.json            hand corrections to gloss / definition / part of speech
   pos-lexicon.json          part-of-speech data (derived, committed)
   synonyms.json             mutual synonym links (derived, committed)
   word-freq.json            corpus frequency evidence (derived, committed)

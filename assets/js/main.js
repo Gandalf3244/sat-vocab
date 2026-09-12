@@ -759,8 +759,10 @@ function renderAccount() {
 /** Show the example sentence with the target word picked out. */
 function highlightWord(sentence, word) {
   const safe = escapeHtml(sentence);
-  const stem = word.replace(/[^a-z]/gi, '').slice(0, Math.max(4, word.length - 3));
+  let stem = word.replace(/[^a-z-]/gi, '').slice(0, Math.max(4, word.length - 3)).replace(/-/g, '-?');
   if (!stem) return safe;
+  // "deny" -> "denied", "rely" -> "reliance": a trailing y may show up as i.
+  if (/y$/.test(stem)) stem = stem.slice(0, -1) + '[yi]';
   const re = new RegExp(`\\b(${stem}[a-z]*)`, 'i');
   return safe.replace(re, '<em>$1</em>');
 }

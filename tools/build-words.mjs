@@ -72,6 +72,8 @@ function visibleLines(html) {
     .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
     .replace(/&rsquo;|&#8217;/g, '’');
+  // Entities that decoded into tags ("misrepresentation&lt;/td&gt;") are not text.
+  s = s.replace(/<\/?[a-z][^>]*>/gi, ' ');
   return s.split('\n').map((l) => l.replace(/\s+/g, ' ').trim()).filter(Boolean);
 }
 
@@ -105,16 +107,24 @@ function parsePage(html, tier) {
 }
 
 function cleanGloss(g) {
-  return g
+  const base = g
     .replace(/^\((?:psychology|chemistry|physics|law|medicine|biology|music|sports?)\)\s*/i, '')
     .replace(/^(?:a|an|the)\s+/i, '')
     .replace(/\s*\(.*?\)\s*/g, ' ')
+    .replace(/^to\s+/i, '');
+  const short = base
     .replace(/,.*$/, '')      // "excessive, sickening" -> "excessive"
     .replace(/\s+or\s+.*$/, '')
     .replace(/[;:,]\s*$/, '')
     .replace(/\s+/g, ' ')
     .trim()
     .toLowerCase();
+  // "relating to or contained in letters" must not become "relating to": if
+  // the cut leaves a dangling function word, keep the whole phrase instead.
+  if (/\b(?:to|of|a|an|the|who|which|that|in|on|for|with|and|by|from|at|as)$/.test(short)) {
+    return base.replace(/[;:,]\s*$/, '').replace(/\s+/g, ' ').trim().toLowerCase();
+  }
+  return short;
 }
 
 /* ------------------------------------------------------------- phonetics */
@@ -493,6 +503,32 @@ console.log(`  deduped: ${words.length} unique words`);
 
 /* part of speech */
 for (const w of words) w.p = resolvePos(w.w, w.g, w.d, w.rawG);
+
+/* Hand corrections (tools/overrides.json: word -> { g, d, p }). The source
+   pages carry WordNet's *first* sense, which is often not the SAT one — crux
+   came through as a constellation, concord as a state capital — and the gloss
+   cleaner truncates "person who makes or repairs shoes" to "person who makes".
+   The part of speech is corrected here too, because a mislabelled entry gets
+   surrounded by answer choices of the wrong kind and stands out on sight. */
+let OVERRIDES = {};
+try {
+  OVERRIDES = JSON.parse(readFileSync(join(HERE, 'overrides.json'), 'utf8'));
+} catch {
+  console.warn('  ! tools/overrides.json missing');
+}
+{
+  let applied = 0;
+  const index = new Map(words.map((w) => [w.w, w]));
+  for (const [name, fix] of Object.entries(OVERRIDES)) {
+    const w = index.get(name);
+    if (!w) { console.warn(`  ! override for unknown word: ${name}`); continue; }
+    if (fix.g) w.g = fix.g.toLowerCase();
+    if (fix.d) w.d = fix.d;
+    if (fix.p) w.p = fix.p;
+    applied++;
+  }
+  console.log(`  overrides applied: ${applied}`);
+}
 const posCount = words.reduce((m, w) => { m[w.p] = (m[w.p] || 0) + 1; return m; }, {});
 console.log(`  parts of speech: ${Object.entries(posCount).map(([k, v]) => `${k} ${v}`).join(', ')}`);
 
